@@ -18,7 +18,7 @@ public class CacheConfig {
     @Bean
     @Primary
     public CacheManager cacheManager() {
-        CaffeineCacheManager cacheManager = new CaffeineCacheManager("dvd", "ipRateLimit", "servicos", "produtos");
+        CaffeineCacheManager cacheManager = new CaffeineCacheManager("anne", "ipRateLimit", "login");
         
         cacheManager.setCaffeine(Caffeine.newBuilder()
                 .expireAfterWrite(10, TimeUnit.MINUTES) 

@@ -1,6 +1,8 @@
 package com.jbkloh.ficha_buffet.config;
 
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.security.KeyFactory;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
@@ -8,7 +10,7 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
 
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import lombok.Getter;
@@ -20,18 +22,21 @@ public class RSAKeyProperties {
     private final RSAPublicKey publicKey;
     private final RSAPrivateKey privateKey;
 
-    public RSAKeyProperties() throws Exception {
-        this.publicKey = loadPublicKey();
-        this.privateKey = loadPrivateKey();
+    public RSAKeyProperties(
+            @Value("${RSA_PUBLIC_KEY_PATH:src/main/resources/keys/public.pem}") String publicKeyPath,
+            @Value("${RSA_PRIVATE_KEY_PATH:src/main/resources/keys/private.pem}") String privateKeyPath
+    ) throws Exception {
+
+        this.publicKey = loadPublicKey(publicKeyPath);
+        this.privateKey = loadPrivateKey(privateKeyPath);
     }
 
-    private RSAPublicKey loadPublicKey() throws Exception {
+    private RSAPublicKey loadPublicKey(String path) throws Exception {
 
-        String key = new String(
-                new ClassPathResource("keys/public.pem")
-                        .getInputStream()
-                        .readAllBytes(),
-                StandardCharsets.UTF_8);
+        String key = Files.readString(
+                Path.of(path),
+                StandardCharsets.UTF_8
+        );
 
         key = key
                 .replace("-----BEGIN PUBLIC KEY-----", "")
@@ -47,13 +52,12 @@ public class RSAKeyProperties {
                 .generatePublic(spec);
     }
 
-    private RSAPrivateKey loadPrivateKey() throws Exception {
+    private RSAPrivateKey loadPrivateKey(String path) throws Exception {
 
-        String key = new String(
-                new ClassPathResource("keys/private.pem")
-                        .getInputStream()
-                        .readAllBytes(),
-                StandardCharsets.UTF_8);
+        String key = Files.readString(
+                Path.of(path),
+                StandardCharsets.UTF_8
+        );
 
         key = key
                 .replace("-----BEGIN PRIVATE KEY-----", "")
