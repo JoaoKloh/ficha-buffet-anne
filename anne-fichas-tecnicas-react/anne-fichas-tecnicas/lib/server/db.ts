@@ -7,6 +7,11 @@ import type {
   CreateProductionInput,
   UpdateProductionInput,
 } from "@/lib/models/production";
+import type {
+  IngredienteResponseDTO,
+  CreateIngredienteRequestDTO,
+  UpdateIngredienteRequestDto,
+} from "@/lib/models/ingredient";
 
 /**
  * Backend de referência baseado em arquivo JSON local.
@@ -25,6 +30,7 @@ import type {
 const DATA_DIR = path.join(process.cwd(), "data");
 const DISHES_FILE = path.join(DATA_DIR, "dishes.json");
 const PRODUCTIONS_FILE = path.join(DATA_DIR, "productions.json");
+const INGREDIENTS_FILE = path.join(DATA_DIR, "ingredients.json");
 
 async function ensureDataFile(file: string): Promise<void> {
   await fs.mkdir(DATA_DIR, { recursive: true });
@@ -162,6 +168,66 @@ export const productionRepository = {
     const next = all.filter((p) => p.id !== id);
     if (next.length === all.length) return false;
     await writeJsonArray(PRODUCTIONS_FILE, next);
+    return true;
+  },
+};
+
+/* -------------------------- Ingredients repository -------------------------- */
+
+export const ingredientRepository = {
+  async list(): Promise<IngredienteResponseDTO[]> {
+    return readJsonArray<IngredienteResponseDTO>(INGREDIENTS_FILE);
+  },
+
+  async getById(id: number): Promise<IngredienteResponseDTO | null> {
+    const all = await this.list();
+    return all.find((i) => i.id === id) ?? null;
+  },
+
+  // O backend real nunca devolve `descricao` (ver IngredienteResponseDTO em
+  // lib/models/ingredient.ts) — o mock espelha isso e também não a guarda.
+  // `qtd` só existe quando o item vem de dentro da ficha técnica de um
+  // prato, nunca no catálogo.
+  async create(input: CreateIngredienteRequestDTO): Promise<IngredienteResponseDTO> {
+    const all = await this.list();
+    const nextId = all.reduce((max, i) => Math.max(max, i.id), 0) + 1;
+    const ingredient: IngredienteResponseDTO = {
+      id: nextId,
+      nome: input.nome,
+      qtd: null,
+      unidade: input.unidade,
+      categoria: input.categoria,
+      custo: input.custo ?? null,
+      fornecedor: input.fornecedor ?? null,
+    };
+    all.push(ingredient);
+    await writeJsonArray(INGREDIENTS_FILE, all);
+    return ingredient;
+  },
+
+  async update(id: number, input: UpdateIngredienteRequestDto): Promise<IngredienteResponseDTO | null> {
+    const all = await this.list();
+    const idx = all.findIndex((i) => i.id === id);
+    if (idx === -1) return null;
+    const updated: IngredienteResponseDTO = {
+      id,
+      nome: input.nome,
+      qtd: null,
+      unidade: input.unidade,
+      categoria: input.categoria,
+      custo: input.custo ?? null,
+      fornecedor: input.fornecedor ?? null,
+    };
+    all[idx] = updated;
+    await writeJsonArray(INGREDIENTS_FILE, all);
+    return updated;
+  },
+
+  async remove(id: number): Promise<boolean> {
+    const all = await this.list();
+    const next = all.filter((i) => i.id !== id);
+    if (next.length === all.length) return false;
+    await writeJsonArray(INGREDIENTS_FILE, next);
     return true;
   },
 };

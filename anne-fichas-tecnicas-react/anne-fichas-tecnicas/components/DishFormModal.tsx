@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Modal } from "./ui/Modal";
 import { IngredientRows } from "./IngredientRows";
+import { FotoUploadField } from "./FotoUploadField";
 import { CATEGORIAS } from "@/lib/models/category";
 import type { Dish, CreateDishInput } from "@/lib/models/dish";
 import { CreateDishInputSchema } from "@/lib/models/dish";
@@ -41,6 +42,7 @@ export function DishFormModal({ initial, onClose, onSave }: Props) {
   );
   const [errors, setErrors] = useState<string[]>([]);
   const [saving, setSaving] = useState(false);
+  const [uploadingFoto, setUploadingFoto] = useState(false);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -88,16 +90,12 @@ export function DishFormModal({ initial, onClose, onSave }: Props) {
           </div>
         </div>
 
-        <div className="field-block">
-          <label htmlFor="d_foto">URL da foto (https, opcional)</label>
-          <input
-            id="d_foto"
-            type="text"
-            value={form.foto}
-            onChange={(e) => setForm({ ...form, foto: e.target.value })}
-            placeholder="https://..."
-          />
-        </div>
+        <FotoUploadField
+          id="d_foto"
+          value={form.foto ?? ""}
+          onChange={(foto) => setForm((prev) => ({ ...prev, foto }))}
+          onUploadingChange={setUploadingFoto}
+        />
 
         <div className="row2">
           <div className="field-block">
@@ -163,8 +161,8 @@ export function DishFormModal({ initial, onClose, onSave }: Props) {
           <button type="button" className="btn ghost" onClick={onClose} disabled={saving}>
             Cancelar
           </button>
-          <button type="submit" className="btn" disabled={saving}>
-            {saving ? "Salvando..." : "Salvar prato"}
+          <button type="submit" className="btn" disabled={saving || uploadingFoto}>
+            {saving ? "Salvando..." : uploadingFoto ? "Enviando foto..." : "Salvar prato"}
           </button>
         </div>
       </form>

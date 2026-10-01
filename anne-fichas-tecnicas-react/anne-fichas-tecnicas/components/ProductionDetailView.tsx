@@ -1,29 +1,27 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import type { Dish } from "@/lib/models/dish";
-import type { Production } from "@/lib/models/production";
+import { Header } from "./Header";
+import type { PratoDetalhadoResponseDTO } from "@/lib/models/prato";
+import type { ProducaoResponseDTO } from "@/lib/models/producao";
 import { buildKitchenRows, buildShoppingList } from "@/lib/utils/production";
 import { fmtDate, fmtQuantidade } from "@/lib/utils/format";
 
 interface Props {
-  production: Production;
-  dishes: Dish[];
+  producao: ProducaoResponseDTO;
+  pratos: PratoDetalhadoResponseDTO[];
 }
 
-export function ProductionDetailView({ production, dishes }: Props) {
+export function ProductionDetailView({ producao, pratos }: Props) {
   const router = useRouter();
-  const kitchenRows = buildKitchenRows(production, dishes);
-  const shoppingRows = buildShoppingList(production, dishes);
+  const kitchenRows = buildKitchenRows(producao, pratos);
+  const shoppingRows = buildShoppingList(producao, pratos);
 
   return (
     <div className="app">
-      <header className="top no-print">
-        <div className="brand">
-          <div className="mark">ANNE</div>
-          <div className="tagline">Fichas técnicas &amp; produção</div>
-        </div>
-      </header>
+      <div className="no-print">
+        <Header />
+      </div>
 
       <div
         style={{
@@ -52,11 +50,11 @@ export function ProductionDetailView({ production, dishes }: Props) {
               fontWeight: 600,
             }}
           >
-            {production.evento}
+            {producao.nome}
           </div>
           <div style={{ fontSize: 13, color: "var(--muted)", marginTop: 2 }}>
-            {fmtDate(production.data)}
-            {production.convidados ? ` · ${production.convidados} convidados` : ""} · Lista de
+            {fmtDate(producao.data)}
+            {producao.quantidade ? ` · ${producao.quantidade} convidados` : ""} · Lista de
             produção e compras
           </div>
         </div>

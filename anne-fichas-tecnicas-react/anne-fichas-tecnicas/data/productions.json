@@ -1,0 +1,50 @@
+[
+  {
+    "evento": "rv",
+    "data": "2026-10-22",
+    "convidados": 150,
+    "itens": [
+      {
+        "dishId": "872b900b-8ceb-47ec-95a0-cb6a8b48d1bf",
+        "quantidade": 150
+      },
+      {
+        "dishId": "872b900b-8ceb-47ec-95a0-cb6a8b48d1bf",
+        "quantidade": 150
+      }
+    ],
+    "id": "a80a9de4-7606-4b67-b3d0-e34d32813a2c",
+    "createdAt": "2026-09-16T23:24:52.920Z",
+    "updatedAt": "2026-09-16T23:24:52.920Z"
+  },
+  {
+    "evento": "marina e duarte",
+    "data": "2026-10-20",
+    "convidados": 90,
+    "itens": [
+      {
+        "dishId": "872b900b-8ceb-47ec-95a0-cb6a8b48d1bf",
+        "quantidade": 90
+      },
+      {
+        "dishId": "9ffc0806-9eaa-468a-be6e-1c0b7dd3c5aa",
+        "quantidade": 135
+      },
+      {
+        "dishId": "f928372d-c137-4ee7-b848-7edfcfafaf3b",
+        "quantidade": 135
+      },
+      {
+        "dishId": "00dc8561-e860-4fa9-b473-3184530f9c91",
+        "quantidade": 135
+      },
+      {
+        "dishId": "872b900b-8ceb-47ec-95a0-cb6a8b48d1bf",
+        "quantidade": 90
+      }
+    ],
+    "id": "3d2f4d22-8dee-4a33-b5f2-38c4e5495df9",
+    "createdAt": "2026-09-18T01:51:48.000Z",
+    "updatedAt": "2026-09-18T15:33:02.070Z"
+  }
+]

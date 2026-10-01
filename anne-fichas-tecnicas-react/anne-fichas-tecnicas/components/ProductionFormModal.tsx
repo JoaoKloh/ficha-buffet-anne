@@ -1,86 +1,66 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal } from "./ui/Modal";
-import type { Dish } from "@/lib/models/dish";
-import type { Production, CreateProductionInput, ProductionItem } from "@/lib/models/production";
-import { CreateProductionInputSchema } from "@/lib/models/production";
+import { listarPratosDisponiveis } from "@/lib/api/producaoPratos";
+import { CreateProducaoRequestSchema } from "@/lib/models/producao";
+import type { CreateProducaoRequestDTO, ProducaoResponseDTO } from "@/lib/models/producao";
+import type { PratoDetalhadoResponseDTO } from "@/lib/models/prato";
 
 interface Props {
-  initial: Production | null;
-  dishes: Dish[];
+  initial: ProducaoResponseDTO | null;
   onClose: () => void;
-  onSave: (input: CreateProductionInput) => Promise<void>;
+  onSave: (input: CreateProducaoRequestDTO) => Promise<void>;
 }
 
-interface DraftItem {
-  dishId: string;
-  quantidade: string;
+function toDraftPratoIds(producao: ProducaoResponseDTO | null): string[] {
+  if (!producao || producao.pratos.length === 0) return [""];
+  return producao.pratos.map((p) => String(p.id));
 }
 
-function toDraftItems(itens: ProductionItem[]): DraftItem[] {
-  if (itens.length === 0) return [{ dishId: "", quantidade: "" }];
-  return itens.map((i) => ({ dishId: i.dishId, quantidade: String(i.quantidade) }));
-}
-
-export function ProductionFormModal({ initial, dishes, onClose, onSave }: Props) {
-  const [evento, setEvento] = useState(initial?.evento ?? "");
+export function ProductionFormModal({ initial, onClose, onSave }: Props) {
+  const [nome, setNome] = useState(initial?.nome ?? "");
   const [data, setData] = useState(initial?.data ?? "");
-  const [convidados, setConvidados] = useState(initial?.convidados ?? 0);
-  const [items, setItems] = useState<DraftItem[]>(toDraftItems(initial?.itens ?? []));
+  const [quantidade, setQuantidade] = useState(initial?.quantidade ?? 0);
+  const [pratoIds, setPratoIds] = useState<string[]>(toDraftPratoIds(initial));
   const [errors, setErrors] = useState<string[]>([]);
   const [saving, setSaving] = useState(false);
 
-  const dishesByCategory = new Map<string, Dish[]>();
-  for (const d of dishes) {
-    const list = dishesByCategory.get(d.categoria) ?? [];
-    list.push(d);
-    dishesByCategory.set(d.categoria, list);
-  }
+  const [catalogo, setCatalogo] = useState<PratoDetalhadoResponseDTO[]>([]);
 
-  function updateItem(index: number, patch: Partial<DraftItem>) {
-    setItems((prev) => prev.map((it, i) => (i === index ? { ...it, ...patch } : it)));
+  useEffect(() => {
+    listarPratosDisponiveis()
+      .then(setCatalogo)
+      .catch(() => setCatalogo([]));
+  }, []);
+
+  function updateRow(index: number, pratoId: string) {
+    setPratoIds((prev) => prev.map((v, i) => (i === index ? pratoId : v)));
   }
-  function removeItem(index: number) {
-    setItems((prev) => prev.filter((_, i) => i !== index));
+  function removeRow(index: number) {
+    setPratoIds((prev) => prev.filter((_, i) => i !== index));
   }
-  function addItem() {
-    setItems((prev) => [...prev, { dishId: "", quantidade: "" }]);
+  function addRow() {
+    setPratoIds((prev) => [...prev, ""]);
   }
-  function suggestForRow(index: number) {
-    const row = items[index];
-    if (!row) return;
-    const dish = dishes.find((d) => d.id === row.dishId);
-    if (!dish || !dish.porPessoa || !convidados) {
-      setErrors(["Selecione um prato com sugestão por pessoa e informe o nº de convidados."]);
-      return;
-    }
-    updateItem(index, { quantidade: String(Math.ceil(convidados * dish.porPessoa)) });
-  }
-  function recalcAll() {
-    if (!convidados) {
-      setErrors(["Informe o nº de convidados primeiro."]);
-      return;
-    }
-    setItems((prev) =>
-      prev.map((row) => {
-        const dish = dishes.find((d) => d.id === row.dishId);
-        if (dish && dish.porPessoa) {
-          return { ...row, quantidade: String(Math.ceil(convidados * dish.porPessoa)) };
-        }
-        return row;
-      })
-    );
+  // Cada linha só mostra pratos ainda não escolhidos nas outras linhas —
+  // o backend rejeita o mesmo pratoId repetido numa mesma produção.
+  function disponiveisPara(index: number): PratoDetalhadoResponseDTO[] {
+    const escolhidosAlhures = new Set(pratoIds.filter((_, i) => i !== index).filter(Boolean));
+    return catalogo.filter((c) => !escolhidosAlhures.has(String(c.id)));
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const itens = items
-      .filter((it) => it.dishId && Number(it.quantidade) > 0)
-      .map((it) => ({ dishId: it.dishId, quantidade: Number(it.quantidade) }));
-
-    const payload: CreateProductionInput = { evento, data, convidados, itens };
-    const parsed = CreateProductionInputSchema.safeParse(payload);
+    const payload: CreateProducaoRequestDTO = {
+      nome,
+      quantidade,
+      data,
+      pratos: pratoIds
+        .filter((id) => id !== "")
+        .map((id) => ({ pratoId: Number(id) })) as CreateProducaoRequestDTO["pratos"],
+    };
+    const parsed = CreateProducaoRequestSchema.safeParse(payload);
     if (!parsed.success) {
       setErrors(parsed.error.issues.map((i) => i.message));
       return;
@@ -95,16 +75,16 @@ export function ProductionFormModal({ initial, dishes, onClose, onSave }: Props)
   }
 
   return (
-    <Modal title={initial ? "Editar produção" : "Nova produção"} onClose={onClose}>
+    <Modal title={initial ? `Editar produção #${initial.id}` : "Nova produção"} onClose={onClose}>
       <form onSubmit={handleSubmit}>
         <div className="row2">
           <div className="field-block">
-            <label htmlFor="pr_evento">Nome do evento</label>
+            <label htmlFor="pr_nome">Nome do evento</label>
             <input
-              id="pr_evento"
+              id="pr_nome"
               type="text"
-              value={evento}
-              onChange={(e) => setEvento(e.target.value)}
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
               placeholder="Ex: Marina & Rafael"
             />
           </div>
@@ -113,62 +93,47 @@ export function ProductionFormModal({ initial, dishes, onClose, onSave }: Props)
             <input id="pr_data" type="date" value={data} onChange={(e) => setData(e.target.value)} />
           </div>
         </div>
+
         <div className="field-block">
-          <label htmlFor="pr_convidados">Nº de convidados</label>
+          <label htmlFor="pr_quantidade">Nº de convidados</label>
           <input
-            id="pr_convidados"
+            id="pr_quantidade"
             type="number"
-            min={0}
+            min={1}
             step="1"
-            value={convidados || ""}
-            onChange={(e) => setConvidados(Number(e.target.value) || 0)}
+            value={quantidade || ""}
+            onChange={(e) => setQuantidade(Number(e.target.value) || 0)}
             placeholder="Ex: 150"
           />
         </div>
 
-        <div className="section-label">Pratos e quantidades a produzir</div>
-        <div style={{ marginBottom: 10 }}>
-          <button type="button" className="btn small ghost" onClick={recalcAll}>
-            Calcular quantidades pelos convidados
-          </button>
-        </div>
-
-        {items.map((row, i) => (
+        <div className="section-label">Pratos da produção</div>
+        {pratoIds.map((pratoId, i) => (
           <div
             key={i}
-            style={{ display: "grid", gridTemplateColumns: "2fr 1fr auto auto", gap: 8, marginBottom: 8 }}
+            style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 8, marginBottom: 8 }}
           >
-            <select value={row.dishId} onChange={(e) => updateItem(i, { dishId: e.target.value })}>
+            <select value={pratoId} onChange={(e) => updateRow(i, e.target.value)}>
               <option value="">Selecione um prato</option>
-              {Array.from(dishesByCategory.entries()).map(([cat, list]) => (
-                <optgroup label={cat} key={cat}>
-                  {list.map((d) => (
-                    <option key={d.id} value={d.id}>
-                      {d.nome}
-                    </option>
-                  ))}
-                </optgroup>
+              {disponiveisPara(i).map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.nome}
+                </option>
               ))}
             </select>
-            <input
-              type="number"
-              min={0}
-              step="1"
-              placeholder="Qtd a produzir"
-              value={row.quantidade}
-              onChange={(e) => updateItem(i, { quantidade: e.target.value })}
-            />
-            <button type="button" className="btn small ghost" onClick={() => suggestForRow(i)}>
-              Sugerir
-            </button>
-            <button type="button" className="row-remove" onClick={() => removeItem(i)}>
+            <button type="button" className="row-remove" title="Remover prato" onClick={() => removeRow(i)}>
               ✕
             </button>
           </div>
         ))}
-        <button type="button" className="btn small ghost" onClick={addItem}>
+        <button type="button" className="btn small ghost" onClick={addRow}>
           + Adicionar prato
         </button>
+        {catalogo.length === 0 && (
+          <p className="dish-recipe-preview" style={{ marginTop: 4 }}>
+            Nenhum prato cadastrado no catálogo ainda.
+          </p>
+        )}
 
         {errors.length > 0 && (
           <div className="error-text">

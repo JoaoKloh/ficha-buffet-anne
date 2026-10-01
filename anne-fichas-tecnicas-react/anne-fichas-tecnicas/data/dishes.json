@@ -1,0 +1,5746 @@
+[
+  {
+    "id": "872b900b-8ceb-47ec-95a0-cb6a8b48d1bf",
+    "nome": "Tartar de salmão com guacamole",
+    "categoria": "Petit Gourmet Volante",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Picar salmão com guacamole finamente à faca, temperar na hora do serviço e montar sobre a base escolhida.",
+    "ingredientes": [
+      {
+        "nome": "Salmão com guacamole picado fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos cítricos e ervas",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Base (torradinha ou blini)",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "bfff129f-00df-481e-a528-ca324244bccb",
+    "nome": "Ceviche de polvo ao vinagrete trufado com musseline de mandioquinha",
+    "categoria": "Petit Gourmet Volante",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Marinar polvo ao vinagrete trufado com musseline de mandioquinha no suco cítrico com cebola roxa e temperos por curto período antes do serviço. Finalizar com coentro fresco.",
+    "ingredientes": [
+      {
+        "nome": "Polvo ao vinagrete trufado com musseline de mandioquinha",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Suco cítrico (limão)",
+        "qtd": 150,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Cebola roxa",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Coentro",
+        "qtd": 50,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d54e5c38-ecf4-4eac-ade8-913bfb6a8718",
+    "nome": "Panelinha com creme de brie e geleia de damasco",
+    "categoria": "Petit Gourmet Volante",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Preparar creme de brie e geleia de damasco conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Creme de brie e geleia de damasco",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "e2cfb4ef-13ae-4637-ab1d-89414b0e22d1",
+    "nome": "Camarão ao champagne",
+    "categoria": "Petit Gourmet Volante",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Preparar champagne conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Champagne",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "6df3293f-14a9-4f31-8e99-d9f23d0925a4",
+    "nome": "Salmão ao champagne",
+    "categoria": "Petit Gourmet Volante",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Preparar champagne conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Champagne",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "36e07409-8bf2-47c4-9ad0-d9ed3ff9af1a",
+    "nome": "Bacalhau brulle",
+    "categoria": "Petit Gourmet Volante",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de Bacalhau brulle e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "6d5fd78f-406a-42a7-abae-8b2a8e2af929",
+    "nome": "Filezinho ao capuccino",
+    "categoria": "Petit Gourmet Volante",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Preparar capuccino conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Capuccino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "9ffc0806-9eaa-468a-be6e-1c0b7dd3c5aa",
+    "nome": "Sable folhado com camarão e musse de mandioquinha trufada",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de camarão e musse de mandioquinha trufada e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de camarão e musse de mandioquinha trufada",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "6022eaec-1071-4922-805f-0d81478465a2",
+    "nome": "Steak tartar, aioli e crosta de grana padano",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Picar grana padano finamente à faca, temperar na hora do serviço e montar sobre a base escolhida.",
+    "ingredientes": [
+      {
+        "nome": "Grana padano picado fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos cítricos e ervas",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Base (torradinha ou blini)",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "0987ecff-f621-4a46-9899-58ffcb922591",
+    "nome": "Macarron com mousse de blue cheese e nozes",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar a base de mousse de blue cheese e nozes, incorporar delicadamente ao creme batido em ponto de chantilly. Gelar antes de servir.",
+    "ingredientes": [
+      {
+        "nome": "Mousse de blue cheese e nozes",
+        "qtd": 400,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme de leite fresco",
+        "qtd": 400,
+        "unidade": "g"
+      },
+      {
+        "nome": "Açúcar ou tempero conforme receita",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Estabilizante (gelatina, se necessário)",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "6eaf8609-b447-41b7-91dc-b2fc849e21a2",
+    "nome": "Mousse de chevre e tuile de castanhas",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar a base de chevre e tuile de castanhas, incorporar delicadamente ao creme batido em ponto de chantilly. Gelar antes de servir.",
+    "ingredientes": [
+      {
+        "nome": "Chevre e tuile de castanhas",
+        "qtd": 400,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme de leite fresco",
+        "qtd": 400,
+        "unidade": "g"
+      },
+      {
+        "nome": "Açúcar ou tempero conforme receita",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Estabilizante (gelatina, se necessário)",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d8f150b2-8599-4a44-a390-f57823e91edf",
+    "nome": "Tartar de salmão com tuile de gergilim",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Picar salmão com tuile de gergilim finamente à faca, temperar na hora do serviço e montar sobre a base escolhida.",
+    "ingredientes": [
+      {
+        "nome": "Salmão com tuile de gergilim picado fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos cítricos e ervas",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Base (torradinha ou blini)",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "54d64dec-5081-4e94-a1da-c38da3ead440",
+    "nome": "Rosbife com creme camembert, alho negro e crosta de grano padano",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar creme camembert, alho negro e crosta de grano padano conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Creme camembert, alho negro e crosta de grano padano",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "f0796bd0-0602-4204-9db0-18f4ff3cc3e3",
+    "nome": "Amuse lagosta com laranja",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar laranja conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Laranja",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "c8a626d4-1095-4a33-9d15-36c7fa68052c",
+    "nome": "Cestinha de truta com ovas de salmão",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de truta com ovas de salmão e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de truta com ovas de salmão",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "c80d9955-91f8-425b-ae9c-d510d381c625",
+    "nome": "Casquinha de brandade de bacalhau com crocante de parma",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de brandade de bacalhau com crocante de parma e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "f1647345-9570-4d55-b86e-4a9e5a8203d0",
+    "nome": "Esfera de queijo de cabra na torradinha artesanal",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "5861b599-7028-404a-ba62-1d429bb1d44f",
+    "nome": "Beiju com purê de banana da terra e carne seca",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar purê de banana da terra e carne seca conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Purê de banana da terra e carne seca",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "a1aec5e3-1712-4708-bc67-02189a4a68d0",
+    "nome": "Beiju de tapioca com ceviche",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Marinar tapioca com ceviche no suco cítrico com cebola roxa e temperos por curto período antes do serviço. Finalizar com coentro fresco.",
+    "ingredientes": [
+      {
+        "nome": "Tapioca com ceviche",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Suco cítrico (limão)",
+        "qtd": 150,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Cebola roxa",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Coentro",
+        "qtd": 50,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "a995771e-1eb4-4d51-ad56-389720bee258",
+    "nome": "Bigne com creme de queijos e farofa de pistache",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de creme de queijos e farofa de pistache e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de creme de queijos e farofa de pistache",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d2f6f591-c8f9-49b3-a017-49a9af21864e",
+    "nome": "Bigne de parmesão com borsin e tapenade",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de parmesão com borsin e tapenade e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de parmesão com borsin e tapenade",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "b4647334-f3dd-4bf8-9a79-2c57da1f874e",
+    "nome": "Blinis com sour cream e camarão",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de sour cream e camarão e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de sour cream e camarão",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "2fd59996-3951-4abe-9ac0-472c591c6b2d",
+    "nome": "Blinis com sour cream e salmão defumado",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de sour cream e salmão defumado e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de sour cream e salmão defumado",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "f928372d-c137-4ee7-b848-7edfcfafaf3b",
+    "nome": "Bombom de burrata com tomatinho confit e pesto de manjericão",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar burrata com tomatinho confit e pesto de manjericão conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Burrata com tomatinho confit e pesto de manjericão",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "32fd7928-7d4a-40e7-a116-0f245fc89847",
+    "nome": "Canapé folhado com musse de queijo de chevre e frutas vermelhas",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de musse de queijo de chevre e frutas vermelhas e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de musse de queijo de chevre e frutas vermelhas",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "aeae714a-7c46-4420-9071-6856ab4a6b90",
+    "nome": "Cannoli de crudo de salmão, emulsão de avocado e ovas negras",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar crudo de salmão, emulsão de avocado e ovas negras conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Crudo de salmão, emulsão de avocado e ovas negras",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "902311d9-edd8-4877-9b49-2e2282507e5c",
+    "nome": "Canoa de vinagrete de polvo ao aroma de azeite trufado",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar vinagrete de polvo ao aroma de azeite trufado conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Vinagrete de polvo ao aroma de azeite trufado",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "fb1f4420-b0a6-4a30-ab9c-7537970266eb",
+    "nome": "Carpaccio no pão preto, com alcaparras",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Fatiar alcaparras bem fino, dispor em prato ou base individual, regar com azeite e limão, e finalizar com o acompanhamento indicado na receita.",
+    "ingredientes": [
+      {
+        "nome": "Alcaparras fatiado bem fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Azeite extravirgem",
+        "qtd": 100,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Limão siciliano",
+        "qtd": 50,
+        "unidade": "g"
+      },
+      {
+        "nome": "Lascas de parmesão ou acompanhamento",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e pimenta",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "f5bc165e-a4fe-4af5-9ebe-da718502f02b",
+    "nome": "Cestinha com musse de baroa e camarão",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de musse de baroa e camarão e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de musse de baroa e camarão",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "b9382c0d-fa7e-45ed-b82c-35acea0b6b15",
+    "nome": "Ceviche de banana da terra na gamelita",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Marinar banana da terra na gamelita no suco cítrico com cebola roxa e temperos por curto período antes do serviço. Finalizar com coentro fresco.",
+    "ingredientes": [
+      {
+        "nome": "Banana da terra na gamelita",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Suco cítrico (limão)",
+        "qtd": 150,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Cebola roxa",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Coentro",
+        "qtd": 50,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7edf14ff-2509-4c42-84d6-5d1c98d289ab",
+    "nome": "Crostillant com carpaccio e alcaparras",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Fatiar carpaccio e alcaparras bem fino, dispor em prato ou base individual, regar com azeite e limão, e finalizar com o acompanhamento indicado na receita.",
+    "ingredientes": [
+      {
+        "nome": "Carpaccio e alcaparras fatiado bem fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Azeite extravirgem",
+        "qtd": 100,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Limão siciliano",
+        "qtd": 50,
+        "unidade": "g"
+      },
+      {
+        "nome": "Lascas de parmesão ou acompanhamento",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e pimenta",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "c9b15f4e-34f2-4728-95a9-64fbf1b2e98c",
+    "nome": "Crostillant com steak tartare de filet",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Picar steak tartare de filet finamente à faca, temperar na hora do serviço e montar sobre a base escolhida.",
+    "ingredientes": [
+      {
+        "nome": "Steak tartare de filet picado fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos cítricos e ervas",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Base (torradinha ou blini)",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "59be0f2b-0d88-46a9-8a21-dfd40c0b1d29",
+    "nome": "Macarrons com gorgonzola e nozes",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar gorgonzola e nozes conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Gorgonzola e nozes",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "01e19e03-491f-4abb-a63d-0cfe6afccb58",
+    "nome": "Macarons com chevre e frutas vermelhas",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de chevre e frutas vermelhas e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de chevre e frutas vermelhas",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "1c6a95d2-ac4a-4ac8-8292-2dacf7ca34b5",
+    "nome": "Mini taco com guacamole",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar guacamole conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Guacamole",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d2c81b10-bfbb-4bb6-abc0-6768efa5a230",
+    "nome": "Philo com foie gras e geleia de cebola caramelada",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar foie gras e geleia de cebola caramelada conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Foie gras e geleia de cebola caramelada",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "e428da28-c0ca-4039-9625-5d3663738b84",
+    "nome": "Presunto de Parma com queijo brie, figo fresco com mel",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "68ccf5a6-d00a-4d54-8d13-f29069b7d14e",
+    "nome": "Presunto parma com palmito e manjericão",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "936e587d-3d9f-49fd-8f77-4c5809207a22",
+    "nome": "Profiteroles de bacalhau",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de bacalhau e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de bacalhau",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "abcec17f-715f-43ec-8973-2e4dc0dc9643",
+    "nome": "Profiteroles de haddock",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de haddock e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de haddock",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "00dc8561-e860-4fa9-b473-3184530f9c91",
+    "nome": "Sable folhado com camarão",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de camarão e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de camarão",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7d64e79a-4d4c-4887-ba32-ce8f35a93c1e",
+    "nome": "Sable folhado com musse de baroa e camarão",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de musse de baroa e camarão e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de musse de baroa e camarão",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "b60f8a8e-24d3-4b7a-9211-44847f974681",
+    "nome": "Steak tartare com torradinha",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Picar torradinha finamente à faca, temperar na hora do serviço e montar sobre a base escolhida.",
+    "ingredientes": [
+      {
+        "nome": "Torradinha picado fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos cítricos e ervas",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Base (torradinha ou blini)",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "f18f4c21-4b26-4750-acb8-2e2cef5be65c",
+    "nome": "Stick de banana da terra com brie e parma",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Cortar banana da terra com brie e parma em formato de palito, empanar em farinha, ovo e panko, e fritar em óleo quente até dourar. Servir com o molho de acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Banana da terra com brie e parma",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha de trigo",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ovos",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "5ed2ed7a-f548-4687-b7b6-da7deffae52c",
+    "nome": "Stick de frango ao curry com gergelim e geleia de damasco",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Cortar frango ao curry com gergelim e geleia de damasco em formato de palito, empanar em farinha, ovo e panko, e fritar em óleo quente até dourar. Servir com o molho de acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Frango ao curry com gergelim e geleia de damasco",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha de trigo",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ovos",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "424b5af7-e03a-43a2-bbb2-f7736fa2dc41",
+    "nome": "Stick de mini caprese ao molho pesto",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Cortar mini caprese ao molho pesto em formato de palito, empanar em farinha, ovo e panko, e fritar em óleo quente até dourar. Servir com o molho de acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Mini caprese ao molho pesto",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha de trigo",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ovos",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "1db275a4-91b6-43de-a3c9-d384188145b1",
+    "nome": "Stick de mozzarella de búfala e salame milano com molho teriyaki",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Cortar mozzarella de búfala e salame milano com molho teriyaki em formato de palito, empanar em farinha, ovo e panko, e fritar em óleo quente até dourar. Servir com o molho de acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Mozzarella de búfala e salame milano com molho teriyaki",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha de trigo",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ovos",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "e093f249-e7cb-432f-a9ca-9e1936f0ecde",
+    "nome": "Stick de parma com melão orange",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Cortar parma com melão orange em formato de palito, empanar em farinha, ovo e panko, e fritar em óleo quente até dourar. Servir com o molho de acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Parma com melão orange",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha de trigo",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ovos",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d249d905-f052-4242-ac34-dda8976623ad",
+    "nome": "Tule de gergilim com tartar de atum",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Picar gergilim com tartar de atum finamente à faca, temperar na hora do serviço e montar sobre a base escolhida.",
+    "ingredientes": [
+      {
+        "nome": "Gergilim com tartar de atum picado fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos cítricos e ervas",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Base (torradinha ou blini)",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "0fa436ba-a6f1-48cf-a4e2-e5924178f23e",
+    "nome": "Tule de gergilim com creme de haddock ao limone",
+    "categoria": "Canapés Frios",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de gergilim com creme de haddock ao limone e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de gergilim com creme de haddock ao limone",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "f413fb97-9779-4346-94f0-a3e3da4012a1",
+    "nome": "Bao de porco glaceado com picles de cebola roxa",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de porco glaceado com picles de cebola roxa e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de porco glaceado com picles de cebola roxa",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d8fec6bc-2ec8-455b-bf76-6a3bca98539e",
+    "nome": "Bruscheta de mix de cogumelos",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar mix de cogumelos conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Mix de cogumelos",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "289c5407-db30-4546-b7f4-9cc8e5d36373",
+    "nome": "Bruscheta de parma",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar parma conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Parma",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "9d73c667-7104-4c6c-a77b-f7e79a8a9f46",
+    "nome": "Bruschetta caprese",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar Bruschetta caprese conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Bruschetta caprese",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "f51a4907-a2d2-4e0e-a676-2f9be982c3e0",
+    "nome": "Brusqueta de queijo de cabra, damasco e mel au gratin",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "0b3488cd-0858-4035-a0e5-de1c561974c9",
+    "nome": "Camarão crocante ao limone",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar limone conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Limone",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "3b532ada-32e8-4a8a-bd7b-a9497a36b2cf",
+    "nome": "Camarão empanado com coco ao molho de maracujá",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar coco ao molho de maracujá conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Coco ao molho de maracujá",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "3351d5b4-f042-46bf-9c3b-149eadeab84c",
+    "nome": "Cestinha de bacalhau brulle",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de bacalhau brulle e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de bacalhau brulle",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7be94663-2e37-41d7-9c22-92d61e4cd9ad",
+    "nome": "Tortinha philo com mix de cogumelos",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de mix de cogumelos e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de mix de cogumelos",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "6d8d38fd-269c-4fb8-80d9-e8b57864a765",
+    "nome": "Tortinha philo com ragu de cordeiro",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de ragu de cordeiro e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de ragu de cordeiro",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "1b1b2395-13f7-4a2d-b859-c9703eaa0eda",
+    "nome": "Tortinha philo com ragu de pato",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de ragu de pato e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de ragu de pato",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7dd77222-b4a2-428b-82d9-798e84953c79",
+    "nome": "Cestinha philo de queijo brie com geleia de damasco",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de queijo brie com geleia de damasco e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de queijo brie com geleia de damasco",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "f65052c9-b865-4f69-a3ec-6a741da0101f",
+    "nome": "Cone com creme de salmão marinado",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de creme de salmão marinado e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de creme de salmão marinado",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d2525f45-29fd-4222-a438-78500d186824",
+    "nome": "Croqueta de cordeiro com dip de hortelã",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de cordeiro com dip de hortelã, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de cordeiro com dip de hortelã",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "9c3a69e3-c55b-4368-9916-63741115b20a",
+    "nome": "Croqueta de cupim com dip de gengibre",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de cupim com dip de gengibre, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de cupim com dip de gengibre",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "a7a41d05-6d82-4266-8ed8-80c006a79ba9",
+    "nome": "Croqueta de pato ao molho de laranja",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de pato ao molho de laranja, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de pato ao molho de laranja",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "618eae71-c947-43aa-be22-bc982ea3c7ed",
+    "nome": "Mini taco com chilli beef",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar chilli beef conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Chilli beef",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "987dbca7-0f29-4954-84c8-d238a99b22e0",
+    "nome": "Stick de filé com noisete e geleia de alho negro",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Cortar filé com noisete e geleia de alho negro em formato de palito, empanar em farinha, ovo e panko, e fritar em óleo quente até dourar. Servir com o molho de acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Filé com noisete e geleia de alho negro",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha de trigo",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ovos",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "3779a64e-e579-47a0-932c-70ddb4d9857d",
+    "nome": "Stick de frango ao molho de queijos",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Cortar frango ao molho de queijos em formato de palito, empanar em farinha, ovo e panko, e fritar em óleo quente até dourar. Servir com o molho de acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Frango ao molho de queijos",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha de trigo",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ovos",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "b3365651-2ef6-45c6-a326-c0befac5b637",
+    "nome": "Stick de mignon com geleia de alho negro",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Cortar mignon com geleia de alho negro em formato de palito, empanar em farinha, ovo e panko, e fritar em óleo quente até dourar. Servir com o molho de acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Mignon com geleia de alho negro",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha de trigo",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ovos",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "15c5cddc-e7ae-4740-bcfd-eb108ff77112",
+    "nome": "Cestinha philo de brie ao mel trufado",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de brie ao mel trufado e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de brie ao mel trufado",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "eb797435-28b2-4a09-a59f-e7e531c0f412",
+    "nome": "Trouxinha de pato com laranja",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de pato com laranja e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de pato com laranja",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7c879eff-1608-4a01-b660-8971ddeef466",
+    "nome": "Mini pastel de queijo canastra com melado",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "a7d93160-3396-4f70-b4e4-aa79d5e69d1f",
+    "nome": "Bolinho de bacalhau com azeite",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de bacalhau com azeite, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de bacalhau com azeite",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "2a4f5881-a1f8-47f7-8095-8cd412221a79",
+    "nome": "Cheeseburger (junk food na pista)",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar Cheeseburger conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Cheeseburger",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "c21c4a95-7deb-437a-8584-57e8584d418a",
+    "nome": "Batata frita (junk food na pista)",
+    "categoria": "Canapés Quentes",
+    "foto": "",
+    "rendQtd": 30,
+    "rendUnid": "unidades",
+    "porPessoa": 1.5,
+    "receita": "Preparar Batata frita conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Batata frita",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "3f85ae95-7b72-4bd4-9a7c-c527d2fd680a",
+    "nome": "Batatinha com bacalhau",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de bacalhau e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "016eee2c-7404-4752-88cc-aefbcef9957b",
+    "nome": "Batatinha recheada alho poró e nirá",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar Batatinha recheada alho poró e nirá conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Batatinha recheada alho poró e nirá",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "dca76fc0-cb8b-46a2-9685-9d90f29d2bd0",
+    "nome": "Batatinha recheada com carne seca",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar carne seca conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Carne seca",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7cd76e26-4990-4e7e-8177-a6356d48eb47",
+    "nome": "Batatinha recheada quatro queijos",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar Batatinha recheada quatro queijos conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Batatinha recheada quatro queijos",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "b0dcd78e-0bd3-4a6c-8bda-24d58f0ec298",
+    "nome": "Batatinha recheada salmão e alcaparras",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar Batatinha recheada salmão e alcaparras conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Batatinha recheada salmão e alcaparras",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "b5c7cb01-81fc-4a02-bb44-b5b11d684f4f",
+    "nome": "Bolinha de bobó de camarão com geleia de pimenta",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de bobó de camarão com geleia de pimenta, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de bobó de camarão com geleia de pimenta",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "1eb186fc-d174-4089-95c8-bc5eb0df08fb",
+    "nome": "Bolinha de provolone com alho poró e melado",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de provolone com alho poró e melado, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de provolone com alho poró e melado",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "4cfbb65c-8ac3-4abb-911a-e4559de9ff4c",
+    "nome": "Bolinha de queijo com geleia de pimenta",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de queijo com geleia de pimenta, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de queijo com geleia de pimenta",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "19b5a3bf-6b9b-412b-8b46-964a54334a03",
+    "nome": "Bolinho de feijoada ao molho de manjericão",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de feijoada ao molho de manjericão, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de feijoada ao molho de manjericão",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "2701beaf-487a-4c30-89fa-c2b3328cd1a3",
+    "nome": "Coxinha de costela com molho barbecue",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de costela com molho barbecue, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de costela com molho barbecue",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "9248f82c-cd9f-4a84-be9c-91be78424aba",
+    "nome": "Coxinha gourmet com molho de queijos",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de molho de queijos, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de molho de queijos",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "3e9e5bb2-64f4-49af-b879-04c978a0ff3e",
+    "nome": "Crocante de queijo com melado",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "8291beb1-1664-4534-a985-6bd9243027b1",
+    "nome": "Croquete alemão com mostarda escura",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de mostarda escura, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de mostarda escura",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "f455e46d-6211-4da3-9e70-d16f56611b20",
+    "nome": "Croqueta de ragu",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de ragu, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de ragu",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "e1a8078b-15bc-48e5-b6cc-ce9d78f9955b",
+    "nome": "Dadinho de tapioca com melado de cana",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de tapioca com melado de cana, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de tapioca com melado de cana",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "9c872353-0655-4228-8c49-3dd07512ef7b",
+    "nome": "Tartalete cremosa de bobó de camarão",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de bobó de camarão e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "06c0620d-79be-464b-944b-90ba41defc7d",
+    "nome": "Cestinha de brie com damasco",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de brie com damasco e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de brie com damasco",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "abb20cbf-c8ff-4f8c-a8f7-5ae092876a86",
+    "nome": "Harumaki de bacalhau com molho de limão siciliano",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Rechear a massa de rolinho com o preparo de bacalhau com molho de limão siciliano, enrolar bem fechado e fritar em óleo quente até dourar. Servir com o molho indicado.",
+    "ingredientes": [
+      {
+        "nome": "Massa de rolinho primavera",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de bacalhau com molho de limão siciliano",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "705b3772-7c61-440f-a5a5-db673e25d61c",
+    "nome": "Harumaki de camarão com geleia de pimenta à parte",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Rechear a massa de rolinho com o preparo de camarão com geleia de pimenta à parte, enrolar bem fechado e fritar em óleo quente até dourar. Servir com o molho indicado.",
+    "ingredientes": [
+      {
+        "nome": "Massa de rolinho primavera",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de camarão com geleia de pimenta à parte",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "04d67b45-d1b8-4993-91e8-ee407169b6d4",
+    "nome": "Harumaki de filé suíno ao molho de abacaxi e mostarda",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Rechear a massa de rolinho com o preparo de filé suíno ao molho de abacaxi e mostarda, enrolar bem fechado e fritar em óleo quente até dourar. Servir com o molho indicado.",
+    "ingredientes": [
+      {
+        "nome": "Massa de rolinho primavera",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de filé suíno ao molho de abacaxi e mostarda",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "189f8806-210a-44ff-93f7-ead1e40d5efd",
+    "nome": "Harumaki de pato com chutney de laranja",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Rechear a massa de rolinho com o preparo de pato com chutney de laranja, enrolar bem fechado e fritar em óleo quente até dourar. Servir com o molho indicado.",
+    "ingredientes": [
+      {
+        "nome": "Massa de rolinho primavera",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de pato com chutney de laranja",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "87eca869-c42b-4e59-a9b7-ba9c3a58b6b0",
+    "nome": "Harumaki de salmão com kani ao agridoce",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Rechear a massa de rolinho com o preparo de salmão com kani ao agridoce, enrolar bem fechado e fritar em óleo quente até dourar. Servir com o molho indicado.",
+    "ingredientes": [
+      {
+        "nome": "Massa de rolinho primavera",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de salmão com kani ao agridoce",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "e783dccd-7730-4257-a9ec-e462095af3a0",
+    "nome": "Kafta com molho de hortelã",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar a massa/base, moldar em porções pequenas com o recheio de molho de hortelã, empanar e fritar até dourar por igual.",
+    "ingredientes": [
+      {
+        "nome": "Base (massa, batata ou proteína conforme receita)",
+        "qtd": 500,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de molho de hortelã",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha panko para empanar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "13cf03a4-63dd-4e06-99c9-cf9cc389ba87",
+    "nome": "Mini filé wellington com dip de mostarda e mel",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de dip de mostarda e mel e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "64768534-4be4-4f2c-9620-f975b3c9000d",
+    "nome": "Mini pastel com ragu de carne",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de ragu de carne e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "735eb085-8f91-48d0-ab2f-5653c0d7fcc5",
+    "nome": "Mini pastel de camarão",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar camarão conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Camarão",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "bbf00c78-84ed-4f3c-8bf8-0dcfb3d7de8e",
+    "nome": "Mini pastel de queijo da canastra",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "c881c2f1-3a2e-43dc-8651-793820d7b24c",
+    "nome": "Mini quibe com molho de iogurte",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Preparar molho de iogurte conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Molho de iogurte",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "44af39fb-9420-4d36-8cb7-bd2c9ce19a7b",
+    "nome": "Mini quiche blue cheese e maçã",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de Mini quiche blue cheese e maçã e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de Mini quiche blue cheese e maçã",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "6b91e1c6-cb46-4e30-a927-2195bbb98cc5",
+    "nome": "Mini quiche de alho poró",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de alho poró e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de alho poró",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "02a5cb1e-3605-42d4-b21f-0467c20b1065",
+    "nome": "Mini quiche de brie com geleia de damasco",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de brie com geleia de damasco e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de brie com geleia de damasco",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "10b15a55-320a-4013-bb6a-d8f753c6d02b",
+    "nome": "Mini quiche de chèvre e cebola caramelizada",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de chèvre e cebola caramelizada e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de chèvre e cebola caramelizada",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "e33a71f5-32b9-455b-999e-bff418c84a12",
+    "nome": "Mini quiche lorraine",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de Mini quiche lorraine e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de Mini quiche lorraine",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "1384fb03-4e33-4497-a7a6-41a4332d59d3",
+    "nome": "Vol-au-vent cremoso de salmão",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de salmão e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de salmão",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7ffc63c2-e21a-4ef6-8cb8-ae8c08e251be",
+    "nome": "Vol-au-vent de brie com damasco",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de brie com damasco e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de brie com damasco",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "25f4ed2b-bddc-488e-963e-bee69362f048",
+    "nome": "Vol-au-vent de cogumelos",
+    "categoria": "Forno e Fogão",
+    "foto": "",
+    "rendQtd": 50,
+    "rendUnid": "unidades",
+    "porPessoa": 2,
+    "receita": "Montar a base de massa em mini forminhas, rechear com o preparo de cogumelos e finalizar conforme a receita. Assar ou montar a frio conforme o tipo de massa, e servir gelado ou morno.",
+    "ingredientes": [
+      {
+        "nome": "Massa (folhada, philo ou torradinha artesanal)",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Recheio de cogumelos",
+        "qtd": 450,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme ou queijo de finalização",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ervas e temperos",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "38feadd6-187b-45af-9b12-4c74747e0f1d",
+    "nome": "Arroz de camarão à moda Thai",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de camarão à moda Thai e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "04c67148-c35c-45f4-9faa-9688b5aa3d88",
+    "nome": "Arroz de pato com shitake, molho de vinho merlot",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de pato com shitake, molho de vinho merlot e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "617c3447-976d-4ae7-9768-6129dd63a36a",
+    "nome": "Batata rústica com iscas de filet ao molho ferrugem",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de iscas de filet ao molho ferrugem e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "5359c6f3-7f2f-4f92-8e65-f51f77a8266b",
+    "nome": "Bobó de camarão com arroz de coco e farofinha",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de camarão com arroz de coco e farofinha e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "84229f45-6023-47a6-b282-fa77ed199d41",
+    "nome": "Bobó de shitake",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de shitake e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "2927a732-107b-48b1-b1fb-bcdb439eb8e1",
+    "nome": "Escondidinho de bacalhau",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de bacalhau e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "1b486e45-9d9f-4539-9362-972fc5fab7a0",
+    "nome": "Escondidinho de filet com queijos",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de filet com queijos e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "aaed45d5-3532-4e4d-8b50-8fba284b702b",
+    "nome": "Escondidinho de camarão ao champagne",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de camarão ao champagne e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7ed8370a-a86d-4947-a3d5-957b338aac23",
+    "nome": "Escondidinho de carne seca flambada com queijos cremosos",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de carne seca flambada com queijos cremosos e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "70da82c0-918b-44da-9224-f241c2f3c9ef",
+    "nome": "Escalopinho com arroz à piemontese",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de arroz à piemontese e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "dc986eee-4d7d-40c0-91d3-b35908bc820c",
+    "nome": "Escalopinho ao molho de gorgonzola com arroz de amêndoas",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de molho de gorgonzola com arroz de amêndoas e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "4c792611-7fdc-4a41-b597-6f8515e655d1",
+    "nome": "Brandada de bacalhau com alho-poró e parmesão",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de bacalhau com alho-poró e parmesão e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "4f5cc8b0-2f81-478f-a5f7-6cd1b4e52693",
+    "nome": "Bacalhau com batata palha e arroz com brócolis",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de batata palha e arroz com brócolis e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "1a32b1bf-a432-4727-b9f1-c81f8b843835",
+    "nome": "Linguado beurre blanc de coco com musseline de baroa",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de coco com musseline de baroa e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "fc240a85-e913-483f-9ed3-b5d05eed413e",
+    "nome": "Peixe branco ao molho de limão com batata aligot",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de molho de limão com batata aligot e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "60665966-289e-49e9-808e-10b35739dbc6",
+    "nome": "Picadinho de mignon com arroz de castanha e batatinha palha",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de mignon com arroz de castanha e batatinha palha e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "c17c5c15-a6ac-4d59-8055-cf117a5686e4",
+    "nome": "Filezinho de mignon ao molho madeira com musseline de mandioquinha",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Preparar mignon ao molho madeira com musseline de mandioquinha conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Mignon ao molho madeira com musseline de mandioquinha",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7bcc6b92-942c-45b2-889e-85df9f082265",
+    "nome": "Filé mignon ao molho de vinho do porto com musseline de mandioquinha",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de molho de vinho do porto com musseline de mandioquinha e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "35570698-1713-44c9-b21e-708ef124ee95",
+    "nome": "Filé mignon com crosta de parmesão ao molho escuro com risoto de alho poró",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar crosta de parmesão ao molho escuro com risoto de alho poró. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Crosta de parmesão ao molho escuro com risoto de alho poró",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "86b65350-8c45-4a7d-97ef-1846da6aff75",
+    "nome": "Filé mignon com crosta de brie ao molho de ervas com risoto de funghi",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar crosta de brie ao molho de ervas com risoto de funghi. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Crosta de brie ao molho de ervas com risoto de funghi",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d4300616-c14b-48c8-ad8c-5e7e47f5ee6e",
+    "nome": "Ragu de costela ao barbecue sobre polentinha cremosa",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de costela ao barbecue sobre polentinha cremosa e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "14bc9e4b-821f-4de5-8988-aa1b50fee90f",
+    "nome": "Nhoque de baroa com molho de gorgonzola e nozes",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Cozinhar a massa em água fervente até subir à superfície, escorrer e finalizar no molho de baroa com molho de gorgonzola e nozes indicado na receita.",
+    "ingredientes": [
+      {
+        "nome": "Massa (nhoque ou ravioli)",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Queijo para finalizar",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "27151bb8-c428-4ebc-8142-53bf0e89aa1b",
+    "nome": "Nhoque de bacalhau com fonduta de queijos",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Cozinhar a massa em água fervente até subir à superfície, escorrer e finalizar no molho de bacalhau com fonduta de queijos indicado na receita.",
+    "ingredientes": [
+      {
+        "nome": "Massa (nhoque ou ravioli)",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Queijo para finalizar",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "058bd4e4-ca77-44f1-b466-99d1117be7a4",
+    "nome": "Ravioli de queijos com molho de costela desfiada ao vinho",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Cozinhar a massa em água fervente até subir à superfície, escorrer e finalizar no molho de queijos com molho de costela desfiada ao vinho indicado na receita.",
+    "ingredientes": [
+      {
+        "nome": "Massa (nhoque ou ravioli)",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Queijo para finalizar",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "489a973a-d927-46df-add4-16a9a7fd096f",
+    "nome": "Ravioli de brie com molho de cogumelos",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Cozinhar a massa em água fervente até subir à superfície, escorrer e finalizar no molho de brie com molho de cogumelos indicado na receita.",
+    "ingredientes": [
+      {
+        "nome": "Massa (nhoque ou ravioli)",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Queijo para finalizar",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d96cb970-b977-4040-aaba-2d246b2f1ec2",
+    "nome": "Ravioli recheado de mix de cogumelos ao molho de queijo azul",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Cozinhar a massa em água fervente até subir à superfície, escorrer e finalizar no molho de mix de cogumelos ao molho de queijo azul indicado na receita.",
+    "ingredientes": [
+      {
+        "nome": "Massa (nhoque ou ravioli)",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Queijo para finalizar",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "53e8bb21-5222-4b07-a3a8-85ef9dabd5b1",
+    "nome": "Risoto ao quatro queijos com filet ao molho de cogumelos",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar quatro queijos com filet ao molho de cogumelos. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Quatro queijos com filet ao molho de cogumelos",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "761dec0f-a464-4351-bdf0-8a0bfea91b8c",
+    "nome": "Risoto de bacalhau com crisp de parma",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar bacalhau com crisp de parma. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Bacalhau com crisp de parma",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "978f7593-4ba5-4c4b-b7e8-9f8b594f607a",
+    "nome": "Risoto de bisque de camarão e camarões flambados",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar bisque de camarão e camarões flambados. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Bisque de camarão e camarões flambados",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "958b2f5c-4d16-4912-b3e5-a390cb11a426",
+    "nome": "Risoto ao limone com filet de salmão",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar limone com filet de salmão. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Limone com filet de salmão",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "07c5a016-d048-4bc2-b8ff-2f771b9ae54d",
+    "nome": "Risoto de grana padano com medalhão ao bernaise",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar grana padano com medalhão ao bernaise. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Grana padano com medalhão ao bernaise",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "e6075d7b-f87f-4919-ac0b-94f5eee64480",
+    "nome": "Risoto trio de cogumelos e pangratato de ervas",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar cogumelos e pangratato de ervas. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Cogumelos e pangratato de ervas",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "2f5a28f9-4dda-4425-8c7c-25d321d66bf6",
+    "nome": "Risoto com queijo azul, pistache e pêra ao vinho",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar queijo azul, pistache e pêra ao vinho. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Queijo azul, pistache e pêra ao vinho",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "b5f95af3-de65-4aaa-aea4-1d1e2bfe0984",
+    "nome": "Risoto al mare",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar Risoto al mare. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Risoto al mare",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "a3fe60cc-2a7a-40c3-9002-997fd0212ec8",
+    "nome": "Nhoque de baroa com molho de cogumelos",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Cozinhar a massa em água fervente até subir à superfície, escorrer e finalizar no molho de baroa com molho de cogumelos indicado na receita.",
+    "ingredientes": [
+      {
+        "nome": "Massa (nhoque ou ravioli)",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho de acompanhamento",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Queijo para finalizar",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7976bfae-00f1-4936-832e-30c573d57720",
+    "nome": "Ragu de cordeiro com aligot de batatas",
+    "categoria": "Mini Jantar Volante",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 100,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de cordeiro com aligot de batatas e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "41983e08-e4aa-4ca6-bf61-9c8c1c770d50",
+    "nome": "Salada bouquet de folhas verdes com lascas de parmesão, fatias de parma e redução de balsâmico",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "541f0f83-eec1-494d-ae9b-072cb2d429cf",
+    "nome": "Medalhões de salmão ao molho champagne",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de salmão ao molho champagne e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "b4ffb877-ae83-47a1-9c3e-1e9e6d80c442",
+    "nome": "Robalo com crosta de ervas ao beurre blanc",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de crosta de ervas ao beurre blanc e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "b9344ca8-95a5-4ea7-9149-1ca9a051c5cd",
+    "nome": "Escalope mignon ao molho madeira, vinho, cogumelos ou crosta de ervas ao demi glace",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de molho madeira, vinho, cogumelos ou crosta de ervas ao demi glace e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "a3e67fd1-0e90-4015-b5a6-8d3e92bead26",
+    "nome": "Bobó de camarão",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de camarão e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "a96e5208-b592-4b71-b70c-87c01db6b761",
+    "nome": "Risoto de arroz negro ao limone",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar arroz negro ao limone. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Arroz negro ao limone",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "2e8be973-a391-443d-89ec-b6db17c32a73",
+    "nome": "Risoto de parmesão reggiano",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar parmesão reggiano. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Parmesão reggiano",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "ee0a8dbc-de96-4d45-9e87-5a1f233555dd",
+    "nome": "Risoto de cogumelos ao funghi",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Refogar o arroz, adicionar o caldo aos poucos mexendo sempre. Nos últimos minutos, incorporar cogumelos ao funghi. Finalizar com manteiga e parmesão.",
+    "ingredientes": [
+      {
+        "nome": "Arroz arbóreo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Caldo (legumes ou carne)",
+        "qtd": 400,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Cogumelos ao funghi",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga e parmesão",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "e2c86163-66d8-401a-b301-a0fa8d130000",
+    "nome": "Musseline de batatas trufadas",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Preparar batatas trufadas conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Batatas trufadas",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "ffc43794-84fd-4318-af8c-eb1f7399efa9",
+    "nome": "Legumes baby glaceados",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Preparar Legumes baby glaceados conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Legumes baby glaceados",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "5b58bb20-c480-4e0e-a901-55f73fdaa23b",
+    "nome": "Musseline de batata baroa",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Preparar batata baroa conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Batata baroa",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "0b67704c-5318-4476-ab51-1091eb735182",
+    "nome": "Aligot",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Preparar Aligot conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Aligot",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "4e82964c-047e-42b3-ad53-a311f4d39e33",
+    "nome": "Arroz de coco com farofa de dendê",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Selar ou grelhar a proteína no ponto, finalizar com o molho de coco com farofa de dendê e montar com o acompanhamento indicado.",
+    "ingredientes": [
+      {
+        "nome": "Proteína principal",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Molho indicado na receita",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Acompanhamento indicado na receita",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "14817fc8-5e2b-4f26-a393-4b8417481868",
+    "nome": "Raviole artesanal de cogumelos com manteiga de sálvia e nozes carameladas",
+    "categoria": "Mini Jantar Estacionado",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 200,
+    "receita": "Preparar cogumelos com manteiga de sálvia e nozes carameladas conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Cogumelos com manteiga de sálvia e nozes carameladas",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "c2dded4b-1225-4594-9a73-3a965239f121",
+    "nome": "Pizza branca (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "237a51ca-6b14-47c1-a672-1643fda95cb3",
+    "nome": "Seleção de pães, torradas e chips artesanais (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "3fd9dff5-d284-4857-98bf-1e5a3494fe89",
+    "nome": "Gateau de roast beef (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "79ff203c-2ec0-4fcc-a2c7-8a3521418acd",
+    "nome": "Gateau de camarão (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "ccc6d0d5-0fab-4eb3-8aa3-a2cbc0ff31b0",
+    "nome": "Terrine de salmão (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "cfa00cc7-cda6-454a-b7e9-279f10bda0f1",
+    "nome": "Salada caprese (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "080a2cf0-93d0-4954-99a9-1089aab43f65",
+    "nome": "Pirâmide de foie gras com geleia de amora (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "ed3daaba-7c1f-4893-a070-458f2a2dc8c3",
+    "nome": "Couscous al mare (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "cb2ea31b-a6ac-46f3-b94a-8b0267a8e0e0",
+    "nome": "Queijo parmesão em peça (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "ef6ec9c6-957c-40a2-8503-b0daec95f4c3",
+    "nome": "Queijo gorgonzola em peça (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "507bcf91-33eb-4ff3-9b41-caea62f1df40",
+    "nome": "Salame Milani e presunto parma (item fixo)",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "99912298-f5d6-4739-a602-b6aada60d8ae",
+    "nome": "Trio de Homus",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Preparar Homus conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Homus",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "14d9aca1-14e7-4aed-938c-9b77620b4b91",
+    "nome": "Mix de cogumelos flambados",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Preparar cogumelos flambados conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Cogumelos flambados",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "da0ecf1e-a054-4643-ac7d-ce2d604c4a12",
+    "nome": "Carpaccio de carne com pesto e alcaparras",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Fatiar carne com pesto e alcaparras bem fino, dispor em prato ou base individual, regar com azeite e limão, e finalizar com o acompanhamento indicado na receita.",
+    "ingredientes": [
+      {
+        "nome": "Carne com pesto e alcaparras fatiado bem fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Azeite extravirgem",
+        "qtd": 100,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Limão siciliano",
+        "qtd": 50,
+        "unidade": "g"
+      },
+      {
+        "nome": "Lascas de parmesão ou acompanhamento",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e pimenta",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "913c2088-325c-459e-98e0-042844834192",
+    "nome": "Carpaccio de salmão defumado ao tartufo de ervas e sour cream",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Fatiar salmão defumado ao tartufo de ervas e sour cream bem fino, dispor em prato ou base individual, regar com azeite e limão, e finalizar com o acompanhamento indicado na receita.",
+    "ingredientes": [
+      {
+        "nome": "Salmão defumado ao tartufo de ervas e sour cream fatiado bem fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Azeite extravirgem",
+        "qtd": 100,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Limão siciliano",
+        "qtd": 50,
+        "unidade": "g"
+      },
+      {
+        "nome": "Lascas de parmesão ou acompanhamento",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Sal e pimenta",
+        "qtd": 50,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "7ae6f781-c1e7-4499-abbd-c972af9ead2d",
+    "nome": "Burrata com tapenade de azeitona e pesto de manjericão",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Preparar tapenade de azeitona e pesto de manjericão conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Tapenade de azeitona e pesto de manjericão",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "265c85bc-ba34-4067-88ab-96f76265cc0c",
+    "nome": "Torre de figo no mel, parma e gorgonzola",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Preparar figo no mel, parma e gorgonzola conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Figo no mel, parma e gorgonzola",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "41f95160-f4fb-4812-be5f-82c552f9fb47",
+    "nome": "Ceviche de peixe branco",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Marinar peixe branco no suco cítrico com cebola roxa e temperos por curto período antes do serviço. Finalizar com coentro fresco.",
+    "ingredientes": [
+      {
+        "nome": "Peixe branco",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Suco cítrico (limão)",
+        "qtd": 150,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Cebola roxa",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Coentro",
+        "qtd": 50,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "cbf70ad8-ad8d-4808-a70b-b68f201467f7",
+    "nome": "Salmão Gravlax com creme azedo",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Picar creme azedo finamente à faca, temperar na hora do serviço e montar sobre a base escolhida.",
+    "ingredientes": [
+      {
+        "nome": "Creme azedo picado fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos cítricos e ervas",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Base (torradinha ou blini)",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d00bd0f7-00f6-4ce3-ad57-c1456614ec4e",
+    "nome": "Brie folhado com torre de favo de mel",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Preparar torre de favo de mel conforme técnica padrão da casa e finalizar para o serviço.",
+    "ingredientes": [
+      {
+        "nome": "Torre de favo de mel",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos e finalização",
+        "qtd": 300,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "df5b5686-e682-479c-98c6-14ab34fea9b1",
+    "nome": "Steak tartare com tuile de parmesão",
+    "categoria": "Ilha Estacionada / Antepasto",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Picar tuile de parmesão finamente à faca, temperar na hora do serviço e montar sobre a base escolhida.",
+    "ingredientes": [
+      {
+        "nome": "Tuile de parmesão picado fino",
+        "qtd": 700,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos cítricos e ervas",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Base (torradinha ou blini)",
+        "qtd": 150,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d32f01bb-6c7d-4d8b-a769-f2b33cada6f7",
+    "nome": "Mini banoffee",
+    "categoria": "Sobremesas",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Fazer a base com bolacha triturada e manteiga, prensar em forminhas. Cobrir com doce de leite, fatias de banana e finalizar com chantilly e raspas de chocolate.",
+    "ingredientes": [
+      {
+        "nome": "Bolacha amanteigada triturada",
+        "qtd": 200,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga derretida",
+        "qtd": 60,
+        "unidade": "g"
+      },
+      {
+        "nome": "Doce de leite",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Banana fatiada",
+        "qtd": 200,
+        "unidade": "g"
+      },
+      {
+        "nome": "Chantilly",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Chocolate em raspas",
+        "qtd": 40,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "e243d6b9-a373-487d-9fcc-af82fadcf35d",
+    "nome": "Brownie de chocolate com fondue de chocolate intenso",
+    "categoria": "Sobremesas",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Assar o brownie tradicional e cortar em mini porções. Servir quente com fondue de chocolate meio amargo derretido com creme de leite.",
+    "ingredientes": [
+      {
+        "nome": "Chocolate meio amargo",
+        "qtd": 300,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga",
+        "qtd": 200,
+        "unidade": "g"
+      },
+      {
+        "nome": "Açúcar",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Ovos",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Farinha de trigo",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme de leite fresco (para o fondue)",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "8e1b53e7-e490-4c0f-802e-4fa2b8a2e172",
+    "nome": "Mousse de chocolate meio amargo",
+    "categoria": "Sobremesas",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Derreter o chocolate, incorporar às gemas batidas e ao creme de leite fresco batido em ponto de chantilly. Gelar por no mínimo 2h antes de servir.",
+    "ingredientes": [
+      {
+        "nome": "Chocolate meio amargo",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Creme de leite fresco",
+        "qtd": 400,
+        "unidade": "g"
+      },
+      {
+        "nome": "Açúcar",
+        "qtd": 150,
+        "unidade": "g"
+      },
+      {
+        "nome": "Gemas",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "a632a019-329b-45f8-994b-e3774038b693",
+    "nome": "Cocada cremosa com toque de leite condensado",
+    "categoria": "Sobremesas",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Levar todos os ingredientes ao fogo baixo, mexendo até soltar do fundo da panela. Distribuir em mini potes e gelar.",
+    "ingredientes": [
+      {
+        "nome": "Coco ralado fresco",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Leite condensado",
+        "qtd": 350,
+        "unidade": "g"
+      },
+      {
+        "nome": "Leite",
+        "qtd": 200,
+        "unidade": "g"
+      },
+      {
+        "nome": "Manteiga",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "d76bd10a-e504-4985-9b97-a954849e86b0",
+    "nome": "Churros com doce de leite argentino",
+    "categoria": "Sobremesas",
+    "foto": "",
+    "rendQtd": 20,
+    "rendUnid": "unidades",
+    "porPessoa": 1,
+    "receita": "Fritar a massa de churros em óleo quente até dourar, passar no açúcar com canela e servir com doce de leite argentino para banhar.",
+    "ingredientes": [
+      {
+        "nome": "Massa de churros (água, farinha, manteiga, sal)",
+        "qtd": 550,
+        "unidade": "g"
+      },
+      {
+        "nome": "Óleo para fritura",
+        "qtd": 250,
+        "unidade": "g"
+      },
+      {
+        "nome": "Açúcar e canela",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Doce de leite argentino",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "2f2a5f09-2492-4e64-96f2-f8c6c2872acf",
+    "nome": "Peça de presunto de Parma (acompanha melão, figos, redução de balsâmico e rúcula) — R$ 30 por convidado",
+    "categoria": "Estações Extras",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Item fixo de ilha/antepasto — apenas porcionar e dispor na montagem, sem preparo culinário adicional.",
+    "ingredientes": [
+      {
+        "nome": "Produto pronto para porcionamento",
+        "qtd": 1000,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "be1ccaf5-76f0-4200-b6b5-3d613434327a",
+    "nome": "Ilha de massa italiana ou risoteria, diversos molhos e finalizações — R$ 28 por convidado",
+    "categoria": "Estações Extras",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Estação/ilha estacionada — montar conforme descrição do item, com reposição contínua durante o evento.",
+    "ingredientes": []
+     
+     
+  },
+  {
+    "id": "90946b34-cec6-4830-92e0-64b56e327333",
+    "nome": "Bar de ceviche: peixes, polvo, camarões, banana da terra, manga, kiwi, limão, manjericão, cebola roxa, coentro — R$ 32 por convidado",
+    "categoria": "Estações Extras",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Marinar ceviche: peixes, polvo, camarões, banana da terra, manga, kiwi, limão, manjericão, cebola roxa, coentro — R$ 32 por convidado no suco cítrico com cebola roxa e temperos por curto período antes do serviço. Finalizar com coentro fresco.",
+    "ingredientes": [
+      {
+        "nome": "Ceviche: peixes, polvo, camarões, banana da terra, manga, kiwi, limão, manjericão, cebola roxa, coentro — R$ 32 por convidado",
+        "qtd": 600,
+        "unidade": "g"
+      },
+      {
+        "nome": "Suco cítrico (limão)",
+        "qtd": 150,
+        "unidade": "ml"
+      },
+      {
+        "nome": "Cebola roxa",
+        "qtd": 100,
+        "unidade": "g"
+      },
+      {
+        "nome": "Coentro",
+        "qtd": 50,
+        "unidade": "g"
+      },
+      {
+        "nome": "Temperos",
+        "qtd": 100,
+        "unidade": "g"
+      }
+    ]
+     
+     
+  },
+  {
+    "id": "48bd64c1-70f4-4b05-91cc-eb92d448be64",
+    "nome": "Ilha de fondue de chocolate nobre com frutas da estação, marshmallows e acompanhamentos — R$ 28 por convidado",
+    "categoria": "Estações Extras",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Estação/ilha estacionada — montar conforme descrição do item, com reposição contínua durante o evento.",
+    "ingredientes": []
+     
+     
+  },
+  {
+    "id": "9bb1ccbd-9b62-478f-b93a-e74b9c21e432",
+    "nome": "Ilha de sobremesas (6 a 8 opções), mini sobremesas variadas e sofisticadas — R$ 32 por convidado",
+    "categoria": "Estações Extras",
+    "foto": "",
+    "rendQtd": 1000,
+    "rendUnid": "g",
+    "porPessoa": 50,
+    "receita": "Estação/ilha estacionada — montar conforme descrição do item, com reposição contínua durante o evento.",
+    "ingredientes": []
+     
+     
+  }
+]

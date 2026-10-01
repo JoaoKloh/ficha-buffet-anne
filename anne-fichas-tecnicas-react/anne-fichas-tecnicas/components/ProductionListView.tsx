@@ -5,74 +5,138 @@ import { useRouter } from "next/navigation";
 import { Header } from "./Header";
 import { ProductionFormModal } from "./ProductionFormModal";
 import { useToast } from "./ui/Toast";
-import { productionsApi } from "@/lib/api/productions";
-import { ApiError } from "@/lib/api/client";
 import { fmtDate } from "@/lib/utils/format";
-import type { Dish } from "@/lib/models/dish";
-import type { Production, CreateProductionInput } from "@/lib/models/production";
+import type { PratoDetalhadoResponseDTO } from "@/lib/models/prato";
+import type {
+  ProducaoResponseDTO,
+  CreateProducaoRequestDTO,
+  UpdateProducaoRequestDTO,
+} from "@/lib/models/producao";
 
 interface Props {
-  initialProductions: Production[];
-  dishes: Dish[];
+  initialProducoes: ProducaoResponseDTO[];
+  pratos: PratoDetalhadoResponseDTO[];
 }
 
-export function ProductionListView({ initialProductions, dishes }: Props) {
-  const [productions, setProductions] = useState<Production[]>(initialProductions);
-  const [editing, setEditing] = useState<Production | null>(null);
+export function ProductionListView({ initialProducoes, pratos }: Props) {
+  const [producoes, setProducoes] = useState<ProducaoResponseDTO[]>(initialProducoes);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [editing, setEditing] = useState<ProducaoResponseDTO | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const { showToast } = useToast();
   const router = useRouter();
 
   function openNew() {
-    if (dishes.length === 0) {
+    if (pratos.length === 0) {
       showToast("Cadastre ao menos um prato no catálogo antes de criar uma produção.", "error");
       return;
     }
     setEditing(null);
     setModalOpen(true);
   }
-  function openEdit(p: Production, e: React.MouseEvent) {
+  function openEdit(p: ProducaoResponseDTO, e: React.MouseEvent) {
     e.stopPropagation();
     setEditing(p);
     setModalOpen(true);
   }
 
-  async function handleSave(input: CreateProductionInput) {
+  // POST -> Envia direto para /api/producao (proxy do ProducaoController real)
+  async function handleCreate(input: CreateProducaoRequestDTO) {
     try {
-      if (editing) {
-        const updated = await productionsApi.update(editing.id, input);
-        setProductions((prev) => prev.map((p) => (p.id === updated.id ? updated : p)));
-        showToast("Produção atualizada.");
-        setModalOpen(false);
-      } else {
-        const created = await productionsApi.create(input);
-        setProductions((prev) => [...prev, created]);
-        showToast("Produção criada.");
-        setModalOpen(false);
-        router.push(`/producao/${created.id}`);
+      const response = await fetch("/api/producao", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(input),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || "Não foi possível criar a produção.");
       }
+
+      setModalOpen(false);
+      showToast("Produção criada com sucesso no banco de dados!");
+
+      // O backend responde 201 sem corpo (sem id) — recarrega a página do
+      // Server Component para refletir a nova produção vinda do banco.
+      window.location.reload();
     } catch (err) {
-      const message = err instanceof ApiError ? err.message : "Não foi possível salvar a produção.";
+      const message = err instanceof Error ? err.message : "Não foi possível salvar a produção.";
       showToast(message, "error");
     }
   }
 
-  async function handleDelete(p: Production, e: React.MouseEvent) {
-    e.stopPropagation();
-    if (!confirm(`Excluir a produção "${p.evento}"? Essa ação não pode ser desfeita.`)) return;
+  // PUT -> Envia direto para /api/producao
+  async function handleUpdate(input: UpdateProducaoRequestDTO) {
     try {
-      await productionsApi.remove(p.id);
-      setProductions((prev) => prev.filter((x) => x.id !== p.id));
-      showToast("Produção excluída.");
+      const response = await fetch("/api/producao", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(input),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || "Não foi possível atualizar a produção.");
+      }
+
+      setProducoes((prev) =>
+        prev.map((p) =>
+          p.id === input.id
+            ? {
+                ...p,
+                nome: input.nome,
+                quantidade: input.quantidade,
+                data: input.data,
+                pratos: pratos.filter((c) => input.pratos.some((sel) => sel.pratoId === c.id)),
+              }
+            : p
+        )
+      );
+      setEditing(null);
+      setModalOpen(false);
+      showToast("Produção atualizada com sucesso!");
     } catch (err) {
-      const message = err instanceof ApiError ? err.message : "Não foi possível excluir a produção.";
+      const message = err instanceof Error ? err.message : "Não foi possível atualizar a produção.";
       showToast(message, "error");
     }
   }
 
-  const sorted = [...productions].sort(
-    (a, b) => new Date(b.data || b.createdAt).getTime() - new Date(a.data || a.createdAt).getTime()
-  );
+  async function handleSave(input: CreateProducaoRequestDTO) {
+    if (editing) {
+      await handleUpdate({ ...input, id: editing.id });
+    } else {
+      await handleCreate(input);
+    }
+  }
+
+  // DELETE -> Envia direto para /api/producao?id=X
+  async function handleDelete(p: ProducaoResponseDTO, e: React.MouseEvent) {
+    e.stopPropagation();
+    if (!confirm(`Excluir a produção "${p.nome}"? Essa ação não pode ser desfeita.`)) return;
+    try {
+      const response = await fetch(`/api/producao?id=${p.id}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || "Não foi possível excluir a produção.");
+      }
+
+      setProducoes((prev) => prev.filter((x) => x.id !== p.id));
+      showToast("Produção excluída do banco de dados.");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Não foi possível excluir a produção.";
+      showToast(message, "error");
+    }
+  }
+
+  const query = searchQuery.trim().toLowerCase();
+  const filtered = query
+    ? producoes.filter((p) => p.nome.toLowerCase().includes(query))
+    : producoes;
+  const sorted = [...filtered].sort((a, b) => new Date(b.data).getTime() - new Date(a.data).getTime());
 
   return (
     <div className="app">
@@ -84,10 +148,25 @@ export function ProductionListView({ initialProductions, dishes }: Props) {
         }
       />
 
+      <div className="search-bar">
+        <input
+          type="search"
+          placeholder="Buscar produção pelo nome do evento..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
+
       {sorted.length === 0 ? (
         <div className="empty-state">
-          Nenhuma produção criada ainda. Clique em &quot;+ Nova produção&quot; para montar a lista de um
-          evento.
+          {query
+            ? "Nenhuma produção encontrada para essa busca."
+            : (
+              <>
+                Nenhuma produção criada ainda. Clique em &quot;+ Nova produção&quot; para montar a lista de um
+                evento.
+              </>
+            )}
         </div>
       ) : (
         <div className="prod-list">
@@ -98,10 +177,10 @@ export function ProductionListView({ initialProductions, dishes }: Props) {
               onClick={() => router.push(`/producao/${p.id}`)}
             >
               <div>
-                <div className="prod-name">{p.evento}</div>
+                <div className="prod-name">{p.nome}</div>
                 <div className="prod-meta">
-                  {fmtDate(p.data)} · {p.convidados ? `${p.convidados} convidados · ` : ""}
-                  {p.itens.length} {p.itens.length === 1 ? "item" : "itens"}
+                  {fmtDate(p.data)} · {p.quantidade ? `${p.quantidade} convidados · ` : ""}
+                  {p.pratos.length} {p.pratos.length === 1 ? "prato" : "pratos"}
                 </div>
               </div>
               <div className="prod-card-actions">
@@ -120,7 +199,6 @@ export function ProductionListView({ initialProductions, dishes }: Props) {
       {modalOpen && (
         <ProductionFormModal
           initial={editing}
-          dishes={dishes}
           onClose={() => setModalOpen(false)}
           onSave={handleSave}
         />

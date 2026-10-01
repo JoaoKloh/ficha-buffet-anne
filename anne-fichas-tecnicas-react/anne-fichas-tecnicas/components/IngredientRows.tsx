@@ -1,6 +1,9 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import type { Ingrediente } from "@/lib/models/dish";
+import { listarIngredientesDisponiveis } from "@/lib/api/pratoIngredientes";
+import type { IngredienteResponseDTO } from "@/lib/models/prato";
 
 interface Props {
   ingredientes: Ingrediente[];
@@ -8,6 +11,14 @@ interface Props {
 }
 
 export function IngredientRows({ ingredientes, onChange }: Props) {
+  const [catalogo, setCatalogo] = useState<IngredienteResponseDTO[]>([]);
+
+  useEffect(() => {
+    listarIngredientesDisponiveis()
+      .then(setCatalogo)
+      .catch(() => setCatalogo([]));
+  }, []);
+
   function updateRow(index: number, patch: Partial<Ingrediente>) {
     const next = ingredientes.map((ing, i) => (i === index ? { ...ing, ...patch } : ing));
     onChange(next);
@@ -19,16 +30,33 @@ export function IngredientRows({ ingredientes, onChange }: Props) {
     onChange([...ingredientes, { nome: "", qtd: 0, unidade: "" }]);
   }
 
+  // Selecionar no menu suspenso grava o id real do ingrediente (enviado ao
+  // backend como ingredienteId) e usa nome/unidade do catálogo para exibição.
+  function handleSelect(index: number, idSelecionado: string) {
+    const selecionado = catalogo.find((c) => String(c.id) === idSelecionado);
+    if (!selecionado) {
+      updateRow(index, { ingredienteId: undefined, nome: "", unidade: "" });
+      return;
+    }
+    updateRow(index, {
+      ingredienteId: selecionado.id,
+      nome: selecionado.nome,
+      unidade: selecionado.unidade,
+    });
+  }
+
   return (
     <div>
       {ingredientes.map((ing, i) => (
         <div className="ing-row" key={i}>
-          <input
-            type="text"
-            placeholder="Ingrediente"
-            value={ing.nome}
-            onChange={(e) => updateRow(i, { nome: e.target.value })}
-          />
+          <select value={ing.ingredienteId ?? ""} onChange={(e) => handleSelect(i, e.target.value)}>
+            <option value="">Selecione um ingrediente</option>
+            {catalogo.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.nome}
+              </option>
+            ))}
+          </select>
           <input
             type="number"
             min={0}

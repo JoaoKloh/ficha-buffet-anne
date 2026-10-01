@@ -1,18 +1,21 @@
 import { CatalogView } from "@/components/CatalogView";
-import { dishRepository } from "@/lib/server/db";
-import { buildSeedDishes } from "@/lib/server/seedData";
+import { pratoBackend } from "@/lib/server/pratoBackend";
+import type { PratoDetalhadoResponseDTO } from "@/lib/models/prato";
 
 // Página sempre renderizada no servidor a cada requisição — o catálogo muda com frequência
 // e não deve ficar em cache estático entre deploys.
 export const dynamic = "force-dynamic";
 
 export default async function CatalogPage() {
-  // Server Components podem acessar a camada de dados diretamente — evita um
-  // round-trip HTTP desnecessário no primeiro carregamento. As mutações do
-  // usuário (criar/editar/excluir), essas sim, sempre passam pela API HTTP
-  // (ver components/CatalogView.tsx → lib/api/dishes.ts), como pedido.
-  await dishRepository.seedIfEmpty(buildSeedDishes());
-  const dishes = await dishRepository.list();
+  // Fonte do catálogo: o backend real (PratoController). Se o backend estiver
+  // fora do ar, cai para lista vazia em vez de derrubar a página inteira.
+  let pratos: PratoDetalhadoResponseDTO[];
+  try {
+    pratos = await pratoBackend.listarTodos();
+  } catch (err) {
+    console.error("[CatalogPage] Falha ao carregar pratos do backend", err);
+    pratos = [];
+  }
 
-  return <CatalogView initialDishes={dishes} />;
+  return <CatalogView initialPratos={pratos} />;
 }
