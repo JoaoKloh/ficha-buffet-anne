@@ -84,7 +84,8 @@ class IngredientesServiceRegressionTest {
             "Torrada", "Lanche", null, 1, "unidade", 1.0, "receita",
             List.of(new CreatePratoItemIngredienteDTO(ingredienteBase.getId(), 20.0, "g"))
         );
-        PratoEntity prato = pratoService.criarPrato(createDto);
+        pratoService.criarPrato(createDto);
+        PratoEntity prato = pratoService.getPratoByNome("Torrada");
         entityManager.flush();
         entityManager.clear();
 

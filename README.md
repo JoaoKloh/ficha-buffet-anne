@@ -36,7 +36,7 @@ Navegador ──► Next.js (porta 3000) ──► Spring Boot (porta 8080) ─�
 
 **Frontend:** Next.js 16, React 18, TypeScript, Zod, `@vercel/blob`
 
-**Backend:** Java 21, Spring Boot 4, Spring Security (OAuth2 Resource Server/JWT), Spring Data JPA, PostgreSQL, Caffeine (cache), Bucket4j (rate limiting), Lombok
+**Backend:** Java 21, Spring Boot 4, Spring Security (OAuth2 Resource Server/JWT), Spring Data JPA, PostgreSQL, Bucket4j (rate limiting), Lombok
 
 **Infraestrutura:** Docker, Docker Compose, GitHub Actions, Docker Hub, VPS
 
@@ -55,7 +55,7 @@ Navegador ──► Next.js (porta 3000) ──► Spring Boot (porta 8080) ─�
 │   └── Dockerfile
 ├── ficha-buffet/                                       # Backend Spring Boot
 │   ├── src/main/java/com/jbkloh/ficha_buffet/
-│   │   ├── config/         # Segurança, CORS, cache, rate limit, chaves RSA
+│   │   ├── config/         # Segurança, CORS, rate limit, chaves RSA
 │   │   ├── controller/     # Endpoints REST
 │   │   ├── service/        # Regras de negócio
 │   │   ├── model/          # Entidades JPA

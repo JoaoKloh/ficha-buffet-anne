@@ -14,7 +14,10 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const backendRes = await pratoBackend.login({ username: body.username, password: body.password });
+    const backendRes = await pratoBackend.login(
+      { username: body.username, password: body.password },
+      req.headers.get("x-forwarded-for")
+    );
 
     const res = new NextResponse(null, { status: 204 });
     for (const cookie of backendRes.headers.getSetCookie()) {

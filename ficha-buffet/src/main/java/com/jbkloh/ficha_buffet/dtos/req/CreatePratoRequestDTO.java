@@ -10,6 +10,8 @@ import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 import org.hibernate.validator.constraints.URL;
 
+import com.jbkloh.ficha_buffet.model.PratoEntity;
+
 public record CreatePratoRequestDTO(
 
     @NotBlank(message = "O nome do prato é obrigatório.")
@@ -40,4 +42,17 @@ public record CreatePratoRequestDTO(
     @NotEmpty(message = "O prato deve conter pelo menos um ingrediente.")
     List<@Valid CreatePratoItemIngredienteDTO> ingredientes
 
-) {}
+) {
+
+    public static PratoEntity toEntity(CreatePratoRequestDTO dto) {
+        PratoEntity prato = new PratoEntity();
+        prato.setNome(dto.nome());
+        prato.setCategoria(dto.categoria());
+        prato.setUrlImagem(dto.foto());
+        prato.setRendimentoReceita(dto.rendQtd());
+        prato.setUnidade(dto.rendUnid());
+        prato.setRendimentoPessoa(dto.porPessoa());
+        prato.setDescricao(dto.receita());
+        return prato;
+    }
+}

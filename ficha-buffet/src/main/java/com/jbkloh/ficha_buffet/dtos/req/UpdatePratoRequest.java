@@ -10,6 +10,8 @@ import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 import org.hibernate.validator.constraints.URL;
 
+import com.jbkloh.ficha_buffet.model.PratoEntity;
+
 public record UpdatePratoRequest(
 
     @NotNull(message = "O id do prato precisa ser informado.")
@@ -43,4 +45,15 @@ public record UpdatePratoRequest(
     @NotEmpty(message = "O prato deve conter pelo menos um ingrediente.")
     List<@Valid CreatePratoItemIngredienteDTO> ingredientes
 
-) {}
+) {
+
+    public static void atualizarEntidade(UpdatePratoRequest req, PratoEntity prato) {
+        prato.setNome(req.nome());
+        prato.setCategoria(req.categoria());
+        prato.setUrlImagem(req.foto());
+        prato.setRendimentoReceita(req.rendQtd());
+        prato.setUnidade(req.rendUnid());
+        prato.setRendimentoPessoa(req.porPessoa());
+        prato.setDescricao(req.receita());
+    }
+}

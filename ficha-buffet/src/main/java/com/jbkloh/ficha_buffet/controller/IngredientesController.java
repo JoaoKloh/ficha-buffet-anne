@@ -2,7 +2,6 @@ package com.jbkloh.ficha_buffet.controller;
 
 import java.util.List;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,7 +42,7 @@ public class IngredientesController {
 
     @GetMapping ("/retornarTodos")
     public ResponseEntity<List<IngredienteResponseDTO>>retornarTodos(){
-        return ResponseEntity.status(HttpStatus.CREATED).body(ingredientesService.listarIngredientes());
+        return ResponseEntity.ok(ingredientesService.listarIngredientes());
     }
 
     @PostMapping ("/associarPratos")

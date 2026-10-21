@@ -2,9 +2,7 @@ package com.jbkloh.ficha_buffet.controller;
 
 import java.util.List;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +22,6 @@ import lombok.RequiredArgsConstructor;
 
 @RestController 
 @RequestMapping ("/producao")
-@PreAuthorize("hasRole('ADMIN')")
 @RequiredArgsConstructor 
 public class ProducaoController {
     private final ProducaoService producaoService;
@@ -43,7 +40,7 @@ public class ProducaoController {
 
     @GetMapping ("/retornarTodos")
     public ResponseEntity<List<ProducaoResponseDTO>>retornarTodos(){
-        return ResponseEntity.status(HttpStatus.CREATED).body(producaoService.listarEventos());
+        return ResponseEntity.ok(producaoService.listarEventos());
     }
 
     @DeleteMapping("/apagar/{id}")

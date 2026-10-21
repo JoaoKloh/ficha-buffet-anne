@@ -4,6 +4,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
+import com.jbkloh.ficha_buffet.model.IngredientesEntity;
+
 public record CreateIngredienteRequestDTO(
     
     @NotBlank(message = "O nome do ingrediente é obrigatório.")
@@ -25,4 +27,9 @@ public record CreateIngredienteRequestDTO(
 
     @Size(max = 50, message = "O fornecedo deve ter no máximo 50 caracteres.")
     String fornecedor
-) {}
+) {
+
+    public static IngredientesEntity toEntity(CreateIngredienteRequestDTO dto) {
+        return new IngredientesEntity(null, dto.categoria(), dto.nome(), dto.unidade(), dto.custo(), dto.fornecedor());
+    }
+}

@@ -83,7 +83,7 @@ public class ProducaoService {
     @Transactional 
     public void apagarProducao(Long id){
         ProducaoEntity evento = producaoRepository.findById(id)
-        .orElseThrow(() -> new AppException("Prato não encontrado", HttpStatus.NOT_FOUND));
+        .orElseThrow(() -> new AppException("Produção não encontrado", HttpStatus.BAD_REQUEST));
 
         evento.getPratos().clear();
 

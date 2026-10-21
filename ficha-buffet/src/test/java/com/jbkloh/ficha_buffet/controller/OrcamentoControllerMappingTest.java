@@ -9,10 +9,19 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
+
+import com.jbkloh.ficha_buffet.TestRsaKeys;
 
 @SpringBootTest
 class OrcamentoControllerMappingTest {
+
+    @DynamicPropertySource
+    static void chavesRsa(DynamicPropertyRegistry registry) {
+        TestRsaKeys.registrar(registry);
+    }
 
     @Autowired
     @Qualifier("requestMappingHandlerMapping")
