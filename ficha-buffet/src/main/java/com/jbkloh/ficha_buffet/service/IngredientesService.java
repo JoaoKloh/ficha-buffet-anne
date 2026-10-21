@@ -32,7 +32,7 @@ public class IngredientesService {
         if(ingredienteExistente.isPresent()){
             throw new AppException("Já existe um ingrediente com o nome: " + req.nome(), HttpStatus.BAD_REQUEST);
     }else{
-        IngredientesEntity ingredientesEntity = new IngredientesEntity(null, req.categoria(),req.nome(), req.unidade(), req.custo(), req.fornecedor());
+        IngredientesEntity ingredientesEntity = CreateIngredienteRequestDTO.toEntity(req);
             ingredientesRepository.save(ingredientesEntity);
         
     }
@@ -43,11 +43,7 @@ public class IngredientesService {
         IngredientesEntity ingredientesEntity = ingredientesRepository.findById(req.id())
         .orElseThrow(()->new AppException("O ingrediente de id, "+req.id()+", não existe.", HttpStatus.BAD_REQUEST));
 
-        ingredientesEntity.setCategoria(req.categoria());
-        ingredientesEntity.setNome(req.nome());
-        ingredientesEntity.setCusto(req.custo());
-        ingredientesEntity.setFornecedor(req.fornecedor());
-        ingredientesEntity.setUnidade(req.unidade());
+        UpdateIngredienteRequestDto.atualizarEntidade(req, ingredientesEntity);
 
         ingredientesRepository.save(ingredientesEntity);
     }
@@ -91,6 +87,11 @@ public class IngredientesService {
 
     @Transactional 
     public void apagarIngrediente(Long id){
-        ingredientesRepository.deleteById(id);
+        Optional<IngredientesEntity>ingrediente = ingredientesRepository.findById(id);
+        if(ingrediente.isPresent()){
+            ingredientesRepository.deleteById(id);
+        }else{
+            throw new AppException("O ingrediente com id, "+id+" , não existe.", HttpStatus.BAD_REQUEST);
+        }
     }
 }

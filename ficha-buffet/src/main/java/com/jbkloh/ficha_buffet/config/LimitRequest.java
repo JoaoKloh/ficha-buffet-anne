@@ -18,10 +18,14 @@ import lombok.RequiredArgsConstructor;
  * exigem um JWT válido (ver SecurityConfig), então não precisam desse limite
  * aqui; tentativas de força bruta contra elas já esbarram na autenticação.
  *
- * Usa RateLimiterService (Bucket4j, refill automático em memória) em vez de um
- * Cache do Spring: não há CacheManager configurado neste projeto, então um
- * contador baseado em Cache nunca expiraria e bloquearia o IP permanentemente
- * após poucas tentativas.
+ * Usa RateLimiterService (Bucket4j, refill automático em memória): o próprio
+ * bucket recarrega os tokens, então não há necessidade de um Cache do Spring.
+ *
+ * O IP vem de request.getRemoteAddr(), que já é o IP real do cliente:
+ * com server.forward-headers-strategy=native o Tomcat lê o X-Forwarded-For
+ * repassado pelo Next.js, confiando nele só quando a requisição vem de rede
+ * interna (o container do frontend). Sem isso, todo login chegaria com o IP do
+ * Next.js e o limite seria compartilhado por todos os usuários.
  */
 @Component
 @RequiredArgsConstructor

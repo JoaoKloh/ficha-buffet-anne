@@ -63,7 +63,8 @@ class PratoServicePersistenceTest {
             List.of(new CreatePratoItemIngredienteDTO(ingredienteId, 200.0, "g"))
         );
 
-        PratoEntity salvo = pratoService.criarPrato(dto);
+        pratoService.criarPrato(dto);
+        PratoEntity salvo = buscarPratoPorNome("Bolo");
 
         entityManager.flush();
         entityManager.clear();
@@ -83,7 +84,8 @@ class PratoServicePersistenceTest {
             "Pudim", "Sobremesa", null, 1, "unidade", 1.0, "receita",
             List.of(new CreatePratoItemIngredienteDTO(ingredienteId, 100.0, "g"))
         );
-        PratoEntity salvo = pratoService.criarPrato(createDto);
+        pratoService.criarPrato(createDto);
+        PratoEntity salvo = buscarPratoPorNome("Pudim");
         entityManager.flush();
         entityManager.clear();
 
@@ -113,7 +115,8 @@ class PratoServicePersistenceTest {
             "Vitamina", "Bebida", null, 1, "unidade", 1.0, "receita",
             List.of(new CreatePratoItemIngredienteDTO(ingredienteId, 300.0, "ml"))
         );
-        PratoEntity salvo = pratoService.criarPrato(createDto);
+        pratoService.criarPrato(createDto);
+        PratoEntity salvo = buscarPratoPorNome("Vitamina");
         entityManager.flush();
 
         pratoService.apagarPrato(salvo.getId());
@@ -146,11 +149,11 @@ class PratoServicePersistenceTest {
             )
         );
 
-        List<PratoEntity> salvos = pratoService.salvarPratosComIngredientes(List.of(pratoDto));
+        List<PratoDetalhadoResponseDTO> salvos = pratoService.salvarPratosComIngredientes(List.of(pratoDto));
         entityManager.flush();
         entityManager.clear();
 
-        PratoEntity recarregado = pratoRepository.findById(salvos.get(0).getId()).orElseThrow();
+        PratoEntity recarregado = pratoRepository.findById(salvos.get(0).id()).orElseThrow();
         assertThat(recarregado.getItensIngredientes()).hasSize(2);
 
         assertThat(ingredientesRepository.findById(farinhaId))
@@ -192,7 +195,8 @@ class PratoServicePersistenceTest {
             "Tempero", "Base", null, 1, "unidade", 1.0, "receita",
             List.of(new CreatePratoItemIngredienteDTO(ingredienteId, 5.0, "g"))
         );
-        PratoEntity prato = pratoService.criarPrato(createDto);
+        pratoService.criarPrato(createDto);
+        PratoEntity prato = buscarPratoPorNome("Tempero");
 
         ProducaoEntity evento = new ProducaoEntity( "Casamento", 100, LocalDate.now(), new java.util.ArrayList<>());
         producaoRepository.save(evento);
@@ -209,5 +213,13 @@ class PratoServicePersistenceTest {
         assertThat(recarregado.getPratos())
             .as("associar o mesmo evento duas vezes nao deve duplicar o vinculo")
             .hasSize(1);
+    }
+
+    // criarPrato não devolve a entidade; o prato criado é localizado pelo nome.
+    private PratoEntity buscarPratoPorNome(String nome) {
+        return pratoRepository.findAll().stream()
+            .filter(p -> p.getNome().equals(nome))
+            .findFirst()
+            .orElseThrow();
     }
 }

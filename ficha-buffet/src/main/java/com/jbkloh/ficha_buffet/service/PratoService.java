@@ -34,20 +34,19 @@ public class PratoService {
     private final IngredientesRepository ingredientesRepository;
     private final ProducaoRepository producaoRepository;
 
+
+    @Transactional (readOnly = true)
+    public PratoEntity getPratoByNome(String nome){
+        return pratoRepository.findByNome(nome)
+        .orElseThrow(()->new AppException("Nao foi possivel localizar o prato com o nome informado.", HttpStatus.BAD_REQUEST));
+    }
     @Transactional
-    public List<PratoEntity> salvarPratosComIngredientes(List<PratoDTO> pratosDTO) {
+    public List<PratoDetalhadoResponseDTO> salvarPratosComIngredientes(List<PratoDTO> pratosDTO) {
         List<PratoEntity> pratos = new ArrayList<>();
         for (PratoDTO pratoDto : pratosDTO) {
 
             // Instancia e preenche a entidade do Prato
-            PratoEntity pratoEntity = new PratoEntity();
-            pratoEntity.setNome(pratoDto.nome());
-            pratoEntity.setCategoria(pratoDto.categoria());
-            pratoEntity.setRendimentoReceita(pratoDto.rendQtd());
-            pratoEntity.setUnidade(pratoDto.rendUnid());
-            pratoEntity.setRendimentoPessoa(pratoDto.porPessoa());
-            pratoEntity.setDescricao(pratoDto.receita());
-            pratoEntity.setUrlImagem(pratoDto.foto());
+            PratoEntity pratoEntity = PratoDTO.toEntity(pratoDto);
 
             // Processa a lista de ingredientes apenas se ela existir e NÃO estiver vazia
             if (pratoDto.ingredientes() != null && !pratoDto.ingredientes().isEmpty()) {
@@ -63,10 +62,7 @@ public class PratoService {
                     if (ingredienteOptional.isPresent()) {
                         ingrediente = ingredienteOptional.get();
                     } else {
-                        ingrediente = new IngredientesEntity();
-                        ingrediente.setNome(ingDto.nome());
-                        ingrediente.setUnidade(ingDto.unidade());
-                        ingrediente = ingredientesRepository.save(ingrediente);
+                        ingrediente = ingredientesRepository.save(IngredienteDTO.toEntity(ingDto));
                     }
 
                     // Associa o ingrediente ao prato
@@ -77,28 +73,23 @@ public class PratoService {
             pratos.add(pratoEntity);
             pratoRepository.save(pratoEntity);
         }
-        return pratos;
+        return pratos.stream()
+                .map(PratoDetalhadoResponseDTO::new)
+                .toList();
     }
     @Transactional
-    public PratoEntity criarPrato(CreatePratoRequestDTO dto) {
-        PratoEntity prato = new PratoEntity();
-        prato.setNome(dto.nome());
-        prato.setCategoria(dto.categoria());
-        prato.setUrlImagem(dto.foto());
-        prato.setRendimentoReceita(dto.rendQtd());
-        prato.setUnidade(dto.rendUnid());
-        prato.setRendimentoPessoa(dto.porPessoa());
-        prato.setDescricao(dto.receita());
+    public void criarPrato(CreatePratoRequestDTO dto) {
+        PratoEntity prato = CreatePratoRequestDTO.toEntity(dto);
 
         if (dto.ingredientes() != null) {
             dto.ingredientes().forEach(itemDto -> {
                 IngredientesEntity ingrediente = ingredientesRepository.findById(itemDto.ingredienteId())
-                        .orElseThrow(() -> new RuntimeException("Ingrediente não encontrado: " + itemDto.ingredienteId()));
+                        .orElseThrow(() -> new AppException("Ingrediente não encontrado: " + itemDto.ingredienteId(), HttpStatus.BAD_REQUEST));
                 prato.addIngrediente(ingrediente, itemDto.qtd());
             });
         }
 
-        return pratoRepository.save(prato);
+         pratoRepository.save(prato);
     }
 
 @Transactional 
@@ -107,13 +98,7 @@ public void atualizarPrato(UpdatePratoRequest req) {
     PratoEntity pratoEntity = pratoRepository.findById(req.id())
         .orElseThrow(() -> new AppException("O prato com id " + req.id() + " não existe.", HttpStatus.BAD_REQUEST));
 
-    pratoEntity.setNome(req.nome());
-    pratoEntity.setCategoria(req.categoria());
-    pratoEntity.setUrlImagem(req.foto());
-    pratoEntity.setRendimentoReceita(req.rendQtd());
-    pratoEntity.setUnidade(req.rendUnid());
-    pratoEntity.setRendimentoPessoa(req.porPessoa());
-    pratoEntity.setDescricao(req.receita());
+    UpdatePratoRequest.atualizarEntidade(req, pratoEntity);
 
     // 1. Limpa os ingredientes atuais do prato (mantenha o orphanRemoval = true na Entidade Prato)
     pratoEntity.getItensIngredientes().clear();

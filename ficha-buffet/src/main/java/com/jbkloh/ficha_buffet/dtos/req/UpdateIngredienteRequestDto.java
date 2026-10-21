@@ -5,6 +5,8 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
+import com.jbkloh.ficha_buffet.model.IngredientesEntity;
+
 public record UpdateIngredienteRequestDto(
 
     @NotNull(message = "O id do ingrediente não pode ser nulo.") 
@@ -29,4 +31,13 @@ public record UpdateIngredienteRequestDto(
 
     @Size(max = 50, message = "O fornecedo deve ter no máximo 50 caracteres.")
     String fornecedor
-) {}
+) {
+
+    public static void atualizarEntidade(UpdateIngredienteRequestDto req, IngredientesEntity ingrediente) {
+        ingrediente.setCategoria(req.categoria());
+        ingrediente.setNome(req.nome());
+        ingrediente.setCusto(req.custo());
+        ingrediente.setFornecedor(req.fornecedor());
+        ingrediente.setUnidade(req.unidade());
+    }
+}

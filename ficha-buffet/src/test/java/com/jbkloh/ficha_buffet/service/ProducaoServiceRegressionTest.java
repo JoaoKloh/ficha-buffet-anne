@@ -63,7 +63,8 @@ class ProducaoServiceRegressionTest {
             nomePrato, "Categoria", null, 1, "unidade", 1.0, "receita",
             List.of(new CreatePratoItemIngredienteDTO(ingredienteId, 100.0, "g"))
         );
-        return pratoService.criarPrato(createDto).getId();
+        pratoService.criarPrato(createDto);
+        return buscarPratoPorNome(nomePrato).getId();
     }
 
     @Test
@@ -153,5 +154,13 @@ class ProducaoServiceRegressionTest {
         assertThat(linhasAssociacao.longValue())
             .as("apagar a producao deve apagar as linhas da tabela de associacao producao_prato")
             .isZero();
+    }
+
+    // criarPrato não devolve a entidade; o prato criado é localizado pelo nome.
+    private PratoEntity buscarPratoPorNome(String nome) {
+        return pratoRepository.findAll().stream()
+            .filter(p -> p.getNome().equals(nome))
+            .findFirst()
+            .orElseThrow();
     }
 }

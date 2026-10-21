@@ -49,7 +49,7 @@ export const pratoBackend = {
     return res.json();
   },
 
-  // Retorna void porque o Spring Boot responde 204 No Content
+  // Retorna void porque o Spring Boot responde sem corpo (201 Created)
   async criar(body: CreateDishInput): Promise<void> {
     await call("/prato/criar", { method: "POST", body: JSON.stringify(body) });
   },
@@ -70,7 +70,18 @@ export const pratoBackend = {
   // Response crua (não json): o que importa é o header Set-Cookie
   // "accessToken" devolvido pelo Spring, repassado ao browser pela rota
   // /api/auth/login na própria origem do Next.js — ver app/api/auth/login/route.ts.
-  async login(credentials: { username: string; password: string }): Promise<Response> {
-    return call("/auth/login", { method: "POST", body: JSON.stringify(credentials) });
+  //
+  // forwardedFor repassa o X-Forwarded-For recebido pelo Next.js: sem ele o
+  // backend veria sempre o IP deste servidor e o rate limit do login seria
+  // compartilhado por todos os usuários.
+  async login(
+    credentials: { username: string; password: string },
+    forwardedFor?: string | null
+  ): Promise<Response> {
+    return call("/auth/login", {
+      method: "POST",
+      body: JSON.stringify(credentials),
+      headers: forwardedFor ? { "X-Forwarded-For": forwardedFor } : undefined,
+    });
   },
 };

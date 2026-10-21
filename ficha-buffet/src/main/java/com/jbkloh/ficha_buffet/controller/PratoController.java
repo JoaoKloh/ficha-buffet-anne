@@ -15,10 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jbkloh.ficha_buffet.dtos.req.AssociationPratoProducaoRequestDTO;
 import com.jbkloh.ficha_buffet.dtos.req.CreatePratoRequestDTO;
-import com.jbkloh.ficha_buffet.dtos.req.PratoDTO;
 import com.jbkloh.ficha_buffet.dtos.req.UpdatePratoRequest;
 import com.jbkloh.ficha_buffet.dtos.resp.PratoDetalhadoResponseDTO;
-import com.jbkloh.ficha_buffet.model.PratoEntity;
 import com.jbkloh.ficha_buffet.service.PratoService;
 
 import jakarta.validation.Valid;
@@ -31,16 +29,10 @@ public class PratoController {
 
     private final PratoService pratoService;
 
-    @PostMapping("/criar-lote")
-    public ResponseEntity<List<PratoEntity>> criarEmLote(@RequestBody List<PratoDTO> pratosDTO) {
-        List<PratoEntity> pratosSalvos = pratoService.salvarPratosComIngredientes(pratosDTO);
-        return ResponseEntity.status(HttpStatus.CREATED).body(pratosSalvos);
-    }
-
     @PostMapping ("/criar")
     public ResponseEntity<Void>criarPrato(@RequestBody @Valid CreatePratoRequestDTO req){
         pratoService.criarPrato(req);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PutMapping ("/atualizar")
@@ -51,7 +43,7 @@ public class PratoController {
 
     @GetMapping ("/retornarTodos")
     public ResponseEntity<List<PratoDetalhadoResponseDTO>>retornarTodos(){
-        return ResponseEntity.status(HttpStatus.CREATED).body(pratoService.listarPratos());
+        return ResponseEntity.ok(pratoService.listarPratos());
     }
 
     @PostMapping ("/associarEventos")
