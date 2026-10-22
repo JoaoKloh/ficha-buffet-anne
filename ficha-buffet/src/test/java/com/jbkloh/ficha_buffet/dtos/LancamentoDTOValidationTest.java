@@ -29,21 +29,21 @@ class LancamentoDTOValidationTest {
     @Test
     void lancamentoValido_naoTemViolacoes() {
         CriarLancamentoDTO dto = new CriarLancamentoDTO(
-            "despesa", "Bebidas", "Refrigerantes", new BigDecimal("10.99"), LocalDate.now()
+            "despesa", "Bebidas", "Refrigerantes", new BigDecimal("10.99"), LocalDate.now(), LocalDate.now(), null
         );
         assertThat(camposInvalidos(dto)).isEmpty();
     }
 
     @Test
     void camposObrigatoriosAusentes_saoRejeitados() {
-        CriarLancamentoDTO dto = new CriarLancamentoDTO(null, " ", "", null, null);
-        assertThat(camposInvalidos(dto)).containsExactlyInAnyOrder("tipo", "categoria", "descricao", "valor", "data");
+        CriarLancamentoDTO dto = new CriarLancamentoDTO(null, " ", "", null, null, null, null);
+        assertThat(camposInvalidos(dto)).containsExactlyInAnyOrder("tipo", "categoria", "descricao", "valor", "data", "dataFinal");
     }
 
     @Test
     void tipoForaDoContrato_eRejeitado() {
         CriarLancamentoDTO dto = new CriarLancamentoDTO(
-            "RECEITA", "Evento fechado", "Casamento", new BigDecimal("10"), LocalDate.now()
+            "RECEITA", "Evento fechado", "Casamento", new BigDecimal("10"), LocalDate.now(), LocalDate.now(), null
         );
         assertThat(camposInvalidos(dto)).containsExactly("tipo");
     }
@@ -52,7 +52,7 @@ class LancamentoDTOValidationTest {
     void valorZeroNegativoOuComMaisDeDuasCasas_eRejeitado() {
         for (String valor : new String[] { "0", "-5", "10.999" }) {
             CriarLancamentoDTO dto = new CriarLancamentoDTO(
-                "receita", "Evento fechado", "Casamento", new BigDecimal(valor), LocalDate.now()
+                "receita", "Evento fechado", "Casamento", new BigDecimal(valor), LocalDate.now(), LocalDate.now(), null
             );
             assertThat(camposInvalidos(dto)).as("valor %s", valor).containsExactly("valor");
         }

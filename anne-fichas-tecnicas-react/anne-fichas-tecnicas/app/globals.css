@@ -263,8 +263,28 @@ header.top {
 }
 .fin-form-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 14px;
+}
+/* Coluna única do livro-caixa: régua, cartões, abas e painel. */
+.fin-coluna {
+  max-width: 760px;
+}
+.fin-intro {
+  margin-top: -8px;
+}
+.fin-span {
+  grid-column: 1 / -1;
+}
+.fin-valor input {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.fin-submit {
+  width: 100%;
+  font-size: 15px;
 }
 .segmented {
   display: flex;
@@ -298,9 +318,241 @@ header.top {
 .fin-panel .error-text {
   margin: 0 0 12px;
 }
+/* Régua do período */
 .fin-periodo {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 0;
+  gap: 8px;
+}
+.fin-periodo-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px;
+}
+.fin-periodo-bar .btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1;
+  border-color: transparent;
+}
+.fin-periodo-nome {
+  font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--green);
+  text-align: center;
+}
+.fin-periodo-nome small {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
+.fin-periodo-ano {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.fin-periodo-ano input {
+  accent-color: var(--green);
+}
+
+/* Abas Lançar / Lançamentos / DRE */
+.segmented.fin-abas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-radius: 8px;
+}
+.segmented.fin-abas button.active {
+  background: var(--green);
+  color: var(--ivory);
+}
+.segmented.fin-abas button:not(.active):hover {
+  background: var(--ivory);
+  color: var(--green);
+}
+
+.fin-recentes {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.fin-recentes .fin-label {
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.fin-recentes .fin-list {
+  margin-bottom: -8px;
+}
+
+/* Lista: filtros, cabeçalho e grupos por dia */
+.fin-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -6px 0 6px;
+}
+.fin-filtros select {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--charcoal);
+  background: var(--white);
+}
+.fin-list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 0;
+}
+.fin-dia {
+  margin: 0 -22px;
+  padding: 7px 22px 5px;
+  background: var(--ivory);
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted);
+}
+.fin-dia + .fin-list .fin-row:first-child {
+  border-top: none;
+}
+
+/* DRE */
+.fin-dre {
+  padding-bottom: 0;
+  overflow: hidden;
+}
+.fin-dre-tabela {
+  margin: 0 -22px;
+}
+.fin-dre-linha {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px 56px;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  padding: 8px 22px;
+  border: none;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--charcoal);
+  text-align: left;
+}
+.fin-dre-linha .num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.fin-dre-linha .pct {
+  text-align: right;
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.fin-dre-linha.grupo {
+  background: var(--ivory);
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted);
+}
+.fin-dre-linha.item {
+  cursor: pointer;
+}
+.fin-dre-linha.item > span:first-child {
+  padding-left: 14px;
+}
+.fin-dre-linha.item:hover {
+  background: var(--sage);
+}
+.fin-dre-linha.item:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+.fin-dre-linha.total {
+  font-weight: 600;
+}
+.fin-dre-linha.final {
+  background: var(--sage);
+  color: var(--green);
+  font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 16px;
+}
+.fin-ref {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+  background: var(--paper);
+  vertical-align: 1px;
+}
+.fin-ref.boa {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: var(--sage-text);
+}
+.fin-ref.atencao {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--amber-text);
+}
+.fin-ref.critica {
+  background: var(--rust-bg);
+  border-color: var(--rust-bg);
+  color: var(--rust);
+}
+.fin-copiar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.fin-copiar-texto {
+  width: 100%;
+  height: 110px;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 12px;
+}
+.fin-notas {
+  max-width: 65ch;
+}
+.fin-notas p {
+  margin: 0 0 6px;
+}
+.fin-notas b {
+  color: var(--charcoal);
 }
 .fin-muted {
   font-size: 13px;
@@ -421,13 +673,18 @@ header.top {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 12px;
 }
+/* A lista de produções ocupa a linha inteira do formulário. */
+.fin-producoes {
+  grid-column: 1 / -1;
+}
+.fin-producoes .assoc-list {
+  max-height: 180px;
+  margin-bottom: 0;
+}
 
 @media (max-width: 900px) {
   .fin-form-grid {
     grid-template-columns: 1fr 1fr;
-  }
-  .fin-cards {
-    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 560px) {
@@ -439,6 +696,22 @@ header.top {
   /* Em telas estreitas, os botões da linha ficam só com o ícone (o aria-label continua). */
   .fin-action-label {
     display: none;
+  }
+  .fin-dre-linha {
+    grid-template-columns: minmax(0, 1fr) 108px 44px;
+    gap: 6px;
+  }
+  .fin-card {
+    padding: 12px 12px;
+  }
+  .fin-amount {
+    font-size: 17px;
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 440px) {
+  .fin-cards {
+    grid-template-columns: 1fr;
   }
 }
 

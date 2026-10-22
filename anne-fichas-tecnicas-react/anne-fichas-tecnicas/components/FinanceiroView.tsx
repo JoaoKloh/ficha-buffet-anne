@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { Header } from "./Header";
+import { FinanceiroPeriodo } from "./FinanceiroPeriodo";
 import { FinanceiroResumo } from "./FinanceiroResumo";
+import { FinanceiroDre } from "./FinanceiroDre";
 import { FinanceiroRelatorio } from "./FinanceiroRelatorio";
 import { LancamentoForm } from "./LancamentoForm";
-import { LancamentoList } from "./LancamentoList";
+import { LancamentoList, type FiltrosLancamento } from "./LancamentoList";
 import { LancamentoFormModal } from "./LancamentoFormModal";
 import { mensagemDeErro } from "./LancamentoCampos";
 import { useToast } from "./ui/Toast";
@@ -15,15 +17,26 @@ import {
   excluirLancamento,
   listarLancamentos,
 } from "@/lib/api/lancamentos";
+import { listarProducoesDisponiveis } from "@/lib/api/pratoProducoes";
 import type { Lancamento, NovoLancamento } from "@/lib/models/financeiro";
-import { fmtMes, mesDe, mesesDisponiveis } from "@/lib/utils/financeiro";
+import type { ProducaoResponseDTO } from "@/lib/models/producao";
+import { noPeriodo, periodoAtual, rotuloPeriodo, type Periodo } from "@/lib/utils/financeiro";
 
-const TODOS = "todos";
+type Aba = "lancar" | "lista" | "dre";
+
+const ABAS: { id: Aba; rotulo: string }[] = [
+  { id: "lancar", rotulo: "Lançar" },
+  { id: "lista", rotulo: "Lançamentos" },
+  { id: "dre", rotulo: "DRE" },
+];
 
 export function FinanceiroView() {
   const [lancamentos, setLancamentos] = useState<Lancamento[]>([]);
+  const [producoes, setProducoes] = useState<ProducaoResponseDTO[]>([]);
   const [loading, setLoading] = useState(true);
-  const [mesFiltro, setMesFiltro] = useState<string>(TODOS);
+  const [periodo, setPeriodo] = useState<Periodo>(periodoAtual);
+  const [aba, setAba] = useState<Aba>("lancar");
+  const [filtros, setFiltros] = useState<FiltrosLancamento>({ categoria: "", producaoId: "" });
   const [editando, setEditando] = useState<Lancamento | null>(null);
   const { showToast } = useToast();
 
@@ -32,6 +45,11 @@ export function FinanceiroView() {
       .then(setLancamentos)
       .catch((err) => showToast(mensagemDeErro(err, "Não foi possível carregar os lançamentos."), "error"))
       .finally(() => setLoading(false));
+
+    // Só alimenta o seletor "Produção vinculada": uma falha aqui não impede usar o Financeiro.
+    listarProducoesDisponiveis()
+      .then(setProducoes)
+      .catch((err) => showToast(mensagemDeErro(err, "Não foi possível carregar as produções."), "error"));
   }, [showToast]);
 
   // POST -> /api/lancamentos. Sem try/catch aqui: o erro sobe até o formulário,
@@ -39,6 +57,11 @@ export function FinanceiroView() {
   async function handleCreate(input: NovoLancamento) {
     const novo = await criarLancamento(input);
     setLancamentos((prev) => [novo, ...prev]);
+    // Leva a régua para o mês do lançamento, para ele aparecer nos cartões e na lista.
+    const [ano, mes] = novo.data.split("-").map(Number);
+    if (ano && mes && noPeriodo([novo], periodo).length === 0) {
+      setPeriodo({ ano, mes: mes - 1, anoInteiro: false });
+    }
     showToast("Lançamento adicionado.");
   }
 
@@ -62,11 +85,15 @@ export function FinanceiroView() {
     }
   }
 
-  const meses = mesesDisponiveis(lancamentos);
-  // Se o mês filtrado deixou de ter lançamentos (ex.: excluiu o último), volta para "Todos".
-  const filtroAtivo = mesFiltro !== TODOS && meses.includes(mesFiltro) ? mesFiltro : TODOS;
-  const filtrados =
-    filtroAtivo === TODOS ? lancamentos : lancamentos.filter((l) => mesDe(l.data) === filtroAtivo);
+  function abrirCategoria(categoria: string) {
+    setFiltros({ categoria, producaoId: "" });
+    setAba("lista");
+  }
+
+  const doPeriodo = noPeriodo(lancamentos, periodo);
+  // Os maiores ids são os lançados por último.
+  const recentes = [...lancamentos].sort((a, b) => b.id - a.id).slice(0, 3);
+  const titulo = rotuloPeriodo(periodo);
 
   return (
     <div className="app">
@@ -84,28 +111,60 @@ export function FinanceiroView() {
         {loading ? (
           <p className="empty-state">Carregando lançamentos...</p>
         ) : (
-          <div className="fin-stack">
-            <LancamentoForm onSave={handleCreate} />
+          <div className="fin-stack fin-coluna">
+            <p className="fin-muted fin-intro">
+              Lance cada receita e cada despesa. A DRE do período se monta sozinha.
+            </p>
 
-            {meses.length > 0 && (
-              <div className="chips fin-periodo" role="group" aria-label="Filtrar por período">
-                <span className="fin-muted">Período:</span>
-                {[TODOS, ...meses].map((m) => (
-                  <button
-                    key={m}
-                    type="button"
-                    className={`chip ${filtroAtivo === m ? "active" : ""}`}
-                    aria-pressed={filtroAtivo === m}
-                    onClick={() => setMesFiltro(m)}
-                  >
-                    {m === TODOS ? "Todos" : fmtMes(m)}
-                  </button>
-                ))}
-              </div>
-            )}
+            <FinanceiroPeriodo value={periodo} onChange={setPeriodo} />
+            <FinanceiroResumo lancamentos={doPeriodo} />
 
-            <FinanceiroResumo lancamentos={filtrados} />
-            <LancamentoList lancamentos={filtrados} onEdit={setEditando} onDelete={handleDelete} />
+            <div className="segmented fin-abas" role="tablist" aria-label="Seções do financeiro">
+              {ABAS.map((a) => (
+                <button
+                  key={a.id}
+                  type="button"
+                  role="tab"
+                  id={`fin-aba-${a.id}`}
+                  aria-selected={aba === a.id}
+                  aria-controls={`fin-painel-${a.id}`}
+                  className={aba === a.id ? "active" : ""}
+                  onClick={() => setAba(a.id)}
+                >
+                  {a.rotulo}
+                </button>
+              ))}
+            </div>
+
+            <div role="tabpanel" id={`fin-painel-${aba}`} aria-labelledby={`fin-aba-${aba}`}>
+              {aba === "lancar" && (
+                <LancamentoForm
+                  onSave={handleCreate}
+                  producoes={producoes}
+                  recentes={recentes}
+                  onEdit={setEditando}
+                  onDelete={handleDelete}
+                />
+              )}
+              {aba === "lista" && (
+                <LancamentoList
+                  lancamentos={doPeriodo}
+                  producoes={producoes}
+                  filtros={filtros}
+                  onFiltros={setFiltros}
+                  onEdit={setEditando}
+                  onDelete={handleDelete}
+                />
+              )}
+              {aba === "dre" && (
+                <FinanceiroDre
+                  lancamentos={doPeriodo}
+                  todos={lancamentos}
+                  periodo={periodo}
+                  onAbrirCategoria={abrirCategoria}
+                />
+              )}
+            </div>
           </div>
         )}
 
@@ -115,14 +174,15 @@ export function FinanceiroView() {
             initial={editando}
             onClose={() => setEditando(null)}
             onSave={handleUpdate}
+            producoes={producoes}
           />
         )}
       </div>
 
       {!loading && (
         <FinanceiroRelatorio
-          lancamentos={filtrados}
-          periodo={filtroAtivo === TODOS ? "Todos os lançamentos" : fmtMes(filtroAtivo)}
+          lancamentos={doPeriodo}
+          periodo={titulo.charAt(0).toUpperCase() + titulo.slice(1)}
         />
       )}
     </div>

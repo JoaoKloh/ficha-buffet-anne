@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Modal } from "./ui/Modal";
+import type { ProducaoResponseDTO } from "@/lib/models/producao";
 import type { Lancamento, NovoLancamento } from "@/lib/models/financeiro";
 import { LancamentoCampos, camposDe, mensagemDeErro, validarCampos } from "./LancamentoCampos";
 
@@ -10,9 +11,10 @@ interface Props {
   onClose: () => void;
   /** Deve lançar em caso de erro, para a mensagem do backend aparecer no modal. */
   onSave: (input: NovoLancamento) => Promise<void>;
+  producoes: ProducaoResponseDTO[];
 }
 
-export function LancamentoFormModal({ initial, onClose, onSave }: Props) {
+export function LancamentoFormModal({ initial, onClose, onSave, producoes }: Props) {
   const [campos, setCampos] = useState(() => camposDe(initial));
   const [erros, setErros] = useState<string[]>([]);
   const [saving, setSaving] = useState(false);
@@ -38,7 +40,12 @@ export function LancamentoFormModal({ initial, onClose, onSave }: Props) {
   return (
     <Modal title="Editar lançamento" onClose={onClose}>
       <form onSubmit={handleSubmit} noValidate>
-        <LancamentoCampos idPrefix="fin-editar" value={campos} onChange={setCampos} />
+        <LancamentoCampos
+          idPrefix="fin-editar"
+          value={campos}
+          onChange={setCampos}
+          producoes={producoes}
+        />
 
         {erros.length > 0 && (
           <div className="error-text" role="alert">
