@@ -107,9 +107,19 @@ interface Props {
   onFiltros: (f: FiltrosLancamento) => void;
   onEdit: (l: Lancamento) => void;
   onDelete: (l: Lancamento) => void;
+  /** Imprime o relatório financeiro da produção selecionada no filtro. */
+  onImprimirProducao: (p: ProducaoResponseDTO) => void;
 }
 
-export function LancamentoList({ lancamentos, producoes, filtros, onFiltros, onEdit, onDelete }: Props) {
+export function LancamentoList({
+  lancamentos,
+  producoes,
+  filtros,
+  onFiltros,
+  onEdit,
+  onDelete,
+  onImprimirProducao,
+}: Props) {
   const nomesProducoes = new Map(producoes.map((p) => [p.id, p.nome]));
   // Só oferece as produções que aparecem em algum lançamento do período.
   const idsNoPeriodo = new Set(lancamentos.flatMap((l) => l.producaoIds ?? []));
@@ -123,6 +133,7 @@ export function LancamentoList({ lancamentos, producoes, filtros, onFiltros, onE
     ),
   ).sort();
   const producaoAtiva = idsNoPeriodo.has(Number(filtros.producaoId)) ? filtros.producaoId : "";
+  const producaoSelecionada = producoesNoPeriodo.find((p) => String(p.id) === producaoAtiva);
 
   const filtrados = ordenarLancamentos(
     lancamentos.filter(
@@ -180,6 +191,15 @@ export function LancamentoList({ lancamentos, producoes, filtros, onFiltros, onE
             </option>
           ))}
         </select>
+        {producaoSelecionada && (
+          <button
+            type="button"
+            className="btn ghost small"
+            onClick={() => onImprimirProducao(producaoSelecionada)}
+          >
+            Imprimir relatório da produção
+          </button>
+        )}
       </div>
 
       {filtrados.length === 0 ? (

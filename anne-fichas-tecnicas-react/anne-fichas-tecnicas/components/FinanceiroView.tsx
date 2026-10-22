@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { flushSync } from "react-dom";
 import { Header } from "./Header";
 import { FinanceiroPeriodo } from "./FinanceiroPeriodo";
 import { FinanceiroResumo } from "./FinanceiroResumo";
@@ -21,6 +22,7 @@ import { listarProducoesDisponiveis } from "@/lib/api/pratoProducoes";
 import type { Lancamento, NovoLancamento } from "@/lib/models/financeiro";
 import type { ProducaoResponseDTO } from "@/lib/models/producao";
 import { noPeriodo, periodoAtual, rotuloPeriodo, type Periodo } from "@/lib/utils/financeiro";
+import { fmtDate } from "@/lib/utils/format";
 
 type Aba = "lancar" | "lista" | "dre";
 
@@ -38,6 +40,8 @@ export function FinanceiroView() {
   const [aba, setAba] = useState<Aba>("lancar");
   const [filtros, setFiltros] = useState<FiltrosLancamento>({ categoria: "", producaoId: "" });
   const [editando, setEditando] = useState<Lancamento | null>(null);
+  // Produção cujo relatório está sendo impresso; null = relatório do período.
+  const [producaoImpressa, setProducaoImpressa] = useState<ProducaoResponseDTO | null>(null);
   const { showToast } = useToast();
 
   useEffect(() => {
@@ -51,6 +55,21 @@ export function FinanceiroView() {
       .then(setProducoes)
       .catch((err) => showToast(mensagemDeErro(err, "Não foi possível carregar as produções."), "error"));
   }, [showToast]);
+
+  // Troca o relatório oculto pelo da produção, imprime e volta ao do período.
+  useEffect(() => {
+    if (!producaoImpressa) return;
+    const voltar = () => setProducaoImpressa(null);
+    window.addEventListener("afterprint", voltar);
+    window.print();
+    return () => window.removeEventListener("afterprint", voltar);
+  }, [producaoImpressa]);
+
+  // Garante que o relatório oculto é o do mês (ou ano) selecionado antes de imprimir.
+  function imprimirMensal() {
+    flushSync(() => setProducaoImpressa(null));
+    window.print();
+  }
 
   // POST -> /api/lancamentos. Sem try/catch aqui: o erro sobe até o formulário,
   // que mostra a mensagem do backend ao lado dos campos.
@@ -94,6 +113,7 @@ export function FinanceiroView() {
   // Os maiores ids são os lançados por último.
   const recentes = [...lancamentos].sort((a, b) => b.id - a.id).slice(0, 3);
   const titulo = rotuloPeriodo(periodo);
+  const nomesProducoes = new Map(producoes.map((p) => [p.id, p.nome]));
 
   return (
     <div className="app">
@@ -101,8 +121,8 @@ export function FinanceiroView() {
         <Header
           actions={
             !loading && (
-              <button type="button" className="btn ghost small" onClick={() => window.print()}>
-                Imprimir relatório
+              <button type="button" className="btn ghost small" onClick={imprimirMensal}>
+                {periodo.anoInteiro ? "Imprimir relatório anual" : "Imprimir relatório mensal"}
               </button>
             )
           }
@@ -154,6 +174,7 @@ export function FinanceiroView() {
                   onFiltros={setFiltros}
                   onEdit={setEditando}
                   onDelete={handleDelete}
+                  onImprimirProducao={setProducaoImpressa}
                 />
               )}
               {aba === "dre" && (
@@ -179,12 +200,28 @@ export function FinanceiroView() {
         )}
       </div>
 
-      {!loading && (
-        <FinanceiroRelatorio
-          lancamentos={doPeriodo}
-          periodo={titulo.charAt(0).toUpperCase() + titulo.slice(1)}
-        />
-      )}
+      {!loading &&
+        (producaoImpressa ? (
+          // Todos os lançamentos vinculados à produção, de qualquer período.
+          <FinanceiroRelatorio
+            lancamentos={lancamentos.filter((l) => (l.producaoIds ?? []).includes(producaoImpressa.id))}
+            titulo={producaoImpressa.nome}
+            subtitulo={[
+              "Relatório financeiro da produção",
+              fmtDate(producaoImpressa.data),
+              producaoImpressa.quantidade ? `${producaoImpressa.quantidade} convidados` : "",
+            ]
+              .filter(Boolean)
+              .join(" · ")}
+            nomesProducoes={nomesProducoes}
+          />
+        ) : (
+          <FinanceiroRelatorio
+            lancamentos={doPeriodo}
+            subtitulo={`${periodo.anoInteiro ? "Período" : "Mês"}: ${titulo.charAt(0).toUpperCase() + titulo.slice(1)}`}
+            nomesProducoes={nomesProducoes}
+          />
+        ))}
     </div>
   );
 }
