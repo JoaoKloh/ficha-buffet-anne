@@ -1150,7 +1150,16 @@ table.orc-table {
   border-bottom: 1px solid var(--line);
   font-size: 13px;
 }
-.orc-relatorio-table td.num {
+.orc-relatorio-table th {
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  color: var(--green);
+}
+.orc-relatorio-table td.num,
+.orc-relatorio-table th.num {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
