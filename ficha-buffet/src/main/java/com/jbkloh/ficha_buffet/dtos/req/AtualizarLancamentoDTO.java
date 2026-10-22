@@ -2,6 +2,10 @@ package com.jbkloh.ficha_buffet.dtos.req;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
+
+import com.jbkloh.ficha_buffet.model.LancamentoEntity;
+import com.jbkloh.ficha_buffet.model.ProducaoEntity;
 
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
@@ -33,5 +37,22 @@ public record AtualizarLancamentoDTO(
     BigDecimal valor,
 
     @NotNull(message = "A data do lançamento é obrigatória.")
-    LocalDate data
-) {}
+    LocalDate data,
+
+    @NotNull(message = "A data final do lançamento é obrigatória.")
+    LocalDate dataFinal,
+
+    // Opcional: ids das produções vinculadas ao lançamento (nulo ou vazio = nenhuma).
+    List<@NotNull(message = "O id da produção não pode ser nulo.") Long> producaoIds
+) {
+
+    public static void atualizarEntidade(AtualizarLancamentoDTO req, LancamentoEntity lancamento, List<ProducaoEntity> producoes) {
+        lancamento.setTipo(req.tipo());
+        lancamento.setCategoria(req.categoria());
+        lancamento.setDescricao(req.descricao().trim());
+        lancamento.setValor(req.valor());
+        lancamento.setDataInical(req.data());
+        lancamento.setDataFinal(req.dataFinal());
+        lancamento.setProducoes(producoes);
+    }
+}

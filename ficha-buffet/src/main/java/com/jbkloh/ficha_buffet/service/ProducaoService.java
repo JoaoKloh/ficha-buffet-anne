@@ -14,6 +14,7 @@ import com.jbkloh.ficha_buffet.dtos.resp.ProducaoResponseDTO;
 import com.jbkloh.ficha_buffet.exceptions.AppException;
 import com.jbkloh.ficha_buffet.model.PratoEntity;
 import com.jbkloh.ficha_buffet.model.ProducaoEntity;
+import com.jbkloh.ficha_buffet.repositories.LancamentoRepository;
 import com.jbkloh.ficha_buffet.repositories.PratoRepository;
 import com.jbkloh.ficha_buffet.repositories.ProducaoRepository;
 
@@ -25,6 +26,7 @@ public class ProducaoService {
 
     private final ProducaoRepository producaoRepository;
     private final PratoRepository pratoRepository;
+    private final LancamentoRepository lancamentoRepository;
 
     @Transactional 
     public void criarEvento(CreateProducaoRequestDTO req){
@@ -86,6 +88,9 @@ public class ProducaoService {
         .orElseThrow(() -> new AppException("Produção não encontrado", HttpStatus.BAD_REQUEST));
 
         evento.getPratos().clear();
+
+        // Os lançamentos financeiros continuam existindo, só perdem o vínculo com a produção.
+        lancamentoRepository.findByProducoesId(id).forEach(lancamento -> lancamento.getProducoes().remove(evento));
 
         producaoRepository.delete(evento);
     }
