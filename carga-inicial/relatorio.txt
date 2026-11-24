@@ -1,0 +1,43 @@
+Carga inicial do Anne Gestão — relatório da conversão
+
+Registros no anne-gestao-carga.json:
+  categorias        26
+  clientes          55
+  insumos          303
+  preparacoes      332
+  eventos           54
+  cardapio         133
+  parcelas          40
+  extras             0
+  nfs               42
+  lancamentos      342
+  movimentos       337
+  cozinha_exec      79
+  pratos_venda       0
+  lotes              0
+  total           1743
+
+Categorias: 8 reaproveitam o id da V2, 18 novas (ids 24..41).
+Etapas de evento no 03-evento-etapas.sql: 21.
+No 04-evento-projeto.sql: logística de 1 evento(s) e orçamento de 1 evento(s).
+No 05-equipe-producao.sql: 1 pessoa(s) no cadastro, 1 escala(s), mapa de produção de 2 evento(s) e 8 plano(s) de ordem.
+Fora da carga: coleção 'cozinha' (retrato calculado pelo protótipo; o Java recalcula) e 'sistema' (registro do último backup do protótipo).
+
+Ajustes feitos nos dados:
+  - Insumo descartado (nome repetido, sem uso): PAPEL HIGIÊNICO [ru5k7h7k9ht8ap7sl3z6, kg]
+  - Insumo fundido (nome repetido): Batata baroa [l8j3mkchmharwl54of5k] -> [smduas6eodv9ijc02j7v], 6 referências movidas; custo final R$ 12.99
+  - Insumo renomeado (nome repetido): Farinha de trigo [ins-farinha-de-trigo-00] -> Farinha de trigo 00
+  - Ficha sem praça recebeu a praça padrão da categoria: Escalope de mignon ao molho madeira ou vinho -> Cozinha quente
+  - Ficha sem praça recebeu a praça padrão da categoria: Medalhão de salmão ao molho champanhe -> Cozinha quente
+  - Ficha sem praça recebeu a praça padrão da categoria: Petit gourmet de polvo -> Cozinha quente
+  - Evento sem margem recebeu 0%: 26-001 Isabela & Jair
+
+Pendente (sem tabela/coluna no banco), ver pendente-sem-tabela.json:
+  - clientes.observacoes: 15 registro(s)
+  - eventos.producaoPara: 1 registro(s)
+  - preparacoes.producao: 241 registro(s)
+  - movimentos.criadoPor: 3 registro(s)
+  - nfs.ajusteParcelas: 2 registro(s)
+
+Avisos:
+  (nenhum)
