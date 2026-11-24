@@ -1,0 +1,1141 @@
+{
+ "_leia": "Dados do protótipo sem tabela/coluna no banco atual, já com os ids numéricos da carga. Ficam guardados para a migração que criar esses campos.",
+ "clientes.observacoes": {
+  "9": "Dentista · ID 28617153-3 · Rua Prof. Gabizo, 230, apto 803 – Maracanã, Rio de Janeiro/RJ. Noivo: Vinicius.",
+  "10": "Av. Rui Barbosa, 300, apto 604 – Flamengo, Rio de Janeiro/RJ, CEP 22250-020. Noivo: Marcelo França. Pais da noiva: Aparecida e Sydney.",
+  "11": "RG 03.289.684-8 DETRAN/RJ · Rua Dr. Agostinho Goulão, 2900 – Corrêas, Petrópolis/RJ, CEP 25730-050.",
+  "4": "Contadora · RG 43.852.389-1 · Av. Ataulfo de Paiva, 27, ap 203, CEP 22440-032 · Instagram @janainasantos. Noivo: Daniel.",
+  "20": "Inauguração de loja. Completar razão social, CNPJ e contato.",
+  "6": "Médica · RG 216962183 DETRAN/RJ · Rua Joaquim Nabuco, 106, apto 501 – Copacabana, Rio de Janeiro/RJ, CEP 22080-030. Noivo e co-contratante: Júlio Ribeiro Borges (médico, CPF 166.656.777-96, RG 279457287 DETRAN/RJ, (21) 98111-5440, juliorborges96@gmail.com).",
+  "5": "Rua Batista da Costa, 11 – Jardim Botânico, Rio de Janeiro/RJ, CEP 22470-120.",
+  "3": "Dentista · Rua Barão de Mesquita 314, ap 903, bloco B, Tijuca, Rio de Janeiro/RJ, CEP 20540-003. Noivo: Guilherme da Silveira Bruno (CPF 147.940.647-30 · (24) 98832-8525 · guiga_bruno@hotmail.com · médico ortopedista), mesmo endereço.",
+  "27": "Engenheira · ID 289538449 · Rua Largo dos Leões, 140, apto 508, Rio de Janeiro/RJ. Noivo: Felipe.",
+  "7": "Rua Francisco de Paula, 630, apto 1003. Noivo: Guilherme.",
+  "14": "Médica · Rua Paulo Viana de Araújo Filho, 100, apto 308 – Barra da Tijuca, Rio de Janeiro/RJ, CEP 22631-040. Noivo: Matheus Fernandes de Andrade Melo (CPF 157.540.727-24).",
+  "12": "Av. Aquarela do Brasil, 601, bloco 1, apto 603 – São Conrado, Rio de Janeiro/RJ, CEP 22610-010. Noivo e co-contratante: João Paulo Mello Tauhata (CPF 151.370.737-09 · (21) 98893-0050 · jptauhata@poli.ufrj.br), mesmo endereço.",
+  "8": "RG 314931650 · Rua Rodolfo Carvalho, 113, casa 14 – Jacarepaguá, Rio de Janeiro/RJ, CEP 22713-490. Noivo: Felippe.",
+  "2": "Administrador · Rua Cesário Alvim 37, ap 303 bl-2, Rio de Janeiro/RJ",
+  "13": "Médica · Rua São Francisco de Assis, 486, apto 302, Rio de Janeiro/RJ (bairro e CEP a completar no contrato). Noivo: Tiago."
+ },
+ "eventos.producaoPara": {
+  "2": 160
+ },
+ "preparacoes.producao": {
+  "111": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "26": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "152": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "caldos"
+  },
+  "110": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "19": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "215": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "158": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "bebidas"
+  },
+  "170": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "finger food frio"
+  },
+  "164": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "bebidas"
+  },
+  "163": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "bebidas"
+  },
+  "137": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "57": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "154": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "caldos"
+  },
+  "73": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de massa"
+  },
+  "40": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "finger food frio"
+  },
+  "43": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "294": {
+   "fonteIngredientes": "estimativa"
+  },
+  "214": {
+   "fonteIngredientes": "estimativa"
+  },
+  "55": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "44": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "179": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food quente"
+  },
+  "121": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "148": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "caldos"
+  },
+  "135": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "36": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "159": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "bebidas"
+  },
+  "156": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "caldos"
+  },
+  "167": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "284": {
+   "fonteIngredientes": "estimativa"
+  },
+  "208": {
+   "fonteIngredientes": "Camila & Lucas"
+  },
+  "52": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food quente"
+  },
+  "146": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "saladas"
+  },
+  "83": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "20": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "antepasto"
+  },
+  "64": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de massa"
+  },
+  "157": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "caldos"
+  },
+  "92": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "116": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "petit gourmet"
+  },
+  "128": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "125": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "97": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "147": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "saladas"
+  },
+  "142": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "saladas"
+  },
+  "320": {
+   "fonteIngredientes": "estimativa"
+  },
+  "21": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "25": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "antepasto"
+  },
+  "149": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "caldos"
+  },
+  "198": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "sobremesa"
+  },
+  "23": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "321": {
+   "fonteIngredientes": "estimativa"
+  },
+  "86": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "196": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "sobremesa"
+  },
+  "63": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "150": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "caldos"
+  },
+  "283": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "172": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "17": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "antepasto"
+  },
+  "282": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "186": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "79": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de risotos"
+  },
+  "122": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "124": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "139": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "312": {
+   "fonteIngredientes": "estimativa"
+  },
+  "102": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "291": {
+   "fonteIngredientes": "estimativa"
+  },
+  "175": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "finger food quente"
+  },
+  "178": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food quente"
+  },
+  "100": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "287": {
+   "fonteIngredientes": "Camila & Lucas"
+  },
+  "279": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "54": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "finger food quente"
+  },
+  "66": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de massa"
+  },
+  "70": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de massa"
+  },
+  "127": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "183": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "298": {
+   "fonteIngredientes": "estimativa"
+  },
+  "271": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "35": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "81": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "276": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "48": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food quente"
+  },
+  "61": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "108": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "16": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "antepasto"
+  },
+  "98": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "131": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "199": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "sobremesa"
+  },
+  "112": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "289": {
+   "fonteIngredientes": "estimativa"
+  },
+  "240": {
+   "itensProducaoAnterior": [
+    {
+     "insumoId": 5,
+     "qtd": 0.01,
+     "fc": 1
+    },
+    {
+     "insumoId": 29,
+     "qtd": 0.002,
+     "fc": 1
+    },
+    {
+     "insumoId": 75,
+     "qtd": 0.002,
+     "fc": 1
+    },
+    {
+     "insumoId": 125,
+     "qtd": 0.004,
+     "fc": 1
+    },
+    {
+     "insumoId": 172,
+     "qtd": 0.008,
+     "fc": 1
+    },
+    {
+     "insumoId": 187,
+     "qtd": 0.002,
+     "fc": 1
+    },
+    {
+     "insumoId": 217,
+     "qtd": 0.00333,
+     "fc": 1
+    },
+    {
+     "insumoId": 124,
+     "qtd": 0.003,
+     "fc": 1
+    },
+    {
+     "insumoId": 302,
+     "qtd": 0.004,
+     "fc": 1
+    },
+    {
+     "insumoId": 210,
+     "qtd": 0.003,
+     "fc": 1
+    }
+   ]
+  },
+  "80": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de risotos"
+  },
+  "192": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "sobremesa"
+  },
+  "107": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "212": {
+   "fonteIngredientes": "estimativa"
+  },
+  "316": {
+   "fonteIngredientes": "estimativa"
+  },
+  "314": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "295": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "151": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "caldos"
+  },
+  "129": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "76": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de risotos"
+  },
+  "177": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "finger food quente"
+  },
+  "31": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "45": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "205": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "166": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "120": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "jantar"
+  },
+  "68": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de massa"
+  },
+  "62": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "308": {
+   "fonteIngredientes": "Camila & Lucas"
+  },
+  "51": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food quente"
+  },
+  "72": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de massa"
+  },
+  "29": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "91": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "82": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "238": {
+   "itensProducaoAnterior": [
+    {
+     "insumoId": 227,
+     "qtd": 0.012,
+     "fc": 1
+    },
+    {
+     "insumoId": 125,
+     "qtd": 0.006,
+     "fc": 1
+    },
+    {
+     "insumoId": 50,
+     "qtd": 0.01,
+     "fc": 1
+    },
+    {
+     "insumoId": 74,
+     "qtd": 0.003,
+     "fc": 1
+    },
+    {
+     "insumoId": 217,
+     "qtd": 0.00333,
+     "fc": 1
+    },
+    {
+     "insumoId": 124,
+     "qtd": 0.003,
+     "fc": 1
+    },
+    {
+     "insumoId": 302,
+     "qtd": 0.004,
+     "fc": 1
+    },
+    {
+     "insumoId": 106,
+     "qtd": 0.003,
+     "fc": 1
+    },
+    {
+     "insumoId": 156,
+     "qtd": 0.001,
+     "fc": 1
+    },
+    {
+     "insumoId": 225,
+     "qtd": 0.001,
+     "fc": 1
+    }
+   ]
+  },
+  "313": {
+   "fonteIngredientes": "estimativa"
+  },
+  "69": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de massa"
+  },
+  "99": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "161": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "bebidas"
+  },
+  "113": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "mini porção volante"
+  },
+  "27": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "antepasto"
+  },
+  "207": {
+   "fonteIngredientes": "estimativa"
+  },
+  "28": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "78": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de risotos"
+  },
+  "189": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "12": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "37": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "60": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "181": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "160": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "bebidas"
+  },
+  "239": {
+   "itensProducaoAnterior": [
+    {
+     "insumoId": 249,
+     "qtd": 0.01,
+     "fc": 1
+    },
+    {
+     "insumoId": 225,
+     "qtd": 0.002,
+     "fc": 1
+    },
+    {
+     "insumoId": 196,
+     "qtd": 0.003,
+     "fc": 1
+    }
+   ]
+  },
+  "77": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de risotos"
+  },
+  "195": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "sobremesa"
+  },
+  "270": {
+   "fonteIngredientes": "estimativa"
+  },
+  "174": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "finger food frio"
+  },
+  "46": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "318": {
+   "fonteIngredientes": "estimativa"
+  },
+  "273": {
+   "fonteIngredientes": "estimativa"
+  },
+  "180": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food quente"
+  },
+  "277": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "39": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "49": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "finger food quente"
+  },
+  "117": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "petit gourmet"
+  },
+  "187": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "101": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "33": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "finger food frio"
+  },
+  "42": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "finger food frio"
+  },
+  "85": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "292": {
+   "fonteIngredientes": "estimativa"
+  },
+  "18": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "87": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "237": {
+   "itensProducaoAnterior": [
+    {
+     "insumoId": 129,
+     "qtd": 0.006,
+     "fc": 1
+    },
+    {
+     "insumoId": 67,
+     "qtd": 0.008,
+     "fc": 1
+    },
+    {
+     "insumoId": 29,
+     "qtd": 0.002,
+     "fc": 1
+    },
+    {
+     "insumoId": 123,
+     "qtd": 0.003,
+     "fc": 1
+    },
+    {
+     "insumoId": 217,
+     "qtd": 0.00333,
+     "fc": 1
+    },
+    {
+     "insumoId": 124,
+     "qtd": 0.003,
+     "fc": 1
+    },
+    {
+     "insumoId": 302,
+     "qtd": 0.004,
+     "fc": 1
+    },
+    {
+     "insumoId": 185,
+     "qtd": 0.001,
+     "fc": 1
+    },
+    {
+     "insumoId": 21,
+     "qtd": 0.002,
+     "fc": 1
+    }
+   ]
+  },
+  "114": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "mini porção volante"
+  },
+  "22": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "165": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "185": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "30": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "119": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "267": {
+   "itensProducaoAnterior": [
+    {
+     "insumoId": 125,
+     "qtd": 0.006,
+     "fc": 1
+    },
+    {
+     "insumoId": 172,
+     "qtd": 0.01,
+     "fc": 1
+    },
+    {
+     "insumoId": 212,
+     "qtd": 0.008,
+     "fc": 1
+    },
+    {
+     "insumoId": 124,
+     "qtd": 0.003,
+     "fc": 1
+    },
+    {
+     "insumoId": 302,
+     "qtd": 0.004,
+     "fc": 1
+    },
+    {
+     "insumoId": 149,
+     "qtd": 0.003,
+     "fc": 1
+    }
+   ]
+  },
+  "41": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "191": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "sobremesa"
+  },
+  "15": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "281": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "106": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "96": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "94": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "268": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "278": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "103": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "126": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "132": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "197": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "sobremesa"
+  },
+  "74": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de massa"
+  },
+  "115": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "petit gourmet"
+  },
+  "67": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "ilha de massa"
+  },
+  "169": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "286": {
+   "fonteIngredientes": "estimativa"
+  },
+  "140": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "65": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de massa"
+  },
+  "322": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "203": {
+   "fonteIngredientes": "Camila & Lucas"
+  },
+  "315": {
+   "fonteIngredientes": "estimativa"
+  },
+  "38": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "47": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food quente"
+  },
+  "145": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "saladas"
+  },
+  "262": {
+   "fonteIngredientes": "estimativa"
+  },
+  "193": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "sobremesa"
+  },
+  "50": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food quente"
+  },
+  "90": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "272": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "32": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "59": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "317": {
+   "fonteIngredientes": "estimativa"
+  },
+  "53": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "finger food quente"
+  },
+  "190": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "sobremesa"
+  },
+  "34": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "finger food frio"
+  },
+  "184": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "105": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "58": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "104": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "162": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "bebidas"
+  },
+  "155": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "caldos"
+  },
+  "95": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "75": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de risotos"
+  },
+  "213": {
+   "fonteIngredientes": "estimativa"
+  },
+  "280": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "194": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "sobremesa"
+  },
+  "290": {
+   "fonteIngredientes": "Isabela & Jair"
+  },
+  "133": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "275": {
+   "fonteIngredientes": "estimativa"
+  },
+  "24": {
+   "fonteIngredientes": "Camila & Lucas",
+   "origemCatalogo": "antepasto"
+  },
+  "13": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "11": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "188": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "176": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food quente"
+  },
+  "14": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "antepasto"
+  },
+  "168": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "136": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "319": {
+   "fonteIngredientes": "Camila & Lucas"
+  },
+  "134": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "118": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "138": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "56": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "216": {
+   "fonteIngredientes": "Camila & Lucas"
+  },
+  "182": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "forno e fogão"
+  },
+  "109": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "84": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "ilha de jantar"
+  },
+  "89": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "88": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  },
+  "173": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "finger food frio"
+  },
+  "123": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "130": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "143": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "saladas"
+  },
+  "153": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "caldos"
+  },
+  "171": {
+   "fonteIngredientes": "Isabela & Jair",
+   "origemCatalogo": "finger food frio"
+  },
+  "144": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "saladas"
+  },
+  "71": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "ilha de massa"
+  },
+  "210": {
+   "fonteIngredientes": "estimativa"
+  },
+  "141": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "jantar"
+  },
+  "93": {
+   "fonteIngredientes": "estimativa",
+   "origemCatalogo": "mini porção volante"
+  }
+ },
+ "movimentos.criadoPor": {
+  "278": "Importação do protótipo",
+  "280": "Importação do protótipo",
+  "279": "Importação do protótipo"
+ },
+ "nfs.ajusteParcelas": {
+  "35": -12,
+  "7": -11.7
+ }
+}
