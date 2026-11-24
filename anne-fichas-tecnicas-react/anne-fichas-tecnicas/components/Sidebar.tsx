@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { NAV_MODULES, isNavItemActive } from "@/lib/navigation";
+import { NAV_MODULES, findActiveNav } from "@/lib/navigation";
+import { ICONES } from "./ui/Icones";
 
 export function Sidebar() {
   const pathname = usePathname();
   // Só relevante em telas pequenas, onde a sidebar vira uma gaveta.
   const [open, setOpen] = useState(false);
+  const itemAtivo = findActiveNav(pathname)?.item;
 
   useEffect(() => {
     if (!open) return;
@@ -41,8 +43,11 @@ export function Sidebar() {
 
       <aside id="app-sidebar" className={`sidebar no-print ${open ? "open" : ""}`}>
         <div className="brand sidebar-brand">
-          <div className="mark">ANNE</div>
-          <div className="tagline">Buffet</div>
+          <span className="logo" aria-hidden="true">A</span>
+          <div>
+            <div className="mark">ANNE</div>
+            <div className="tagline">Buffet e restaurante</div>
+          </div>
         </div>
 
         <nav aria-label="Navegação principal">
@@ -50,7 +55,7 @@ export function Sidebar() {
             <div key={mod.label} className="sidebar-group">
               <div className="sidebar-group-label">{mod.label}</div>
               {mod.items.map((item) => {
-                const active = isNavItemActive(item.href, pathname);
+                const active = item === itemAtivo;
                 return (
                   <Link
                     key={item.href}
@@ -59,7 +64,8 @@ export function Sidebar() {
                     aria-current={active ? "page" : undefined}
                     onClick={() => setOpen(false)}
                   >
-                    {item.label}
+                    {item.icone && ICONES[item.icone]}
+                    <span>{item.label}</span>
                   </Link>
                 );
               })}

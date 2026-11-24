@@ -7,15 +7,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jbkloh.ficha_buffet.dtos.req.AssociationIngredientePratoRequestDTO;
 import com.jbkloh.ficha_buffet.dtos.req.CreateIngredienteRequestDTO;
 import com.jbkloh.ficha_buffet.dtos.req.UpdateIngredienteRequestDto;
 import com.jbkloh.ficha_buffet.dtos.resp.IngredienteResponseDTO;
 import com.jbkloh.ficha_buffet.exceptions.AppException;
 import com.jbkloh.ficha_buffet.model.IngredientesEntity;
-import com.jbkloh.ficha_buffet.model.PratoEntity;
 import com.jbkloh.ficha_buffet.repositories.IngredientesRepository;
-import com.jbkloh.ficha_buffet.repositories.PratoRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -24,7 +21,6 @@ import lombok.RequiredArgsConstructor;
 public class IngredientesService {
     
     private final IngredientesRepository ingredientesRepository;
-    private final PratoRepository pratoRepository;
 
     @Transactional 
     public void criarIngrediente(CreateIngredienteRequestDTO req){
@@ -54,35 +50,6 @@ public class IngredientesService {
                 .stream()
                 .map(IngredienteResponseDTO::new) 
                 .toList();
-    }
-
-    @Transactional
-    public void associarPratos(AssociationIngredientePratoRequestDTO req) {
-        IngredientesEntity ingrediente = ingredientesRepository.findById(req.ingredienteId())
-            .orElseThrow(() -> new AppException(
-                "O ingrediente de ID: " + req.ingredienteId() + " não está cadastrado.", 
-                HttpStatus.NOT_FOUND
-            ));
-
-        List<PratoEntity> pratos = req.pratosId().stream()
-            .map(pratoid -> pratoRepository.findById(pratoid)
-                .orElseThrow(() -> new AppException(
-                    "O prato de ID: " + pratoid + " não foi encontrado.", 
-                    HttpStatus.NOT_FOUND
-                ))
-            )
-            .toList();
-
-        for (PratoEntity prato : pratos) {
-            boolean jaAssociado = prato.getItensIngredientes().stream()
-                .anyMatch(item -> item.getIngrediente().getId().equals(ingrediente.getId()));
-
-            if (!jaAssociado) {
-                prato.addIngrediente(ingrediente, 1.0);
-            }
-        }
-
-        pratoRepository.saveAll(pratos);
     }
 
     @Transactional 

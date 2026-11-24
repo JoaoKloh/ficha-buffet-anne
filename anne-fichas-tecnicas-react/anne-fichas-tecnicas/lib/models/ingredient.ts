@@ -82,14 +82,3 @@ export const UpdateIngredienteRequestSchema = CreateIngredienteRequestSchema.ext
   id: z.number({ message: "O id do ingrediente não pode ser nulo." }),
 });
 export type UpdateIngredienteRequestDto = z.infer<typeof UpdateIngredienteRequestSchema>;
-
-/**
- * Espelha AssociationIngredientePratoRequestDTO.java (POST /ingredientes/associarPratos).
- */
-export const AssociationIngredientePratoRequestSchema = z.object({
-  ingredienteId: z.number({ message: "O ID do ingrediente é obrigatório." }),
-  pratosId: z.array(z.number()).min(1, "É necessário vincular um ou mais pratos."),
-});
-export type AssociationIngredientePratoRequestDTO = z.infer<
-  typeof AssociationIngredientePratoRequestSchema
->;

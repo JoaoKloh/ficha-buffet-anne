@@ -26,3 +26,10 @@ export function fmtPercent(value: number): string {
 export function fmtNumero(value: number): string {
   return value.toLocaleString("pt-BR", { maximumFractionDigits: 1 });
 }
+
+/** Texto em minúsculas e sem acentos, para busca. */
+export const semAcento = (t: string): string =>
+  t
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase();

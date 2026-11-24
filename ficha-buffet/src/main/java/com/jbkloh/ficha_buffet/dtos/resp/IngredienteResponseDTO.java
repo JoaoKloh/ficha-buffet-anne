@@ -20,7 +20,7 @@ public record IngredienteResponseDTO(
             null, // Sem quantidade específica pois é o catálogo global
             entity.getUnidade(),
             entity.getCategoria(),
-            entity.getCusto(),
+            entity.getCusto() != null ? entity.getCusto().doubleValue() : null,
             entity.getFornecedor()
         );
     }
@@ -33,7 +33,7 @@ public record IngredienteResponseDTO(
             item.getQuantidade(), // Quantidade específica da receita
             item.getIngrediente().getUnidade(),
             item.getIngrediente().getCategoria(),
-            item.getIngrediente().getCusto(),
+            item.getIngrediente().getCusto() != null ? item.getIngrediente().getCusto().doubleValue() : null,
             item.getIngrediente().getFornecedor()
         );
     }

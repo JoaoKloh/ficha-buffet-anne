@@ -35,10 +35,24 @@ class LancamentoControllerMappingTest {
             .collect(Collectors.toSet());
 
         assertThat(rotas).containsExactlyInAnyOrder(
-            "[POST] [/lancamentos/criar]",
-            "[PUT] [/lancamentos/atualizar]",
-            "[GET] [/lancamentos/retornarTodos]",
-            "[DELETE] [/lancamentos/apagar/{id}]"
+            "[GET] [/lancamentos/caixa/retornarMes]",
+            "[GET] [/lancamentos/caixa/detalhar/{id}]",
+            "[POST] [/lancamentos/caixa/criar]",
+            "[PUT] [/lancamentos/caixa/atualizar/{id}]",
+            "[POST] [/lancamentos/caixa/pagar/{id}]",
+            "[GET] [/lancamentos/caixa/contas]",
+            "[GET] [/lancamentos/caixa/fluxo]",
+            "[GET] [/lancamentos/caixa/transferencias]",
+            "[GET] [/lancamentos/caixa/semUnidade]",
+            "[POST] [/lancamentos/caixa/pagamentos/registrar/{id}]",
+            "[POST] [/lancamentos/caixa/pagamentos/desfazer/{id}]",
+            "[POST] [/lancamentos/caixa/transferencias/criar]",
+            "[PUT] [/lancamentos/caixa/transferencias/atualizar/{id}]",
+            "[PUT] [/lancamentos/caixa/classificar]",
+            "[PUT] [/lancamentos/caixa/saldos]",
+            "[PUT] [/lancamentos/caixa/rateio]",
+            "[DELETE] [/lancamentos/apagar/{id}]",
+            "[GET] [/lancamentos/dre]"
         );
     }
 }

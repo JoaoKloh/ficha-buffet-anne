@@ -21,6 +21,14 @@ import com.jbkloh.ficha_buffet.service.PratoService;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import com.jbkloh.ficha_buffet.dtos.req.CalcularCustoRequestDTO;
+import com.jbkloh.ficha_buffet.dtos.req.PreparacaoRequestDTO;
+import com.jbkloh.ficha_buffet.dtos.resp.CustoPreparacaoDTO;
+import com.jbkloh.ficha_buffet.dtos.resp.FichasOpcoesResponseDTO;
+import com.jbkloh.ficha_buffet.dtos.resp.PreparacaoListaItemDTO;
+import com.jbkloh.ficha_buffet.dtos.resp.PreparacaoResponseDTO;
+import com.jbkloh.ficha_buffet.service.FichaService;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController 
 @RequestMapping ("/prato")
@@ -28,6 +36,7 @@ import lombok.RequiredArgsConstructor;
 public class PratoController {
 
     private final PratoService pratoService;
+    private final FichaService fichaService;
 
     @PostMapping ("/criar")
     public ResponseEntity<Void>criarPrato(@RequestBody @Valid CreatePratoRequestDTO req){
@@ -55,6 +64,42 @@ public class PratoController {
     @DeleteMapping("/apagar/{id}")
     public ResponseEntity<Void> apagarPrato(@PathVariable Long id) {
         pratoService.apagarPrato(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    /* ---------- Anne Gestão: fichas técnicas (aba Preparações da tela Fichas) ---------- */
+
+    /** Fichas em ordem alfabética com custo e situação calculados; `busca` filtra pelo nome. */
+    @GetMapping("/fichas/retornarTodos")
+    public ResponseEntity<List<PreparacaoListaItemDTO>> retornarFichas(@RequestParam(defaultValue = "") String busca) {
+        return ResponseEntity.ok(fichaService.listarFichas(busca));
+    }
+
+    /** Opções dos formulários de ficha e de prato de venda. */
+    @GetMapping("/fichas/opcoes")
+    public ResponseEntity<FichasOpcoesResponseDTO> opcoesFichas() {
+        return ResponseEntity.ok(fichaService.opcoes());
+    }
+
+    /** Custo do rascunho da ficha, para o resumo ao vivo do formulário. */
+    @PostMapping("/fichas/calcularCusto")
+    public ResponseEntity<CustoPreparacaoDTO> calcularCusto(@RequestBody @Valid CalcularCustoRequestDTO req) {
+        return ResponseEntity.ok(fichaService.calcularCusto(req));
+    }
+
+    @PostMapping("/fichas/criar")
+    public ResponseEntity<PreparacaoResponseDTO> criarFicha(@RequestBody @Valid PreparacaoRequestDTO req) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(fichaService.criarFicha(req));
+    }
+
+    @PutMapping("/fichas/atualizar/{id}")
+    public ResponseEntity<PreparacaoResponseDTO> atualizarFicha(@PathVariable Long id, @RequestBody @Valid PreparacaoRequestDTO req) {
+        return ResponseEntity.ok(fichaService.atualizarFicha(id, req));
+    }
+
+    @DeleteMapping("/fichas/apagar/{id}")
+    public ResponseEntity<Void> apagarFicha(@PathVariable Long id) {
+        fichaService.apagarFicha(id);
         return ResponseEntity.noContent().build();
     }
 }
