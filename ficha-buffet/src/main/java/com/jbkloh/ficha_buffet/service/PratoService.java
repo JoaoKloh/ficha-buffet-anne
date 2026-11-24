@@ -1,9 +1,7 @@
 package com.jbkloh.ficha_buffet.service;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.http.HttpStatus;
@@ -12,17 +10,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.jbkloh.ficha_buffet.dtos.req.AssociationPratoProducaoRequestDTO;
 import com.jbkloh.ficha_buffet.dtos.req.CreatePratoRequestDTO;
-import com.jbkloh.ficha_buffet.dtos.req.IngredienteDTO;
-import com.jbkloh.ficha_buffet.dtos.req.PratoDTO;
 import com.jbkloh.ficha_buffet.dtos.req.UpdatePratoRequest;
 import com.jbkloh.ficha_buffet.dtos.resp.PratoDetalhadoResponseDTO;
 import com.jbkloh.ficha_buffet.exceptions.AppException;
 import com.jbkloh.ficha_buffet.model.IngredientesEntity;
-import com.jbkloh.ficha_buffet.model.PratoEntity;
-import com.jbkloh.ficha_buffet.model.ProducaoEntity;
+import com.jbkloh.ficha_buffet.model.PreparacaoEntity;
+import com.jbkloh.ficha_buffet.model.EventoEntity;
 import com.jbkloh.ficha_buffet.repositories.IngredientesRepository;
-import com.jbkloh.ficha_buffet.repositories.PratoRepository;
-import com.jbkloh.ficha_buffet.repositories.ProducaoRepository;
+import com.jbkloh.ficha_buffet.repositories.PreparacaoRepository;
+import com.jbkloh.ficha_buffet.repositories.EventoRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -30,56 +26,13 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor 
 public class PratoService {
 
-    private final PratoRepository pratoRepository;
+    private final PreparacaoRepository pratoRepository;
     private final IngredientesRepository ingredientesRepository;
-    private final ProducaoRepository producaoRepository;
+    private final EventoRepository producaoRepository;
 
-
-    @Transactional (readOnly = true)
-    public PratoEntity getPratoByNome(String nome){
-        return pratoRepository.findByNome(nome)
-        .orElseThrow(()->new AppException("Nao foi possivel localizar o prato com o nome informado.", HttpStatus.BAD_REQUEST));
-    }
-    @Transactional
-    public List<PratoDetalhadoResponseDTO> salvarPratosComIngredientes(List<PratoDTO> pratosDTO) {
-        List<PratoEntity> pratos = new ArrayList<>();
-        for (PratoDTO pratoDto : pratosDTO) {
-
-            // Instancia e preenche a entidade do Prato
-            PratoEntity pratoEntity = PratoDTO.toEntity(pratoDto);
-
-            // Processa a lista de ingredientes apenas se ela existir e NÃO estiver vazia
-            if (pratoDto.ingredientes() != null && !pratoDto.ingredientes().isEmpty()) {
-                for (IngredienteDTO ingDto : pratoDto.ingredientes()) {
-
-                    // Busca o ingrediente para verificar se ele já existe
-                    Optional<IngredientesEntity> ingredienteOptional = 
-                        ingredientesRepository.findByNomeAndUnidadeMedida(ingDto.nome(), ingDto.unidade());
-
-                    IngredientesEntity ingrediente;
-
-                    // Estrutura IF/ELSE utilizando Optional sem o uso do orElseThrow
-                    if (ingredienteOptional.isPresent()) {
-                        ingrediente = ingredienteOptional.get();
-                    } else {
-                        ingrediente = ingredientesRepository.save(IngredienteDTO.toEntity(ingDto));
-                    }
-
-                    // Associa o ingrediente ao prato
-                    pratoEntity.addIngrediente(ingrediente, ingDto.qtd());
-                }
-            }
-
-            pratos.add(pratoEntity);
-            pratoRepository.save(pratoEntity);
-        }
-        return pratos.stream()
-                .map(PratoDetalhadoResponseDTO::new)
-                .toList();
-    }
     @Transactional
     public void criarPrato(CreatePratoRequestDTO dto) {
-        PratoEntity prato = CreatePratoRequestDTO.toEntity(dto);
+        PreparacaoEntity prato = CreatePratoRequestDTO.toEntity(dto);
 
         if (dto.ingredientes() != null) {
             dto.ingredientes().forEach(itemDto -> {
@@ -95,7 +48,7 @@ public class PratoService {
 @Transactional 
 public void atualizarPrato(UpdatePratoRequest req) {
 
-    PratoEntity pratoEntity = pratoRepository.findById(req.id())
+    PreparacaoEntity pratoEntity = pratoRepository.findById(req.id())
         .orElseThrow(() -> new AppException("O prato com id " + req.id() + " não existe.", HttpStatus.BAD_REQUEST));
 
     UpdatePratoRequest.atualizarEntidade(req, pratoEntity);
@@ -128,7 +81,7 @@ public void atualizarPrato(UpdatePratoRequest req) {
     
     @Transactional 
     public void apagarPrato(Long id) {
-        PratoEntity prato = pratoRepository.findById(id)
+        PreparacaoEntity prato = pratoRepository.findById(id)
             .orElseThrow(() -> new AppException("Prato não encontrado", HttpStatus.NOT_FOUND));
         
         prato.getItensIngredientes().clear();
@@ -137,13 +90,13 @@ public void atualizarPrato(UpdatePratoRequest req) {
 
     @Transactional
     public void associarEventos(AssociationPratoProducaoRequestDTO req) {
-        PratoEntity prato = pratoRepository.findById(req.pratoId())
+        PreparacaoEntity prato = pratoRepository.findById(req.pratoId())
             .orElseThrow(() -> new AppException(
                 "O prato de ID: " + req.pratoId() + " não está cadastrado.", 
                 HttpStatus.NOT_FOUND
             ));
 
-        List<ProducaoEntity> eventos = req.eventosId().stream()
+        List<EventoEntity> eventos = req.eventosId().stream()
             .map(eventoId -> producaoRepository.findById(eventoId)
                 .orElseThrow(() -> new AppException(
                     "O evento/produção de ID: " + eventoId + " não foi encontrado.", 
@@ -152,9 +105,11 @@ public void atualizarPrato(UpdatePratoRequest req) {
             )
             .toList();
 
-        for (ProducaoEntity evento : eventos) {
-            if (!evento.getPratos().contains(prato)) {
-                evento.getPratos().add(prato);
+        for (EventoEntity evento : eventos) {
+            boolean jaNoCardapio = evento.getCardapio().stream()
+                .anyMatch(item -> item.getPreparacao().getId().equals(prato.getId()));
+            if (!jaNoCardapio) {
+                evento.addPreparacao(prato);
             }
         }
 

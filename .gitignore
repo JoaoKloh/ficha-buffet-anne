@@ -90,3 +90,7 @@ CLAUDE.md
 **/.env
 **/.env.*
 !.env.example
+# dados locais do Anne Gestão (JSON store de referência do BFF)
+/anne-fichas-tecnicas-react/anne-fichas-tecnicas/data/gestao/
+# carga inicial do protótipo: tem dados pessoais de clientes (CPF, e-mail, telefone)
+/carga-inicial/

@@ -58,6 +58,8 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .requestMatchers("/auth/**").permitAll()
                 .requestMatchers("/ingredientes/**","/prato/**","/lancamentos/**", "/orcamento/**", "/producao/**").hasRole("ADMIN")
+                .requestMatchers("/clientes/**", "/api/categoriafinanceira/**", "/pratosvenda/**", "/parcelas/**", "/extras/**", "/cardapio/**",
+                    "/movimentos/**", "/estoque/**", "/lotes/**", "/notasfiscais/**", "/cozinha/**", "/painel/**", "/backup/**", "/equipe/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
             )
             .oauth2ResourceServer(oauth2 -> oauth2

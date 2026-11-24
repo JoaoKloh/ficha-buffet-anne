@@ -2,8 +2,11 @@ package com.jbkloh.ficha_buffet.dtos.req;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
+
+import java.time.LocalDate;
 
 import com.jbkloh.ficha_buffet.model.IngredientesEntity;
 
@@ -17,16 +20,17 @@ public record UpdateIngredienteRequestDto(
     String nome,
 
     @NotBlank(message = "A unidade de medida do ingrediente é obrigatória.")
-    @Size(max = 50, message = "A unidade de medida deve ter no máximo 50 caracteres.")
+    @Pattern(regexp = "kg|l|un|dz|maço|garrafa|botijão", message = "A unidade deve ser kg, l, un, dz, maço, garrafa ou botijão.")
     String unidade,
 
     @NotBlank(message = "A categoria do ingrediente é obrigatória.")
+    @Pattern(regexp = "Proteínas e frutos do mar|Queijos e laticínios|Hortifruti|Mercearia|Bebidas|Descartáveis|Produtos de limpeza|Outros", message = "Categoria de ingrediente inválida.")
     String categoria,
 
     @Size(max = 1024, message = "A unidade de medida deve ter no máximo 1024 caracteres.")
     String descricao,
 
-    @Positive (message = "O custo não pode ser negativo.")
+    @PositiveOrZero(message = "O custo não pode ser negativo.")
     Double custo,
 
     @Size(max = 50, message = "O fornecedo deve ter no máximo 50 caracteres.")
@@ -36,7 +40,8 @@ public record UpdateIngredienteRequestDto(
     public static void atualizarEntidade(UpdateIngredienteRequestDto req, IngredientesEntity ingrediente) {
         ingrediente.setCategoria(req.categoria());
         ingrediente.setNome(req.nome());
-        ingrediente.setCusto(req.custo());
+        ingrediente.setCusto(CreateIngredienteRequestDTO.custoDe(req.custo()));
+        ingrediente.setAtualizadoEm(LocalDate.now());
         ingrediente.setFornecedor(req.fornecedor());
         ingrediente.setUnidade(req.unidade());
     }

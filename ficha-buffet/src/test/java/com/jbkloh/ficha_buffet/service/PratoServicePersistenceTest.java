@@ -12,16 +12,15 @@ import org.springframework.context.annotation.Import;
 import com.jbkloh.ficha_buffet.dtos.req.AssociationPratoProducaoRequestDTO;
 import com.jbkloh.ficha_buffet.dtos.req.CreatePratoItemIngredienteDTO;
 import com.jbkloh.ficha_buffet.dtos.req.CreatePratoRequestDTO;
-import com.jbkloh.ficha_buffet.dtos.req.IngredienteDTO;
-import com.jbkloh.ficha_buffet.dtos.req.PratoDTO;
 import com.jbkloh.ficha_buffet.dtos.req.UpdatePratoRequest;
 import com.jbkloh.ficha_buffet.dtos.resp.PratoDetalhadoResponseDTO;
 import com.jbkloh.ficha_buffet.model.IngredientesEntity;
-import com.jbkloh.ficha_buffet.model.PratoEntity;
-import com.jbkloh.ficha_buffet.model.ProducaoEntity;
+import com.jbkloh.ficha_buffet.model.PreparacaoEntity;
+import com.jbkloh.ficha_buffet.model.ClienteEntity;
+import com.jbkloh.ficha_buffet.model.EventoEntity;
 import com.jbkloh.ficha_buffet.repositories.IngredientesRepository;
-import com.jbkloh.ficha_buffet.repositories.PratoRepository;
-import com.jbkloh.ficha_buffet.repositories.ProducaoRepository;
+import com.jbkloh.ficha_buffet.repositories.PreparacaoRepository;
+import com.jbkloh.ficha_buffet.repositories.EventoRepository;
 
 import jakarta.persistence.EntityManager;
 import java.time.LocalDate;
@@ -34,23 +33,39 @@ class PratoServicePersistenceTest {
     private PratoService pratoService;
 
     @Autowired
-    private PratoRepository pratoRepository;
+    private PreparacaoRepository pratoRepository;
 
     @Autowired
     private IngredientesRepository ingredientesRepository;
 
     @Autowired
-    private ProducaoRepository producaoRepository;
+    private EventoRepository producaoRepository;
 
     @Autowired
     private EntityManager entityManager;
+
+    // Evento mínimo válido: todo evento tem cliente e código.
+    private EventoEntity novoEvento(String nome, int convidados, LocalDate data) {
+        ClienteEntity cliente = new ClienteEntity();
+        cliente.setNome(nome);
+        entityManager.persist(cliente);
+        EventoEntity evento = new EventoEntity();
+        evento.setNome(nome);
+        evento.setConvidadosPrevistos(convidados);
+        evento.setDataEvento(data);
+        evento.setCliente(cliente);
+        evento.setCodigo(String.format("26-%03d", ++sequenciaCodigo));
+        return evento;
+    }
+
+    private int sequenciaCodigo = 0;
 
     private Long criarIngrediente(String nome) {
         IngredientesEntity ingrediente = new IngredientesEntity();
         ingrediente.setNome(nome);
         ingrediente.setUnidade("g");
         ingrediente.setCategoria("Geral");
-        ingrediente.setCusto(1.0);
+        ingrediente.setCusto(new java.math.BigDecimal("1.0"));
         return ingredientesRepository.save(ingrediente).getId();
     }
 
@@ -59,17 +74,17 @@ class PratoServicePersistenceTest {
         Long ingredienteId = criarIngrediente("Farinha");
 
         CreatePratoRequestDTO dto = new CreatePratoRequestDTO(
-            "Bolo", "Sobremesa", null, 1, "unidade", 1.0, "receita",
+            "Bolo", "sobremesa", null, 1.0, "un", 1.0, "receita",
             List.of(new CreatePratoItemIngredienteDTO(ingredienteId, 200.0, "g"))
         );
 
         pratoService.criarPrato(dto);
-        PratoEntity salvo = buscarPratoPorNome("Bolo");
+        PreparacaoEntity salvo = buscarPratoPorNome("Bolo");
 
         entityManager.flush();
         entityManager.clear();
 
-        PratoEntity recarregado = pratoRepository.findById(salvo.getId()).orElseThrow();
+        PreparacaoEntity recarregado = pratoRepository.findById(salvo.getId()).orElseThrow();
 
         assertThat(recarregado.getItensIngredientes())
             .as("os itens de ingrediente do prato devem ser persistidos na tabela intermediaria")
@@ -81,16 +96,16 @@ class PratoServicePersistenceTest {
         Long ingredienteId = criarIngrediente("Acucar");
 
         CreatePratoRequestDTO createDto = new CreatePratoRequestDTO(
-            "Pudim", "Sobremesa", null, 1, "unidade", 1.0, "receita",
+            "Pudim", "sobremesa", null, 1.0, "un", 1.0, "receita",
             List.of(new CreatePratoItemIngredienteDTO(ingredienteId, 100.0, "g"))
         );
         pratoService.criarPrato(createDto);
-        PratoEntity salvo = buscarPratoPorNome("Pudim");
+        PreparacaoEntity salvo = buscarPratoPorNome("Pudim");
         entityManager.flush();
         entityManager.clear();
 
         UpdatePratoRequest updateDto = new UpdatePratoRequest(
-            salvo.getId(), "Pudim", "Sobremesa", null, 1, "unidade", 1.0, "receita",
+            salvo.getId(), "Pudim", "sobremesa", null, 1.0, "un", 1.0, "receita",
             List.of()
         );
         pratoService.atualizarPrato(updateDto);
@@ -98,7 +113,7 @@ class PratoServicePersistenceTest {
         entityManager.clear();
 
         Number count = (Number) entityManager
-            .createNativeQuery("SELECT COUNT(*) FROM prato_ingrediente WHERE prato_id = :id")
+            .createNativeQuery("SELECT COUNT(*) FROM prato_ingrediente WHERE preparacao_id = :id")
             .setParameter("id", salvo.getId())
             .getSingleResult();
 
@@ -112,11 +127,11 @@ class PratoServicePersistenceTest {
         Long ingredienteId = criarIngrediente("Leite");
 
         CreatePratoRequestDTO createDto = new CreatePratoRequestDTO(
-            "Vitamina", "Bebida", null, 1, "unidade", 1.0, "receita",
+            "Vitamina", "bebida", null, 1.0, "un", 1.0, "receita",
             List.of(new CreatePratoItemIngredienteDTO(ingredienteId, 300.0, "ml"))
         );
         pratoService.criarPrato(createDto);
-        PratoEntity salvo = buscarPratoPorNome("Vitamina");
+        PreparacaoEntity salvo = buscarPratoPorNome("Vitamina");
         entityManager.flush();
 
         pratoService.apagarPrato(salvo.getId());
@@ -129,7 +144,7 @@ class PratoServicePersistenceTest {
             .isPresent();
 
         Number linhasIntermediarias = (Number) entityManager
-            .createNativeQuery("SELECT COUNT(*) FROM prato_ingrediente WHERE prato_id = :id")
+            .createNativeQuery("SELECT COUNT(*) FROM prato_ingrediente WHERE preparacao_id = :id")
             .setParameter("id", salvo.getId())
             .getSingleResult();
         assertThat(linhasIntermediarias.longValue())
@@ -138,41 +153,11 @@ class PratoServicePersistenceTest {
     }
 
     @Test
-    void salvarPratosComIngredientes_reaproveitaIngredienteExistenteEcriaNovoQuandoNecessario() {
-        Long farinhaId = criarIngrediente("Farinha de trigo");
-
-        PratoDTO pratoDto = new PratoDTO(
-            "Pao", "Padaria", null, 2, "unidades", 1.0, "receita",
-            List.of(
-                new IngredienteDTO("Farinha de trigo", 500.0, "g"),
-                new IngredienteDTO("Fermento", 10.0, "g")
-            )
-        );
-
-        List<PratoDetalhadoResponseDTO> salvos = pratoService.salvarPratosComIngredientes(List.of(pratoDto));
-        entityManager.flush();
-        entityManager.clear();
-
-        PratoEntity recarregado = pratoRepository.findById(salvos.get(0).id()).orElseThrow();
-        assertThat(recarregado.getItensIngredientes()).hasSize(2);
-
-        assertThat(ingredientesRepository.findById(farinhaId))
-            .as("o ingrediente ja cadastrado nao deve ser duplicado")
-            .isPresent();
-        assertThat(ingredientesRepository.findByNomeAndUnidadeMedida("Fermento", "g"))
-            .as("um novo ingrediente deve ser criado quando nao existir no catalogo")
-            .isPresent();
-        assertThat(ingredientesRepository.findAll())
-            .as("nao deve haver duplicidade do ingrediente ja existente")
-            .hasSize(2);
-    }
-
-    @Test
     void listarPratos_deveExporQuantidadeDoIngredienteNaFichaTecnica() {
         Long ingredienteId = criarIngrediente("Tomate");
 
         CreatePratoRequestDTO createDto = new CreatePratoRequestDTO(
-            "Molho", "Base", null, 1, "litro", 1.0, "receita",
+            "Molho", "base", null, 1.0, "l", 1.0, "receita",
             List.of(new CreatePratoItemIngredienteDTO(ingredienteId, 750.0, "g"))
         );
         pratoService.criarPrato(createDto);
@@ -192,13 +177,13 @@ class PratoServicePersistenceTest {
     void associarEventos_deveVincularPratoAoEventoSemDuplicar() {
         Long ingredienteId = criarIngrediente("Sal");
         CreatePratoRequestDTO createDto = new CreatePratoRequestDTO(
-            "Tempero", "Base", null, 1, "unidade", 1.0, "receita",
+            "Tempero", "base", null, 1.0, "un", 1.0, "receita",
             List.of(new CreatePratoItemIngredienteDTO(ingredienteId, 5.0, "g"))
         );
         pratoService.criarPrato(createDto);
-        PratoEntity prato = buscarPratoPorNome("Tempero");
+        PreparacaoEntity prato = buscarPratoPorNome("Tempero");
 
-        ProducaoEntity evento = new ProducaoEntity( "Casamento", 100, LocalDate.now(), new java.util.ArrayList<>());
+        EventoEntity evento = novoEvento("Casamento", 100, LocalDate.now());
         producaoRepository.save(evento);
         entityManager.flush();
         entityManager.clear();
@@ -209,14 +194,14 @@ class PratoServicePersistenceTest {
         entityManager.flush();
         entityManager.clear();
 
-        ProducaoEntity recarregado = producaoRepository.findById(evento.getId()).orElseThrow();
-        assertThat(recarregado.getPratos())
+        EventoEntity recarregado = producaoRepository.findById(evento.getId()).orElseThrow();
+        assertThat(recarregado.getCardapio())
             .as("associar o mesmo evento duas vezes nao deve duplicar o vinculo")
             .hasSize(1);
     }
 
     // criarPrato não devolve a entidade; o prato criado é localizado pelo nome.
-    private PratoEntity buscarPratoPorNome(String nome) {
+    private PreparacaoEntity buscarPratoPorNome(String nome) {
         return pratoRepository.findAll().stream()
             .filter(p -> p.getNome().equals(nome))
             .findFirst()

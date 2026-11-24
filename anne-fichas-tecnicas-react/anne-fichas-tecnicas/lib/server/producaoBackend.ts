@@ -1,10 +1,6 @@
 // lib/server/producaoBackend.ts
 import { cookies } from "next/headers";
-import type {
-  ProducaoResponseDTO,
-  CreateProducaoRequestDTO,
-  UpdateProducaoRequestDTO,
-} from "@/lib/models/producao";
+import type { ProducaoResponseDTO } from "@/lib/models/producao";
 
 const API_BASE_URL = process.env.API_BASE_URL ?? "http://localhost:8080";
 
@@ -46,18 +42,5 @@ export const producaoBackend = {
   async listarTodos(): Promise<ProducaoResponseDTO[]> {
     const res = await call("/producao/retornarTodos");
     return res.json();
-  },
-
-  // Retorna void porque o Spring Boot responde 204 No Content
-  async criar(body: CreateProducaoRequestDTO): Promise<void> {
-    await call("/producao/criar", { method: "POST", body: JSON.stringify(body) });
-  },
-
-  async atualizar(body: UpdateProducaoRequestDTO): Promise<void> {
-    await call("/producao/atualizar", { method: "PUT", body: JSON.stringify(body) });
-  },
-
-  async apagar(id: number): Promise<void> {
-    await call(`/producao/apagar/${id}`, { method: "DELETE" });
   },
 };

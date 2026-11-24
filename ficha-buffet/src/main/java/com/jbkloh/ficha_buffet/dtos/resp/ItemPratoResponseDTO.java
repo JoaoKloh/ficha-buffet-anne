@@ -1,26 +1,26 @@
 package com.jbkloh.ficha_buffet.dtos.resp;
 
-import com.jbkloh.ficha_buffet.model.PratoEntity;
+import com.jbkloh.ficha_buffet.model.PreparacaoEntity;
 
 public record ItemPratoResponseDTO(
     Long id,
     String nome,
     String categoria,
-    Integer rendQtd,
+    Double rendQtd,
     String rendUnid,
     Double porPessoa,
     String receita,
     String foto
 ) {
-    public ItemPratoResponseDTO(PratoEntity entity) {
+    public ItemPratoResponseDTO(PreparacaoEntity entity) {
         this(
             entity.getId(),
             entity.getNome(),
             entity.getCategoria(),
-            entity.getRendimentoReceita(),
-            entity.getUnidade(),
-            entity.getRendimentoPessoa(),
-            entity.getDescricao(),
+            entity.getRendimento(),
+            entity.getUnidadeRendimento(),
+            entity.getPorcaoPadrao(),
+            entity.getModoPreparo(),
             entity.getUrlImagem()
         );
     }

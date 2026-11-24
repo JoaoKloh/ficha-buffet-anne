@@ -1,16 +1,18 @@
 package com.jbkloh.ficha_buffet.dtos.req;
 
+import java.time.LocalDate;
 import java.util.List;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 import org.hibernate.validator.constraints.URL;
 
-import com.jbkloh.ficha_buffet.model.PratoEntity;
+import com.jbkloh.ficha_buffet.model.PreparacaoEntity;
 
 public record UpdatePratoRequest(
 
@@ -22,7 +24,7 @@ public record UpdatePratoRequest(
     String nome,
 
     @NotBlank(message = "A categoria é obrigatória.")
-    @Size(max = 100, message = "A categoria deve ter no máximo 100 caracteres.")
+    @Pattern(regexp = "canape|volante|entrada|ilha|principal|acompanhamento|sobremesa|bebida|base", message = "Categoria de ficha inválida.")
     String categoria,
 
     @URL(message = "A foto deve ser uma URL válida.")
@@ -30,16 +32,16 @@ public record UpdatePratoRequest(
 
     @NotNull(message = "O rendimento da receita (qtd) é obrigatório.")
     @Positive(message = "O rendimento da receita deve ser maior que zero.")
-    Integer rendQtd,
+    Double rendQtd,
 
     @NotBlank(message = "A unidade do rendimento é obrigatória.")
-    @Size(max = 50, message = "A unidade do rendimento deve ter no máximo 50 caracteres.")
+    @Pattern(regexp = "porções|un|kg|l", message = "A unidade do rendimento deve ser porções, un, kg ou l.")
     String rendUnid,
 
     @Min(value = 0, message = "A sugestão por pessoa não pode ser negativa.")
     Double porPessoa,
 
-    @Size(max = 2000, message = "A receita/modo de preparo deve ter no máximo 2000 caracteres.")
+    @Size(max = 4000, message = "A receita/modo de preparo deve ter no máximo 4000 caracteres.")
     String receita,
 
     @NotEmpty(message = "O prato deve conter pelo menos um ingrediente.")
@@ -47,13 +49,14 @@ public record UpdatePratoRequest(
 
 ) {
 
-    public static void atualizarEntidade(UpdatePratoRequest req, PratoEntity prato) {
+    public static void atualizarEntidade(UpdatePratoRequest req, PreparacaoEntity prato) {
         prato.setNome(req.nome());
         prato.setCategoria(req.categoria());
         prato.setUrlImagem(req.foto());
-        prato.setRendimentoReceita(req.rendQtd());
-        prato.setUnidade(req.rendUnid());
-        prato.setRendimentoPessoa(req.porPessoa());
-        prato.setDescricao(req.receita());
+        prato.setRendimento(req.rendQtd());
+        prato.setUnidadeRendimento(req.rendUnid());
+        prato.setPorcaoPadrao(req.porPessoa() != null ? req.porPessoa() : 1.0);
+        prato.setModoPreparo(req.receita() != null ? req.receita() : "");
+        prato.setAtualizadoEm(LocalDate.now());
     }
 }
