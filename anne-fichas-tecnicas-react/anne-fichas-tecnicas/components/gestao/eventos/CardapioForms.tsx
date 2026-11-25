@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Carregando, FormSheet, Fld, Pill, Sel, Vazio, msgErro } from "@/components/ui/Gestao";
 import { useDados, useSheet } from "@/components/ui/Sheet";
 import { useToast } from "@/components/ui/Toast";
@@ -8,7 +8,7 @@ import { CATEGORIAS_PREPARACAO, PRACAS, type Praca } from "@/lib/models/dominio"
 import type { CardapioLinhaDTO, EventoResponseDTO, ImportarCardapioAnaliseResponseDTO } from "@/lib/models/evento";
 import { adicionarPratosCardapio, analisarCardapio, atualizarItemCardapio, confirmarCardapio, copiarCardapio, criarItemCardapio, excluirItemCardapio, opcoesEvento } from "@/lib/api/gestao/eventos";
 import { dec, fmtN, numIn } from "@/lib/utils/numero";
-import { semAcento } from "@/lib/utils/format";
+import { filtrarPratos } from "@/lib/utils/cardapio";
 
 const unidRend = (u: string, n: number) => (u === "porções" ? (n === 1 ? "porção" : "porções") : u === "un" ? "un" : u);
 
@@ -207,14 +207,16 @@ export function CardapioMultiSheet({ evento, jaNoCardapio }: { evento: EventoRes
   const [busca, setBusca] = useState("");
   const [grupo, setGrupo] = useState("");
   const [ocupado, setOcupado] = useState(false);
+  const lista = useRef<HTMLDivElement>(null);
   if (!op) return <Carregando erro={erro} />;
   if (!op.preparacoes.length) return <p className="note">Cadastre as fichas técnicas primeiro, na aba Fichas.</p>;
   const ja = new Set(jaNoCardapio);
-  const q = semAcento(busca.trim());
-  const grupos = op.preparacoes
-    .filter((g) => !grupo || g.grupo === grupo)
-    .map((g) => ({ ...g, itens: g.itens.filter(([, n]) => !q || semAcento(n).includes(q)) }))
-    .filter((g) => g.itens.length);
+  const grupos = filtrarPratos(op.preparacoes, grupo, busca);
+  // Busca ou categoria nova: a lista volta ao topo para os resultados aparecerem.
+  const filtrar = (f: () => void) => {
+    f();
+    lista.current?.scrollTo({ top: 0 });
+  };
   const marcar = (ids: number[], on: boolean) =>
     setSel((s) => {
       const n = new Set(s);
@@ -241,19 +243,19 @@ export function CardapioMultiSheet({ evento, jaNoCardapio }: { evento: EventoRes
         Marque todos os pratos que entram no cardápio de <b>{evento.nome}</b> e salve uma vez só. O fator por convidado vem da ficha; dá para ajustar depois na lista do cardápio.
       </p>
       <div className="toolbar">
-        <input className="search" type="search" placeholder="Buscar prato…" value={busca} onChange={(e) => setBusca(e.target.value)} aria-label="Buscar prato" />
+        <input className="search" type="search" placeholder="Buscar prato…" value={busca} onChange={(e) => filtrar(() => setBusca(e.target.value))} aria-label="Buscar prato" />
       </div>
       <div className="toolbar" role="group" aria-label="Categoria">
-        <button type="button" className="chip" aria-pressed={!grupo} onClick={() => setGrupo("")}>
+        <button type="button" className="chip" aria-pressed={!grupo} onClick={() => filtrar(() => setGrupo(""))}>
           Todas
         </button>
         {op.preparacoes.map((g) => (
-          <button key={g.grupo} type="button" className="chip" aria-pressed={grupo === g.grupo} onClick={() => setGrupo(g.grupo)}>
+          <button key={g.grupo} type="button" className="chip" aria-pressed={grupo === g.grupo} onClick={() => filtrar(() => setGrupo(g.grupo))}>
             {g.grupo}
           </button>
         ))}
       </div>
-      <div className="box">
+      <div className="box rola" ref={lista}>
         {!grupos.length && <Vazio titulo="Nenhum prato encontrado">Mude a busca ou a categoria.</Vazio>}
         {grupos.map((g) => {
           const livres = g.itens.map(([id]) => id).filter((id) => !ja.has(id));

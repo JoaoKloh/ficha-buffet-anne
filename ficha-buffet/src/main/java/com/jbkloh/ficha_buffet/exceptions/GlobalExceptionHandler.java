@@ -33,10 +33,11 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(ex.getHttpStatus()).body(errorResponse);
     }
 
+    /** Falha do AuthenticationManager no login. 401/403 de rotas protegidas saem do RespostaErroSeguranca. */
     @ExceptionHandler(AuthenticationException.class)
     public ResponseEntity<RestErrorMessage> handleAuth(AuthenticationException ex) {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-            .body(new RestErrorMessage(HttpStatus.UNAUTHORIZED, "Usuário ou senha inválidos."));
+            .body(new RestErrorMessage(HttpStatus.UNAUTHORIZED, CodigoErroAutenticacao.INVALID_CREDENTIALS));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { authApi } from "@/lib/api/auth";
 import { NAV_MODULES, findActiveNav } from "@/lib/navigation";
 import { ICONES } from "./ui/Icones";
 
@@ -10,6 +11,7 @@ export function Sidebar() {
   const pathname = usePathname();
   // Só relevante em telas pequenas, onde a sidebar vira uma gaveta.
   const [open, setOpen] = useState(false);
+  const [saindo, setSaindo] = useState(false);
   const itemAtivo = findActiveNav(pathname)?.item;
 
   useEffect(() => {
@@ -72,6 +74,21 @@ export function Sidebar() {
             </div>
           ))}
         </nav>
+
+        <button
+          type="button"
+          className="sidebar-link sidebar-sair"
+          disabled={saindo}
+          onClick={() => {
+            setSaindo(true);
+            void authApi.logout();
+          }}
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+            <path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <span>{saindo ? "Saindo…" : "Sair"}</span>
+        </button>
       </aside>
     </>
   );
