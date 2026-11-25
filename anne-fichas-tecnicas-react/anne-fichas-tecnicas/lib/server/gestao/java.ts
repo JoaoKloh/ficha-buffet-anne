@@ -10,14 +10,17 @@ const API_BASE_URL = process.env.API_BASE_URL ?? "http://localhost:8080";
 
 export class BackendError extends Error {
   status: number;
-  constructor(message: string, status = 400) {
+  /** Código do Java nos 401/403 (ex.: ACCESS_TOKEN_EXPIRED, ACCESS_DENIED), repassado à tela. */
+  code?: string;
+  constructor(message: string, status = 400, code?: string) {
     super(message);
     this.name = "BackendError";
     this.status = status;
+    this.code = code;
   }
 }
 
-// 401/403 vêm do Spring Security sem corpo JSON — sem isto o usuário veria só o código HTTP.
+// Fallback para 401/403 sem corpo JSON (o Java hoje responde { message, code }).
 function mensagemPadrao(status: number): string {
   if (status === 401) return "Sua sessão expirou. Faça login novamente.";
   if (status === 403) return "Você não tem permissão para esta operação.";
@@ -39,7 +42,7 @@ async function chamar(path: string, method: string, body?: unknown): Promise<Res
   }
   if (!res.ok) {
     const payload = await res.json().catch(() => null);
-    throw new BackendError(payload?.message ?? mensagemPadrao(res.status), res.status);
+    throw new BackendError(payload?.message ?? mensagemPadrao(res.status), res.status, payload?.code);
   }
   return res;
 }

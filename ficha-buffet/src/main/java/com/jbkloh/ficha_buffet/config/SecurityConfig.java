@@ -29,6 +29,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import com.jbkloh.ficha_buffet.repositories.UsuarioRepository;
+import com.jbkloh.ficha_buffet.service.AutenticacaoService;
 import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
@@ -44,6 +45,7 @@ public class SecurityConfig {
 
     private final LimitRequest limitRequest;
     private final RSAKeyProperties keys;
+    private final RespostaErroSeguranca respostaErroSeguranca;
 
     @Value("${url.frontend}")
     private String urlFront;
@@ -62,8 +64,15 @@ public class SecurityConfig {
                     "/movimentos/**", "/estoque/**", "/lotes/**", "/notasfiscais/**", "/cozinha/**", "/painel/**", "/backup/**", "/equipe/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
             )
+            // 401/403 com corpo JSON e código (ACCESS_TOKEN_EXPIRED, ACCESS_DENIED...): ver RespostaErroSeguranca.
+            .exceptionHandling(ex -> ex
+                .authenticationEntryPoint(respostaErroSeguranca)
+                .accessDeniedHandler(respostaErroSeguranca)
+            )
             .oauth2ResourceServer(oauth2 -> oauth2
                 .bearerTokenResolver(cookieTokenResolver())
+                .authenticationEntryPoint(respostaErroSeguranca)
+                .accessDeniedHandler(respostaErroSeguranca)
                 .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter()))
             )
             .addFilterBefore(limitRequest, UsernamePasswordAuthenticationFilter.class)
@@ -138,11 +147,19 @@ public class SecurityConfig {
                 .build();
     }
 
+    /**
+     * Access token lido do cookie. Nas rotas /auth/** (login, refresh-token, logout) ele é
+     * ignorado: são públicas, e um access token vencido no cookie faria o filtro do resource
+     * server responder 401 antes de a sessão poder ser renovada ou encerrada.
+     */
     private BearerTokenResolver cookieTokenResolver() {
         return request -> {
+            if (request.getRequestURI().startsWith(request.getContextPath() + "/auth/")) {
+                return null;
+            }
             if (request.getCookies() != null) {
                 for (jakarta.servlet.http.Cookie cookie : request.getCookies()) {
-                    if ("accessToken".equals(cookie.getName())) {
+                    if (AutenticacaoService.COOKIE_ACESSO.equals(cookie.getName())) {
                         return cookie.getValue();
                     }
                 }

@@ -17,7 +17,10 @@ export async function responder<T>(fn: () => Promise<T>, status = 200, padrao = 
       return NextResponse.json({ message: error.issues[0]?.message ?? "Dados inválidos.", issues: error.issues }, { status: 400 });
     }
     if (error instanceof BackendError) {
-      return NextResponse.json({ message: error.message }, { status: error.status });
+      return NextResponse.json(
+        error.code ? { message: error.message, code: error.code } : { message: error.message },
+        { status: error.status }
+      );
     }
     console.error("[gestao]", error);
     return NextResponse.json({ message: padrao }, { status: 500 });

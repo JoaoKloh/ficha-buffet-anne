@@ -21,16 +21,17 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class TokenService {
 
-    // Fonte única da validade do token — o cookie que o carrega (ver
-    // AutenticacaoController) usa este mesmo valor como maxAge, para que o
-    // cookie nunca sobreviva mais tempo do que o JWT que ele guarda.
-    private static final long EXPIRATION_HOURS = 1;
+    // Fonte única da validade do access token — o cookie que o carrega (ver
+    // AutenticacaoService) usa este mesmo valor como maxAge, para que o
+    // cookie nunca sobreviva mais tempo do que o JWT que ele guarda. Vencido,
+    // a sessão é renovada pelo refresh token (RefreshTokenService).
+    private static final long EXPIRATION_MINUTES = 20;
 
     private final JwtEncoder jwtEncoder;
     private final JwtDecoder jwtDecoder;
 
     public long getExpirationSeconds() {
-        return EXPIRATION_HOURS * 3600;
+        return EXPIRATION_MINUTES * 60;
     }
 
     public String extrairSubject(String token) {
@@ -43,7 +44,7 @@ public class TokenService {
 
     public String criarToken(String email, Collection<? extends GrantedAuthority> authorities) {
         Instant agora = Instant.now();
-        Instant expiracao = agora.plus(EXPIRATION_HOURS, ChronoUnit.HOURS);
+        Instant expiracao = agora.plus(EXPIRATION_MINUTES, ChronoUnit.MINUTES);
 
         List<String> roles = authorities.stream()
                         .map(GrantedAuthority::getAuthority)
