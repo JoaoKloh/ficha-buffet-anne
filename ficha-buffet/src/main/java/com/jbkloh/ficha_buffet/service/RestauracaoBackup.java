@@ -125,7 +125,19 @@ public class RestauracaoBackup {
     public void ajustarSequencia(String colecao) {
         String tabela = TABELAS.get(colecao);
         Number maior = (Number) em.createNativeQuery("SELECT COALESCE(MAX(id), 0) FROM " + tabela).getSingleResult();
-        em.createNativeQuery("ALTER TABLE " + tabela + " ALTER COLUMN id RESTART WITH " + (maior.longValue() + 1)).executeUpdate();
+        posicionarSequencia(tabela, maior.longValue() + 1);
+    }
+
+    /**
+     * O próximo id gerado pela tabela passa a ser {@code proximo}. Usa setval (basta UPDATE na
+     * sequence) em vez de ALTER TABLE ... RESTART, que exige ser dono da tabela: a aplicação
+     * conecta como anne_app, sem DDL.
+     */
+    private void posicionarSequencia(String tabela, long proximo) {
+        em.createNativeQuery("SELECT setval(pg_get_serial_sequence(:tabela, 'id'), :proximo, false)")
+                .setParameter("tabela", tabela)
+                .setParameter("proximo", proximo)
+                .getSingleResult();
     }
 
     /** O registro existente ou um novo, que nascerá com o id pedido. */
@@ -134,7 +146,7 @@ public class RestauracaoBackup {
         if (existente != null) {
             return existente;
         }
-        em.createNativeQuery("ALTER TABLE " + TABELAS.get(colecao) + " ALTER COLUMN id RESTART WITH " + id).executeUpdate();
+        posicionarSequencia(TABELAS.get(colecao), id);
         return novo.get();
     }
 
