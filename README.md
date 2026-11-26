@@ -82,23 +82,35 @@ Navegador ──► Next.js (porta 3000) ──► Spring Boot (porta 8080) ─�
 O jeito mais rápido é subir o Postgres com Docker:
 
 ```bash
-docker run -d --name ficha-db \
-  -e POSTGRES_DB=ficha -e POSTGRES_USER=ficha -e POSTGRES_PASSWORD=ficha \
-  -p 5432:5432 postgres:17-alpine
+cd ficha-buffet
+cp .env.example .env        # preencha POSTGRES_PASSWORD (superusuário administrativo)
+docker compose up -d db
 ```
 
-As tabelas são criadas pelo Hibernate (`ddl-auto=update`) quando o backend sobe.
+O backend não usa o superusuário. Ele conecta com dois usuários separados: `anne_app` em runtime, só com SELECT/INSERT/UPDATE/DELETE, e `anne_migrator` para o Flyway, que assume `anne_owner`, o dono dos objetos. Crie os papéis e as senhas uma vez (o passo a passo completo está em [`ficha-buffet/db-admin/privilegios/README.md`](ficha-buffet/db-admin/privilegios/README.md)):
+
+```bash
+cd ficha-buffet/db-admin/privilegios
+docker exec -i ficha-tecnica-anne sh -c 'psql -X -v ON_ERROR_STOP=1 -U "$POSTGRES_USER" -d postgres' < 01-papeis.sql
+docker exec -i ficha-tecnica-anne sh -c 'psql -X -v ON_ERROR_STOP=1 -U "$POSTGRES_USER" -d "$POSTGRES_DB"' < 02-banco.sql
+python3 definir-senhas.py --env-file ../../.env \
+  --psql 'docker exec -i ficha-tecnica-anne sh -c "psql -X -q -v ON_ERROR_STOP=1 -U \"$POSTGRES_USER\" -d postgres"'
+```
+
+As tabelas são criadas pelas migrations do Flyway (`src/main/resources/db/migration`) quando o backend sobe; o Hibernate só confere o schema (`ddl-auto=validate`).
 
 ### 2. Backend
 
 Gere o par de chaves RSA que assina os JWTs. O passo a passo está em [`ficha-buffet/src/main/resources/keys/README.md`](ficha-buffet/src/main/resources/keys/README.md). A chave privada precisa estar no formato PKCS#8.
 
-Crie o arquivo `ficha-buffet/.env`. Ele é lido automaticamente e fica fora do git:
+O arquivo `ficha-buffet/.env` (copiado de [`.env.example`](ficha-buffet/.env.example)) é lido automaticamente e fica fora do git:
 
 ```properties
-URL_DB=jdbc:postgresql://localhost:5432/ficha
-POSTGRES_USER=ficha
-POSTGRES_PASSWORD=ficha
+URL_DB=jdbc:postgresql://localhost:5432/fichadb
+DB_USERNAME=anne_app
+DB_PASSWORD=...            # gerada por definir-senhas.py
+FLYWAY_USER=anne_migrator
+FLYWAY_PASSWORD=...        # gerada por definir-senhas.py
 URL_FRONTEND=http://localhost:3000
 COOKIE_SECURE=false
 RSA_PUBLIC_KEY_PATH=src/main/resources/keys/public.pem
@@ -190,8 +202,10 @@ O [`docker-compose.prod.yaml`](docker-compose.prod.yaml) sobe o Postgres, o back
 
 | Variável | Uso |
 | --- | --- |
-| `DB_NAME`, `POSTGRES_USER`, `POSTGRES_PASSWORD` | Credenciais do Postgres |
+| `DB_NAME`, `POSTGRES_USER`, `POSTGRES_PASSWORD` | Superusuário do Postgres (só o serviço `db` e a administração usam) |
 | `URL_DB` | JDBC URL, por exemplo `jdbc:postgresql://db:5432/<DB_NAME>` |
+| `DB_USERNAME`, `DB_PASSWORD` | Usuário de runtime do backend (`anne_app`) |
+| `FLYWAY_USER`, `FLYWAY_PASSWORD` | Usuário das migrations (`anne_migrator`); opcionais: `FLYWAY_URL` (padrão `URL_DB`) e `FLYWAY_ROLE` (padrão `anne_owner`) |
 | `URL_FRONTEND` | Origem liberada no CORS do backend |
 | `COOKIE_SECURE` | `true` em produção (HTTPS) |
 | `BLOB_READ_WRITE_TOKEN` | Token do Vercel Blob para o upload de fotos |
@@ -205,3 +219,4 @@ As chaves RSA de produção são montadas como volume no container do backend. O
 - As entradas são validadas com Zod no frontend e com Bean Validation no backend.
 - O Next.js envia headers de segurança: CSP, `X-Frame-Options: DENY`, `nosniff`, `Referrer-Policy` e `Permissions-Policy`.
 - Nenhum segredo é versionado: `.env` e `*.pem` estão no `.gitignore`.
+- O banco separa os papéis: `anne_owner` (dono dos objetos, sem login), `anne_migrator` (Flyway) e `anne_app` (runtime, sem DDL, sem TRUNCATE). Nenhum deles tem SUPERUSER ou BYPASSRLS. Detalhes em [`ficha-buffet/db-admin/privilegios/README.md`](ficha-buffet/db-admin/privilegios/README.md).
